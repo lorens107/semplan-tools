@@ -1,0 +1,16 @@
+{
+  "_source": "CORE ELA Pacing Guide 1st Grade - Beyond the Page and the Visions Supplemental Lessons doc, uploaded by Loren 8/27/26. Text/url/code reused from btp_grade1_formatted.json; only the week each activity's guide table names is new. The two grade-1 activities coded by a shared spreadsheet (1-LS1-1 week 1, 1.3.2 week 19, K-2-ETS1-1 week 35) are Science/HSS per activity_subject() and are excluded here, same as they're excluded from the ELA row in generate_plan.py.",
+  "cursive": {"text": "Cursive Writing Assignment", "url": "https://drive.google.com/file/d/1wU5WhmwM6NLV-imcNkZON3lWu9Zio_gX/view?usp=sharing"},
+  "gap_by_week": {
+    "2": {"text": "Exploring Information in Texts and Pictures", "url": "https://docs.google.com/document/d/16YuQg3CPKUFXVjofwANlKv-gWZOstVwsly079rJcAhk/edit#bookmark=id.iu90k4ld4grd", "code": "RI.I.6"},
+    "4": {"text": "Predicting What Happens Next in an Informational Text", "url": "https://docs.google.com/document/d/16YuQg3CPKUFXVjofwANlKv-gWZOstVwsly079rJcAhk/edit#bookmark=id.cke7uofcwhb", "code": "RI.1.10.b"},
+    "5": {"text": "Strengthening Writing with Details", "url": "https://docs.google.com/document/d/16YuQg3CPKUFXVjofwANlKv-gWZOstVwsly079rJcAhk/edit#bookmark=id.4du2hg6wlww4", "code": "W.1.5"},
+    "6": {"text": "Engaging in Collaborative Conversations about Weather and Seasons", "url": "https://docs.google.com/document/d/16YuQg3CPKUFXVjofwANlKv-gWZOstVwsly079rJcAhk/edit#bookmark=id.fwycmegfhp5s", "code": "SL.1.1.a-b"},
+    "7": {"text": "Exploring Pronouns in \"On the Town\"", "url": "https://docs.google.com/document/d/16YuQg3CPKUFXVjofwANlKv-gWZOstVwsly079rJcAhk/edit#bookmark=id.3x7efxsdn8fe", "code": "L.1.1.d"},
+    "8": {"text": "Exploring Commas in Dates and Series", "url": "https://docs.google.com/document/d/16YuQg3CPKUFXVjofwANlKv-gWZOstVwsly079rJcAhk/edit#bookmark=id.14ebis98pk1y", "code": "L.1.2.c"},
+    "9": {"text": "Exploring Root Words and Their Inflectional Forms", "url": "https://docs.google.com/document/d/16YuQg3CPKUFXVjofwANlKv-gWZOstVwsly079rJcAhk/edit#bookmark=id.m8ninuulz6pv", "code": "L.1.4.c"},
+    "10": {"text": "Exploring Syllables with Animal Names", "url": "https://docs.google.com/document/d/16YuQg3CPKUFXVjofwANlKv-gWZOstVwsly079rJcAhk/edit#bookmark=id.qas0hjwy5knu", "code": "RF.1.3.d"},
+    "11": {"text": "Mastering Reading Fluency and Comprehension", "url": "https://docs.google.com/document/d/16YuQg3CPKUFXVjofwANlKv-gWZOstVwsly079rJcAhk/edit#bookmark=id.o1bis4igawd", "code": "RF.1.4.a-c"}
+  },
+  "note": "No ELA-row gap activity is named for weeks 1, 3, 12-36 in the guide - cursive runs every week regardless, confirmed against the guide's own week-by-week tables."
+}

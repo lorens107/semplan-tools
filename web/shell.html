@@ -1,0 +1,462 @@
+<title>Semester Plan Pacing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>/* Palette taken from the plan's own material rather than invented: --cell is
+   the district template's actual fill, #E9F0FA, so the preview on screen looks
+   like the cells it pastes into, and --accent is a sibling of the #0563C1 that
+   already links the activity names inside those cells.
+
+   Light is defined on bare :root. Dark redefines the same tokens twice: once
+   behind prefers-color-scheme for viewers on the default "system" setting,
+   guarded so an explicit light choice still wins, and once behind
+   [data-theme="dark"] so the toggle wins the other way. No colour is declared
+   only inside one of those blocks. */
+:root {
+  --paper: #f4f6f9;
+  --card: #ffffff;
+  --sunk: #eef1f6;
+  --ink: #16202e;
+  --muted: #5d6b7f;
+  --faint: #8a97a8;
+  --line: #dbe2ec;
+  --hair: #e8edf4;
+  --cell: #e9f0fa;          /* the district's own cell fill */
+  --cell-ink: #16202e;
+  --accent: #2f5fa8;
+  --accent-soft: #dfe9f8;
+  --link: #1a56c4;
+  --good: #0f7b45;
+  --good-soft: #e3f2e9;
+  --warn: #8a5a00;
+  --warn-soft: #fdf3e0;
+  --warn-line: #e8cf9e;
+  --focus: #2f5fa8;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0f151d;
+    --card: #171f2a;
+    --sunk: #1d2733;
+    --ink: #e6ecf4;
+    --muted: #9aa8ba;
+    --faint: #6d7c8f;
+    --line: #2b3745;
+    --hair: #232e3b;
+    --cell: #1b2836;
+    --cell-ink: #e6ecf4;
+    --accent: #8fb4ec;
+    --accent-soft: #22334c;
+    --link: #8fb4ec;
+    --good: #5fce97;
+    --good-soft: #14301f;
+    --warn: #e3b467;
+    --warn-soft: #2c2415;
+    --warn-line: #4a3c1e;
+    --focus: #8fb4ec;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0f151d;
+  --card: #171f2a;
+  --sunk: #1d2733;
+  --ink: #e6ecf4;
+  --muted: #9aa8ba;
+  --faint: #6d7c8f;
+  --line: #2b3745;
+  --hair: #232e3b;
+  --cell: #1b2836;
+  --cell-ink: #e6ecf4;
+  --accent: #8fb4ec;
+  --accent-soft: #22334c;
+  --link: #8fb4ec;
+  --good: #5fce97;
+  --good-soft: #14301f;
+  --warn: #e3b467;
+  --warn-soft: #2c2415;
+  --warn-line: #4a3c1e;
+  --focus: #8fb4ec;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 20px 72px;
+  background: var(--paper);
+  color: var(--ink);
+  font: 15px/1.55 "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 1180px; margin: 0 auto; }
+
+/* ---------------------------------------------------------------- masthead */
+
+header { padding: 30px 0 18px; }
+h1 {
+  margin: 0 0 4px;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+header p { margin: 0; color: var(--muted); font-size: 14.5px; max-width: 66ch; }
+
+/* ------------------------------------------------------------------ controls */
+
+.controls {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.field-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  align-items: flex-end;
+}
+.field { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.field label {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+select {
+  font: 14px/1.3 "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  min-width: 190px;
+  max-width: 290px;
+}
+select.lp { min-width: 88px; }
+select:disabled { color: var(--faint); background: var(--sunk); }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+/* Two subjects per row on a wide screen, one on a narrow one. Each subject
+   keeps its core curriculum menu wide enough to read the whole name, with the
+   optional second row beside it. */
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  gap: 14px 20px;
+}
+.subject-grid .field select { min-width: 0; max-width: none; width: 100%; }
+.stack { display: flex; gap: 10px; align-items: flex-end; }
+.stack .field:first-child { flex: 3 1 0; min-width: 0; }
+.stack .field:last-child { flex: 2 1 0; min-width: 0; }
+.stack .field:last-child label { color: var(--faint); font-weight: 500; }
+
+details.timing { border-top: 1px solid var(--hair); padding-top: 14px; }
+details.timing summary {
+  cursor: pointer;
+  font-size: 13.5px;
+  color: var(--muted);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+details.timing summary::-webkit-details-marker { display: none; }
+details.timing summary::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform .15s ease;
+}
+details.timing[open] summary::before { transform: rotate(45deg); }
+details.timing .field-row { margin-top: 14px; }
+.week-shift-note { margin: 10px 0 0; font-size: 12.5px; color: var(--muted, #666); }
+input.weeks { min-width: 60px; width: 70px; }
+
+/* ------------------------------------------------------------------- notices */
+
+.notice {
+  border-radius: 10px;
+  padding: 13px 15px;
+  font-size: 13.5px;
+  border: 1px solid var(--warn-line);
+  background: var(--warn-soft);
+  color: var(--warn);
+}
+.notice strong { color: var(--ink); }
+.notice ul { margin: 8px 0 0; padding-left: 18px; }
+.notice li + li { margin-top: 4px; }
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 0;
+}
+.pill {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 7px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 13px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.pill b { color: var(--ink); font-weight: 600; }
+.pill.count {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --------------------------------------------------------------------- cards */
+
+main { display: flex; flex-direction: column; gap: 18px; margin-top: 20px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px 20px;
+}
+.card > h2 {
+  margin: 0 0 3px;
+  font-size: 16.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.card .meta {
+  margin: 0 0 14px;
+  font-size: 13px;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  align-items: baseline;
+}
+.card .meta .sep { color: var(--faint); }
+.card .meta a { color: var(--link); }
+/* Names the document a row's lesson numbers came from, when that is not
+   Appendix A. Only Grade 1 ELA on Lincoln Learning shows one today. */
+.card .meta.source-note {
+  margin: -8px 0 14px;
+  display: block;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin: 0 0 12px;
+}
+button {
+  font: 600 13px/1 "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 9px 14px;
+  cursor: pointer;
+  transition: background .12s ease, border-color .12s ease;
+}
+button:hover { background: var(--sunk); }
+button.primary { background: var(--accent-soft); border-color: var(--accent); }
+button.done {
+  background: var(--good-soft);
+  border-color: var(--good);
+  color: var(--good);
+}
+.where {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+code {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12.5px;
+  background: var(--sunk);
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: var(--ink);
+}
+
+.semhead {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  margin: 16px 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.semhead::after {
+  content: "";
+  flex: 1 1 auto;
+  height: 1px;
+  background: var(--hair);
+}
+
+/* --------------------------------------------------------------- the tables */
+
+.scroll {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  min-width: 860px;
+}
+thead th {
+  background: var(--sunk);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  padding: 7px 10px;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+thead th:first-child { width: 148px; }
+tbody td {
+  border-top: 1px solid var(--hair);
+  padding: 9px 10px;
+  vertical-align: top;
+  /* The cell body is set in the sheet's own face at the sheet's own size, so
+     what is on screen is what lands in the plan. */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12.5px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  background: var(--cell);
+  color: var(--cell-ink);
+}
+tbody td.rowref {
+  background: var(--sunk);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 11.5px;
+  color: var(--muted);
+  white-space: normal;
+}
+tbody td.rowref b {
+  display: block;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--faint);
+  letter-spacing: 0.04em;
+}
+tbody td.empty { color: var(--faint); font-style: italic; }
+tbody td a { color: var(--link); }
+tbody td.nwa { color: var(--muted); }
+
+.empty-state {
+  background: var(--card);
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  padding: 34px 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.notes { font-size: 13px; color: var(--muted); }
+.notes p { margin: 0 0 7px; }
+.notes p:last-child { margin: 0; }
+
+footer {
+  margin-top: 26px;
+  padding-top: 16px;
+  border-top: 1px solid var(--hair);
+  font-size: 12.5px;
+  color: var(--faint);
+  max-width: 74ch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Semester Plan Pacing</h1>
+    <p>Pick a grade and a curriculum per subject. Copy each block and paste it
+      into the student's Semester Plan in Google Sheets.</p>
+  </header>
+
+  <div class="controls">
+    <div class="field-row">
+      <div class="field">
+        <label for="grade">Grade</label>
+        <select id="grade"></select>
+      </div>
+    </div>
+
+    <div class="subject-grid" id="subjects"></div>
+
+    <details class="timing">
+      <summary>Started late? Set the LP each subject begins in</summary>
+      <div class="field-row" id="timing-fields"></div>
+    </details>
+
+    <details class="timing" id="week-shift-block" style="display:none">
+      <summary>Behind on weeks? Set how many weeks LP1 actually covered</summary>
+      <div class="field-row" id="week-shift-fields"></div>
+      <p class="week-shift-note">Only offered for curricula with real
+        week-by-week source data (right now: Beyond the Page ELA and Zearn
+        Math, in Grade 1 and Grade 3). The rest of the year slides back to
+        match, and anything that runs past week 36 doesn't fit this year —
+        same as any curriculum that finishes early.</p>
+    </details>
+  </div>
+
+  <div id="summary"></div>
+
+  <div class="notice" style="margin-top:20px">
+    <strong>Before the first paste</strong>
+    <ul>
+      <li>Paste normally with Ctrl+V. That is what carries the line breaks
+        inside a cell and the links on the activity names. <em>Paste values
+        only</em> drops both.</li>
+      <li>Click the single cell named on the button, not the whole range. The
+        paste fills down and right from there.</li>
+      <li>Column C is never copied. Those are the CT Approval checkboxes, and a
+        paste over them turns them into the word FALSE.</li>
+      <li>The paste carries the plan's own cell formatting — Arial 10, wrapped,
+        top-aligned, the blue fill. Check the first block before doing the
+        rest, and undo if your sheet is set up differently.</li>
+    </ul>
+  </div>
+
+  <main id="output"></main>
+
+  <footer>
+    Pacing comes from Appendix A of the 26/27 LP Meeting Plan, except Grade 1
+    Beyond the Page and the Grade 1 math courses, which come from their CORE
+    pacing guides and the Visions supplemental documents, and PE, which is the
+    topic names off the district's own standards sheets. Nothing you pick is
+    saved or sent anywhere; it stays in this browser tab.
+  </footer>
+</div>
+
+<script src="web_data.js"></script>
+<script src="engine.js"></script>
+<script src="app.js"></script>
