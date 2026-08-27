@@ -16,9 +16,9 @@ It is offered only where there is real, guide-sourced per-week data for that
 grade/subject/curriculum. Everything else keeps using the ordinary per-LP
 cells.
 
-## Status as of commit 4c46ace
+## Status as of commit 5945b8e + Grade 2
 
-**Grade 1 and Grade 3 both have working week-shift data**, each for
+**Grades 1, 2 and 3 all have working week-shift data**, each for
 Math/Zearn and ELA/Beyond the Page. Both are verified end to end in a real
 browser - the panel appears, the fields drive it, and the shifted content
 renders. No other grade has week data, and the panel correctly stays hidden

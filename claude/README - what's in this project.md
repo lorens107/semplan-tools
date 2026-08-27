@@ -22,6 +22,7 @@ into a student's Semester Plan in Google Sheets.
     build_artifact.py       inlines the four above into index.html
     add_week_pacing.py      merges per-week source files into web_data.json
     data/                   guide-sourced per-week files (inputs to the above)
+                        grades 1, 2 and 3 so far
     index.html              the built page - a build output, kept in git
                             because it is what gets published
 

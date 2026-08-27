@@ -12845,6 +12845,279 @@
           }
         }
       }
+    },
+    "2": {
+      "Math": {
+        "Zearn": {
+          "kind": "zearn",
+          "weeks": {
+            "1": {
+              "mission": 1,
+              "topic": "Topic A-B",
+              "lessons": "1-5"
+            },
+            "2": {
+              "mission": 1,
+              "topic": "Topic B-C",
+              "lessons": "6-8",
+              "assessment": "End-of-Mission Assessment (Topics A-B)"
+            },
+            "3": {
+              "mission": 2,
+              "topic": "Topic A-B",
+              "lessons": "1-5"
+            },
+            "4": {
+              "mission": 2,
+              "topic": "Topic C-D",
+              "lessons": "6-10"
+            },
+            "5": {
+              "mission": 3,
+              "topic": "Topic A-C",
+              "lessons": "1-3",
+              "assessment": "Mission 2 End-of-Mission Assessment (Topics A-D)"
+            },
+            "6": {
+              "mission": 3,
+              "topic": "Topic C-D",
+              "lessons": "4-8"
+            },
+            "7": {
+              "mission": 3,
+              "topic": "Topic D-E",
+              "lessons": "9-11",
+              "assessment": "Mid-Mission Assessment (Topics A-D)"
+            },
+            "8": {
+              "mission": 3,
+              "topic": "Topic E-F",
+              "lessons": "12-16"
+            },
+            "9": {
+              "mission": 3,
+              "topic": "Topic F-G",
+              "lessons": "17-21"
+            },
+            "10": {
+              "mission": 4,
+              "topic": "Topic A",
+              "lessons": "1-3",
+              "assessment": "Mission 3 End-of-Mission Assessment (Topics A-G)"
+            },
+            "11": {
+              "mission": 4,
+              "topic": "Topic A-B",
+              "lessons": "4-8"
+            },
+            "12": {
+              "mission": 4,
+              "topic": "Topic B-C",
+              "lessons": "9-13"
+            },
+            "13": {
+              "mission": 4,
+              "topic": "Topic C",
+              "lessons": "14-16",
+              "assessment": "Mid-Mission Assessment (Topics A-C)"
+            },
+            "14": {
+              "mission": 4,
+              "topic": "Topic D",
+              "lessons": "17-21"
+            },
+            "15": {
+              "mission": 4,
+              "topic": "Topic D-E",
+              "lessons": "22-26"
+            },
+            "16": {
+              "mission": 4,
+              "topic": "Topic E-F",
+              "lessons": "27-31"
+            },
+            "17": {
+              "mission": 5,
+              "topic": "Topic A",
+              "lessons": "1-3",
+              "assessment": "Mission 4 End-of-Mission Assessment (Topics D-F)"
+            },
+            "18": {
+              "mission": 5,
+              "topic": "Topic A-B",
+              "lessons": "4-8"
+            },
+            "19": {
+              "mission": 5,
+              "topic": "Topic B",
+              "lessons": "9-12",
+              "assessment": "Mid-Mission Assessment (Topics A-B), Day 1"
+            },
+            "20": {
+              "mission": 5,
+              "topic": "Topic C",
+              "lessons": "13-16",
+              "assessment": "Mid-Mission Assessment (Topics A-B), Day 2"
+            },
+            "21": {
+              "mission": 5,
+              "topic": "Topic C-D",
+              "lessons": "17-20",
+              "assessment": "End-of-Mission Assessment (Topics C-D), Day 1"
+            },
+            "22": {
+              "mission": 6,
+              "topic": "Topic A",
+              "lessons": "1-4",
+              "assessment": "Mission 5 End-of-Mission Assessment (Topics C-D), Day 2"
+            },
+            "23": {
+              "mission": 6,
+              "topic": "Topic B",
+              "lessons": "5-9"
+            },
+            "24": {
+              "mission": 6,
+              "topic": "Topic C",
+              "lessons": "10-12",
+              "assessment": "Mid-Mission Assessment (Topics A-B)"
+            },
+            "25": {
+              "mission": 6,
+              "topic": "Topic C-D",
+              "lessons": "13-17"
+            },
+            "26": {
+              "mission": 6,
+              "topic": "Topic D-F",
+              "lessons": "18-20",
+              "assessment": "End-of-Mission Assessment (Topics C-D)"
+            },
+            "27": {
+              "mission": 7,
+              "topic": "Topic A",
+              "lessons": "1-5"
+            },
+            "28": {
+              "mission": 7,
+              "topic": "Topic B",
+              "lessons": "6-10"
+            },
+            "29": {
+              "mission": 7,
+              "topic": "Topic B",
+              "lessons": "11-13",
+              "assessment": "Mid-Mission Assessment (Topics A-B)"
+            },
+            "30": {
+              "mission": 7,
+              "topic": "Topic C-D",
+              "lessons": "14-18"
+            },
+            "31": {
+              "mission": 7,
+              "topic": "Topic D-F",
+              "lessons": "19-23"
+            },
+            "32": {
+              "mission": 7,
+              "topic": "Topic F",
+              "lessons": "24-26",
+              "assessment": "End-of-Mission Assessment (Topics C-F)"
+            },
+            "33": {
+              "mission": 8,
+              "topic": "Topic A",
+              "lessons": "1-5"
+            },
+            "34": {
+              "mission": 8,
+              "topic": "Topic B",
+              "lessons": "6-8",
+              "assessment": "Mid-Mission Assessment (Topics A-B)"
+            },
+            "35": {
+              "mission": 8,
+              "topic": "Topic C-D",
+              "lessons": "9-13"
+            },
+            "36": {
+              "mission": 8,
+              "topic": "Topic D",
+              "lessons": "14-16",
+              "assessment": "End-of-Mission Assessment (Topics C-D)"
+            }
+          }
+        }
+      },
+      "ELA": {
+        "Beyond the Page": {
+          "kind": "btp_ela",
+          "weeks": {
+            "cursive": {
+              "text": "Cursive Writing Assignment",
+              "url": "https://drive.google.com/file/d/1wU5WhmwM6NLV-imcNkZON3lWu9Zio_gX/view?usp=sharing"
+            },
+            "gap_by_week": {
+              "1": {
+                "text": "Exploring Different Points of View Through The City Mouse and the Country Mouse - RL.2.6",
+                "url": "https://docs.google.com/document/d/1Ygh5HI5fZJiMC6oLKYsopPaGX6EXldEdiAUc-aeW6SY/edit#bookmark=id.updejp65bqkn",
+                "code": "RL.2.6"
+              },
+              "2": {
+                "text": "Understanding the Purpose of Texts - RI.2.6",
+                "url": "https://docs.google.com/document/d/1Ygh5HI5fZJiMC6oLKYsopPaGX6EXldEdiAUc-aeW6SY/edit#bookmark=id.9h9ylnomh4q3",
+                "code": "RI.2.6"
+              },
+              "3": {
+                "text": "Understanding Reasons and Supporting Points in a Text - RI.2.8",
+                "url": "https://docs.google.com/document/d/1Ygh5HI5fZJiMC6oLKYsopPaGX6EXldEdiAUc-aeW6SY/edit#bookmark=id.wvfkn8ih1k15",
+                "code": "RI.2.8"
+              },
+              "4": {
+                "text": "Exploring Texts: Comparing and Contrasting - RI.2.9",
+                "url": "https://docs.google.com/document/d/1Ygh5HI5fZJiMC6oLKYsopPaGX6EXldEdiAUc-aeW6SY/edit#bookmark=id.8ve7hxizj68n",
+                "code": "RI.2.9"
+              },
+              "5": {
+                "text": "Exploring Digital Tools for Writing in Community Leadership - W.2.6",
+                "url": "https://docs.google.com/document/d/1Ygh5HI5fZJiMC6oLKYsopPaGX6EXldEdiAUc-aeW6SY/edit#bookmark=id.i1avu8gqpy9",
+                "code": "W.2.6"
+              },
+              "6": {
+                "text": "Collaborative Conversations about Plants and Animals - SL.2.1.a-c",
+                "url": "https://docs.google.com/document/d/1Ygh5HI5fZJiMC6oLKYsopPaGX6EXldEdiAUc-aeW6SY/edit#bookmark=id.ow1onyl35jb5",
+                "code": "SL.2.1.a-c"
+              },
+              "8": {
+                "text": "Exploring Collective Nouns and Reflexive Pronouns in Plants and Animals - L.2.1.a,c",
+                "url": "https://docs.google.com/document/d/1Ygh5HI5fZJiMC6oLKYsopPaGX6EXldEdiAUc-aeW6SY/edit#bookmark=id.96dtq8jyvg5o",
+                "code": "L.2.1.a,c"
+              },
+              "9": {
+                "text": "Exploring Spellings with Plants and Animals - L.2.2.e",
+                "url": "https://docs.google.com/document/d/1Ygh5HI5fZJiMC6oLKYsopPaGX6EXldEdiAUc-aeW6SY/edit#bookmark=id.8tlugn28xvt",
+                "code": "L.2.2.e"
+              },
+              "10": {
+                "text": "Exploring Formal and Informal English Language Use - L.2.3.a",
+                "url": "https://docs.google.com/document/d/1Ygh5HI5fZJiMC6oLKYsopPaGX6EXldEdiAUc-aeW6SY/edit#bookmark=id.360xudryv2cz",
+                "code": "L.2.3.a"
+              },
+              "11": {
+                "text": "Exploring Words: Using Glossaries and Dictionaries - L.2.4.e",
+                "url": "https://docs.google.com/document/d/1Ygh5HI5fZJiMC6oLKYsopPaGX6EXldEdiAUc-aeW6SY/edit#bookmark=id.vffd90iyr1ag",
+                "code": "L.2.4.e"
+              },
+              "13": {
+                "text": "Reading Fluency and Comprehension - RF.2.4.a-c",
+                "url": "https://docs.google.com/document/d/1Ygh5HI5fZJiMC6oLKYsopPaGX6EXldEdiAUc-aeW6SY/edit#bookmark=id.et2h3wuyzckx",
+                "code": "RF.2.4.a-c"
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
