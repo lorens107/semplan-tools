@@ -29,11 +29,11 @@ Build outputs that are *not* committed are listed in `.gitignore`.
 
 ## Week-level pacing
 
-**Week-level pacing is live for Grades 1, 2, 3, 4 and 5**, each for Math/Zearn
+**Week-level pacing is live for Grades 1 through 6**, each for Math/Zearn
 and ELA/Beyond the Page. The "Behind on weeks?" panel appears only for those
 grade/subject/curriculum combinations and stays hidden everywhere else.
 
-`data/` holds the guide-sourced per-week files for Grades 1, 2, 4 and 5.
+`data/` holds the guide-sourced per-week files for Grades 1, 2, 4, 5 and 6.
 **Grade 3 has no source files**: its week data arrived inside the original
 uploaded build and lives only in `web/web_data.json`.
 

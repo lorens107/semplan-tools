@@ -1,0 +1,79 @@
+{
+  "_source": "CORE ELA Pacing Guide 6th Grade (Beyond the Page), and Visions Supplemental Lessons for Moving Beyond the Page 6th, uploaded by Loren 8/28/26. Reused the exact text/url/code fields from semester-plan-generator_btp_g6_ela_pacing.json (the stored per-LP pacing); only added which week each activity's guide table names it, from the guide's own per-week 'Visions Standards Gap Activities' row. All 14 gap activities land within their stored LP's week window, and no Science/HSS-coded activities or stray codes without a matching link were found in this guide's ELA gap rows.",
+  "cursive": {
+    "text": "Cursive Writing Assignment",
+    "url": "https://drive.google.com/file/d/1wU5WhmwM6NLV-imcNkZON3lWu9Zio_gX/view?usp=sharing"
+  },
+  "gap_by_week": {
+    "5": {
+      "text": "Comparing and Contrasting Text Experiences (RL.6.7)",
+      "url": "https://docs.google.com/document/d/1pEgFMZyu2np2d0y4-RKUVFyRYTPgrub9YfJRx32_EDI/edit?tab=t.0#bookmark=id.2t4ol1684llr",
+      "code": "RL.6.7"
+    },
+    "7": {
+      "text": "Analyzing the Development of Ideas in Informational Texts (RI.6.3)",
+      "url": "https://docs.google.com/document/d/1pEgFMZyu2np2d0y4-RKUVFyRYTPgrub9YfJRx32_EDI/edit?tab=t.0#bookmark=id.i46bvb1ngkez",
+      "code": "RI.6.3"
+    },
+    "9": {
+      "text": "Analyzing Text Structure and Text Features (RI.6.5.a)",
+      "url": "https://docs.google.com/document/d/1pEgFMZyu2np2d0y4-RKUVFyRYTPgrub9YfJRx32_EDI/edit?tab=t.0#bookmark=id.p4hhyczgzsfy",
+      "code": "RI.6.5.a"
+    },
+    "11": {
+      "text": "Tracing and Evaluating Arguments (RI.6.8)",
+      "url": "https://docs.google.com/document/d/1pEgFMZyu2np2d0y4-RKUVFyRYTPgrub9YfJRx32_EDI/edit?tab=t.0#bookmark=id.xg3dw0aa96go",
+      "code": "RI.6.8"
+    },
+    "13": {
+      "text": "Writing Arguments to Support Claims (W.6.1.a-b,d)",
+      "url": "https://docs.google.com/document/d/1pEgFMZyu2np2d0y4-RKUVFyRYTPgrub9YfJRx32_EDI/edit?tab=t.0#bookmark=id.q8a3t7lu279b",
+      "code": "W.6.1.a-b,d"
+    },
+    "15": {
+      "text": "Writing Informative/Explanatory Texts (W.6.2 c-f)",
+      "url": "https://docs.google.com/document/d/1pEgFMZyu2np2d0y4-RKUVFyRYTPgrub9YfJRx32_EDI/edit?tab=t.0#bookmark=id.jchbxm9psr82",
+      "code": "W.6.2 c-f"
+    },
+    "17": {
+      "text": "Writing Narratives (W.6.3.c-e)",
+      "url": "https://docs.google.com/document/d/1pEgFMZyu2np2d0y4-RKUVFyRYTPgrub9YfJRx32_EDI/edit?tab=t.0#bookmark=id.t5hdbg5r4ioi",
+      "code": "W.6.3.c-e"
+    },
+    "19": {
+      "text": "Drawing Evidence from Texts (W.6.9.a-b)",
+      "url": "https://docs.google.com/document/d/1pEgFMZyu2np2d0y4-RKUVFyRYTPgrub9YfJRx32_EDI/edit?tab=t.0#bookmark=id.7hywtbp9ykdx",
+      "code": "W.6.9.a-b"
+    },
+    "21": {
+      "text": "Collaborative Discussions (SL.6.1.a-d)",
+      "url": "https://docs.google.com/document/d/1pEgFMZyu2np2d0y4-RKUVFyRYTPgrub9YfJRx32_EDI/edit?tab=t.0#bookmark=id.1tjtv0wbxac0",
+      "code": "SL.6.1.a-d"
+    },
+    "23": {
+      "text": "Delineating a Speaker’s Argument (SL.6.3)",
+      "url": "https://docs.google.com/document/d/1pEgFMZyu2np2d0y4-RKUVFyRYTPgrub9YfJRx32_EDI/edit?tab=t.0#bookmark=id.72tbknx0jr63",
+      "code": "SL.6.3"
+    },
+    "25": {
+      "text": "Mastering Pronouns in English Grammar (L.6.1.a-d)",
+      "url": "https://docs.google.com/document/d/1pEgFMZyu2np2d0y4-RKUVFyRYTPgrub9YfJRx32_EDI/edit?tab=t.0#bookmark=id.w1ybi0il5doj",
+      "code": "L.6.1.a-d"
+    },
+    "27": {
+      "text": "Pronouns – Subjective, Objective, Possessive, and Intensive Pronouns (L.6.3.a-b)",
+      "url": "https://docs.google.com/document/d/1pEgFMZyu2np2d0y4-RKUVFyRYTPgrub9YfJRx32_EDI/edit?tab=t.0#bookmark=id.2z8chjrm376a",
+      "code": "L.6.3.a-b"
+    },
+    "29": {
+      "text": "Determining Word Meanings Using Affixes and Roots (L.6.4.b, d)",
+      "url": "https://docs.google.com/document/d/1pEgFMZyu2np2d0y4-RKUVFyRYTPgrub9YfJRx32_EDI/edit?tab=t.0#bookmark=id.7xp8ybgov45r",
+      "code": "L.6.4.b, d"
+    },
+    "31": {
+      "text": "Understanding Figurative Language, Word Relationships, and Word Connotations (L.6.5.a-c)",
+      "url": "https://docs.google.com/document/d/1pEgFMZyu2np2d0y4-RKUVFyRYTPgrub9YfJRx32_EDI/edit?tab=t.0#bookmark=id.szgnk5ta5a1y",
+      "code": "L.6.5.a-c"
+    }
+  }
+}

@@ -18,7 +18,7 @@ cells.
 
 ## Status
 
-**Grades 1, 2, 3, 4 and 5 all have working week-shift data**, each for
+**Grades 1 through 6 all have working week-shift data**, each for
 Math/Zearn and ELA/Beyond the Page. Every one is verified end to end in a
 real browser - the panel appears, the fields drive it, and the shifted
 content renders. No other grade has week data, and the panel correctly stays
@@ -26,6 +26,13 @@ hidden for them.
 
 ### Changelog
 
+- **Grade 6** - `data/zearn_g6_weeks.json` (36 weeks),
+  `data/btp_g6_ela_weeks.json` (14 gap weeks + cursive). ELA reproduces the
+  stored per-LP cells on all 10 LPs. Zearn matches on 7 of 10, and all three
+  exceptions are known shapes, not defects: LP9 is an assessment-only mission
+  tail (below), and LP3/LP4 are a window-vs-prose split (below). Lesson
+  accounting checked independently - every mission's lessons are contiguous
+  from 1 with no gaps or duplicates across all 36 weeks.
 - **Grade 5** - `data/zearn_g5_weeks.json` (36 weeks),
   `data/btp_g5_ela_weeks.json` (14 gap weeks + cursive). ELA reproduces the
   stored per-LP cells on all 10 LPs, including LP3, where weeks 9 and 10 name
@@ -185,3 +192,24 @@ this, because there the earlier mission still had real lessons inside the
 window and so did get its own line. Before accepting one of these, confirm the
 missing line really is assessment-only; if the earlier mission has lessons in
 that window and no line appears, that IS a defect.
+
+Grade 6 LP9 is the second instance: Mission 7 ends at lesson 18 in week 30
+(LP8's window), only its End-of-Mission Assessment falls in week 31, and
+stored's `Mission 7: Lessons 19 - End-of-Mission Assessment` is again
+bookkeeping for an assessment rather than a real lesson 19. Expect this shape
+to recur; run the test rather than assuming either way.
+
+### Window-vs-prose mission splits
+
+A different expected shape, first seen at Grade 6 LP3/LP4. Appendix A's prose
+can group a mission differently from where `WEEK_WINDOWS` actually puts its
+guide weeks. Grade 6 Mission 3 has 17 lessons; Appendix A puts all 17 under
+LP3 and writes LP4 as "finished", but the guide week carrying lessons 13-17
+(week 13) falls inside LP4's window (13-15), so the week path renders
+`Mission 3: Lessons 1-12` in LP3 and `Mission 3: Lessons 13-17` in LP4.
+
+Nothing is lost or duplicated - it is grouped by the calendar rather than by
+Appendix A's sentence. The check that settles it is lesson accounting, not
+line-by-line comparison: confirm every mission's lessons are contiguous from 1
+with no gaps and no duplicates across all 36 weeks. If they are, the split is
+presentational. If a lesson is missing or appears twice, that IS a defect.
