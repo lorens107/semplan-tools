@@ -22,11 +22,25 @@ into a student's Semester Plan in Google Sheets.
     build_artifact.py       inlines the four above into index.html
     add_week_pacing.py      merges per-week source files into web_data.json
     data/                   guide-sourced per-week files (inputs to the above)
-                        grades 1, 2 and 3 so far
     index.html              the built page - a build output, kept in git
                             because it is what gets published
 
 Build outputs that are *not* committed are listed in `.gitignore`.
+
+## Week-level pacing
+
+**Week-level pacing is live for Grades 1, 2, 3 and 4**, each for Math/Zearn
+and ELA/Beyond the Page. The "Behind on weeks?" panel appears only for those
+grade/subject/curriculum combinations and stays hidden everywhere else.
+
+`data/` holds the guide-sourced per-week files for Grades 1, 2 and 4.
+**Grade 3 has no source files**: its week data arrived inside the original
+uploaded build and lives only in `web/web_data.json`.
+
+See "Adding Week-Level Pacing - how to add a grade.md" for the schema, the
+steps, and the real verification sequence - which is
+`add_week_pacing.py`, `build_artifact.py` and `web/verify_week_shift.js`,
+and nothing else.
 
 ## Source of truth
 
@@ -60,7 +74,12 @@ line saying it was built by `build_web_data.py` from `pacing_data.json`, and
 **None of those files are here.** `web_data.json` is committed as data, and
 can be edited or extended (see the week-pacing doc), but it cannot currently
 be regenerated from its own upstream sources inside this repo. Also absent:
-`dump_python.py`, `verify_web.js`, `verify_artifact.js`.
+`dump_python.py`, `web/verify_web.js`, `web/verify_artifact.js`.
+
+If a doc or a chat tells you to run `build_web_data.py`, `dump_python.py`,
+`web/verify_web.js` or `web/verify_artifact.js`, it is working from a stale
+copy. Those four have never been in this repo, and the parity line "The
+browser engine matches the Python tool exactly" cannot be produced here.
 
 That is a real gap, not an oversight to paper over. If those scripts still
 exist somewhere, committing them here is the fix.

@@ -16,13 +16,30 @@ It is offered only where there is real, guide-sourced per-week data for that
 grade/subject/curriculum. Everything else keeps using the ordinary per-LP
 cells.
 
-## Status as of commit 5945b8e + Grade 2
+## Status
 
-**Grades 1, 2 and 3 all have working week-shift data**, each for
-Math/Zearn and ELA/Beyond the Page. Both are verified end to end in a real
-browser - the panel appears, the fields drive it, and the shifted content
-renders. No other grade has week data, and the panel correctly stays hidden
-for them.
+**Grades 1, 2, 3 and 4 all have working week-shift data**, each for
+Math/Zearn and ELA/Beyond the Page. Every one is verified end to end in a
+real browser - the panel appears, the fields drive it, and the shifted
+content renders. No other grade has week data, and the panel correctly stays
+hidden for them.
+
+### Changelog
+
+- **Grade 4** - wired in from `data/zearn_g4_weeks.json` (36 weeks) and
+  `data/btp_g4_ela_weeks.json` (14 gap weeks + cursive). At deficit 0 both
+  subjects reproduce the stored per-LP cells on all 10 LPs; Grades 1-3
+  unchanged. Its Zearn file uses the previous-mission assessment convention
+  (week 7 is Mission 3 but carries "Mission 2 End-of-Mission Assessment"),
+  same as Grade 2.
+- **Grade 3** - arrived with the original uploaded build. It is the one grade
+  with **no source files in `data/`**; its week data exists only inside
+  `web/web_data.json` and cannot be re-derived.
+- **Grade 2** - `data/zearn_g2_weeks.json` (36 weeks),
+  `data/btp_g2_ela_weeks.json` (11 gap weeks + cursive).
+- **Grade 1** - `data/zearn_g1_weeks.json` (36 weeks),
+  `data/btp_g1_ela_weeks.json` (9 gap weeks + cursive). Commit 4c46ace, which
+  also split the page's source out of the build and into `web/`.
 
 ## Adding a grade is data, not code
 
@@ -83,10 +100,38 @@ caps the input at 4.
 
 ## Verifying
 
-    node web/verify_week_shift.js <built.html> <grade> <weeksCompletedInLP1>
+**The three scripts below are the entire build and verification toolchain in
+this repo.** There is nothing else.
 
-Needs `NODE_PATH=$(npm root -g)` where playwright is installed globally.
-Prints panel visibility, field labels, note text, and the rendered preview.
+    python3 add_week_pacing.py --grade N \
+        --zearn data/zearn_gN_weeks.json \
+        --btp-ela data/btp_gN_ela_weeks.json
+    # then hand-edit the .week-shift-note copy in web/shell.html
+    python3 build_artifact.py                     # -> "Semester Plan Pacing.html"
+    export NODE_PATH=$(npm root -g)               # playwright is installed globally
+    node web/verify_week_shift.js "Semester Plan Pacing.html" N 1
+    cp "Semester Plan Pacing.html" index.html     # publish, once verified
+
+`verify_week_shift.js` prints panel visibility, field labels, the note text,
+and the rendered preview, as JSON. A console error reading
+`net::ERR_CONNECTION_RESET` is expected offline - that is the Google Fonts
+stylesheet, not a script failure.
+
+### If your copy of this doc lists a different suite, it is stale
+
+Some copies of this doc name **`build_web_data.py`, `dump_python.py`,
+`web/verify_web.js` and `web/verify_artifact.js`** as the verification suite.
+**None of those four files exist in this repo, and none ever have.** Do not go
+looking for them and do not try to run them.
+
+In particular, **you cannot confirm "The browser engine matches the Python tool
+exactly" here.** No script in this repo emits that line, because the Python
+workbook tool it compares against is not in this repo. Any report claiming that
+check passed did not run it.
+
+Related: `web/web_data.json` cannot be regenerated. Its own `_source` line
+credits `build_web_data.py` reading `pacing_data.json`; neither is here. It is
+committed as data and edited in place by `add_week_pacing.py`.
 
 Two checks worth running every time:
 
@@ -101,14 +146,15 @@ Two checks worth running every time:
 ## One expected mismatch, so it isn't mistaken for a bug
 
 At deficit 0 the **ELA/BTP** week path reproduces the stored per-LP cells
-exactly, on all 10 LPs, for both Grade 1 and Grade 3.
+exactly, on all 10 LPs, for all four wired grades.
 
 **Zearn does not, and should not.** Lesson ranges and mission boundaries agree
 on every LP, but the week path names the guide's specific assessments inline
 ("+ Mid-Mission Assessment (Topics A-F), Day 1") where the baked cells use
 Appendix A's generic phrasing ("End-of-Mission Assessment") or omit them.
-Shipped Grade 3 Zearn differs from its stored cells on all 10 LPs for exactly
-this reason, and did so before Grade 1 was added.
+Shipped Grade 3 Zearn differed from its stored cells on all 10 LPs for
+exactly this reason before Grade 1 was ever added, so this is the original
+behaviour, not something a later grade introduced.
 
 So: a Zearn mismatch confined to assessment wording is expected. A mismatch in
 a lesson range or a mission boundary is a real defect - check the source file.

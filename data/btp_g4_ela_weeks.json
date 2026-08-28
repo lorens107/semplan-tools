@@ -1,0 +1,21 @@
+{
+  "_source": "CORE ELA Pacing Guide 4th Grade - Beyond the Page, uploaded by Loren 8/27/26. Text/url/code reused from btp_g4_ela_pacing.json; only the week each activity's guide table names is new.",
+  "cursive": {"text": "Cursive Writing Assignment", "url": "https://drive.google.com/file/d/1wU5WhmwM6NLV-imcNkZON3lWu9Zio_gX/view?usp=sharing"},
+  "gap_by_week": {
+    "1": {"text": "Understanding and Analyzing Informational Text (RI.4.8)", "url": "https://docs.google.com/document/d/1WdmcAnVbQNQRBEvmZhez35dg2B0r-35cjD_72o2q048/edit#bookmark=id.m07rxcawxilh", "code": "RI.4.8"},
+    "2": {"text": "Writing Opinion Pieces (W.4.1.a-d)", "url": "https://docs.google.com/document/d/1WdmcAnVbQNQRBEvmZhez35dg2B0r-35cjD_72o2q048/edit#bookmark=id.419r8nc1lg11", "code": "W.4.1.a-d"},
+    "3": {"text": "Writing Informative/Explanatory Texts (W.4.2.a-e)", "url": "https://docs.google.com/document/d/1WdmcAnVbQNQRBEvmZhez35dg2B0r-35cjD_72o2q048/edit#bookmark=id.sj6wptplslik", "code": "W.4.2.a-e"},
+    "4": {"text": "Transitions and Sensory Details in Writing (W.4.3.c-e)", "url": "https://docs.google.com/document/d/1WdmcAnVbQNQRBEvmZhez35dg2B0r-35cjD_72o2q048/edit#bookmark=id.88ibgi1chryz", "code": "W.4.3.c-e"},
+    "5": {"text": "Drawing Evidence from Texts (W.4.9)", "url": "https://docs.google.com/document/d/1WdmcAnVbQNQRBEvmZhez35dg2B0r-35cjD_72o2q048/edit#bookmark=id.fjn4frrcemyw", "code": "W.4.9"},
+    "6": {"text": "Collaborative Discussions (SL.4.1.a-c)", "url": "https://docs.google.com/document/d/1WdmcAnVbQNQRBEvmZhez35dg2B0r-35cjD_72o2q048/edit#bookmark=id.opjmf8qk0nf", "code": "SL.4.1.a-c"},
+    "8": {"text": "Identifying Reasons and Evidence in Speech and Media (SL.4.3)", "url": "https://docs.google.com/document/d/1WdmcAnVbQNQRBEvmZhez35dg2B0r-35cjD_72o2q048/edit#bookmark=id.ayucd7ba3v4t", "code": "SL.4.3"},
+    "9": {"text": "Modal Auxiliaries and Adjective Order (L.4.1.c, d)", "url": "https://docs.google.com/document/d/1WdmcAnVbQNQRBEvmZhez35dg2B0r-35cjD_72o2q048/edit#bookmark=id.i8gxxrrh7ur2", "code": "L.4.1.c, d"},
+    "10": {"text": "Capitalization and Spelling Mastery (L.4.2.a, d)", "url": "https://docs.google.com/document/d/1WdmcAnVbQNQRBEvmZhez35dg2B0r-35cjD_72o2q048/edit#bookmark=id.kudn355alpjo", "code": "L.4.2.a, d"},
+    "11": {"text": "Punctuation for Effect: Adding Impact to Your Writing (L.4.3.b)", "url": "https://docs.google.com/document/d/1WdmcAnVbQNQRBEvmZhez35dg2B0r-35cjD_72o2q048/edit#bookmark=id.k1tp045nggtd", "code": "L.4.3.b"},
+    "12": {"text": "Understanding Multiple-Meaning Words (L.4.4)", "url": "https://docs.google.com/document/d/1WdmcAnVbQNQRBEvmZhez35dg2B0r-35cjD_72o2q048/edit#bookmark=id.fsq6e8p5alwo", "code": "L.4.4"},
+    "13": {"text": "Exploring Precise Language: Actions, Emotions, and States of Being (L.4.6)", "url": "https://docs.google.com/document/d/1WdmcAnVbQNQRBEvmZhez35dg2B0r-35cjD_72o2q048/edit#bookmark=id.ezxwt2hmbb0i", "code": "L.4.6"},
+    "14": {"text": "Decoding Words: Phonics and Word Analysis Skills (RF.4.3)", "url": "https://docs.google.com/document/d/1WdmcAnVbQNQRBEvmZhez35dg2B0r-35cjD_72o2q048/edit#bookmark=id.s184cgvwzvu4", "code": "RF.4.3"},
+    "15": {"text": "Reading with Accuracy and Fluency Worksheet (RF.4.4)", "url": "https://docs.google.com/document/d/1WdmcAnVbQNQRBEvmZhez35dg2B0r-35cjD_72o2q048/edit#bookmark=id.rx4b6a63m6", "code": "RF.4.4"}
+  },
+  "note": "No ELA-row gap activity is named for week 7 or weeks 16-36 in the guide - cursive runs every week regardless, confirmed against the guide's own week-by-week tables and matching the stored LP5-LP10 pacing (btp_g4_ela_pacing.json), which carries only cursive for those LPs. Week 23's codes cell shows a stray 'L.3.1.j' (a third-grade code) with no accompanying named-activity link, so it is not treated as a real gap activity - excluded to match the stored data, the same way earlier grades' guide-formatting slips were excluded. No Science or H-SS gap activity codes appeared in this guide's ELA rows, so no cross-subject exclusion was needed here (unlike Grade 2)."
+}
