@@ -18,7 +18,7 @@ cells.
 
 ## Status
 
-**Grades 1, 2, 3 and 4 all have working week-shift data**, each for
+**Grades 1, 2, 3, 4 and 5 all have working week-shift data**, each for
 Math/Zearn and ELA/Beyond the Page. Every one is verified end to end in a
 real browser - the panel appears, the fields drive it, and the shifted
 content renders. No other grade has week data, and the panel correctly stays
@@ -26,6 +26,12 @@ hidden for them.
 
 ### Changelog
 
+- **Grade 5** - `data/zearn_g5_weeks.json` (36 weeks),
+  `data/btp_g5_ela_weeks.json` (14 gap weeks + cursive). ELA reproduces the
+  stored per-LP cells on all 10 LPs, including LP3, where weeks 9 and 10 name
+  the same activity under the same bookmark and the stored data carries it
+  twice - both weeks are kept deliberately. Zearn matches on 9 of 10; see
+  "Assessment-only mission tails" below for LP5, which is expected.
 - **Grade 4** - wired in from `data/zearn_g4_weeks.json` (36 weeks) and
   `data/btp_g4_ela_weeks.json` (14 gap weeks + cursive). At deficit 0 both
   subjects reproduce the stored per-LP cells on all 10 LPs; Grades 1-3
@@ -158,3 +164,24 @@ behaviour, not something a later grade introduced.
 
 So: a Zearn mismatch confined to assessment wording is expected. A mismatch in
 a lesson range or a mission boundary is a real defect - check the source file.
+
+### Assessment-only mission tails
+
+One more shape that looks like a span mismatch but is not. `zearnShiftedContent()`
+builds a line per run of weeks sharing a mission, so a mission whose only
+presence in an LP window is an **assessment with no lessons** never gets its own
+line - the assessment text is folded onto the next mission's line instead.
+
+Grade 5 LP5 is the case in the repo. Stored reads
+`Mission 3: Lessons 17 - End-of-Mission Assessment | Mission 4: Lessons 1-16`;
+the week path emits one line,
+`Mission 4: Lessons 1-16 + Mission 3 End-of-Mission Assessment (Topics A-D), Days 2-3 + ...`.
+Confirmed 8/27/26 that Grade 5 Mission 3 has no lesson 17 - Appendix A's
+"Lessons 17 -" is its own bookkeeping for the assessment days - so no lesson
+content is lost, only the formatting differs.
+
+Grades 2 and 4 carry the same previous-mission convention without tripping
+this, because there the earlier mission still had real lessons inside the
+window and so did get its own line. Before accepting one of these, confirm the
+missing line really is assessment-only; if the earlier mission has lessons in
+that window and no line appears, that IS a defect.

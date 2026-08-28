@@ -1,0 +1,21 @@
+{
+  "_source": "CORE ELA Pacing Guide 5th Grade - Beyond the Page, uploaded by Loren 8/27/26. Text/url/code reused from btp_g5_ela_pacing.json; only the week each activity's guide table names is new.",
+  "cursive": {"text": "Cursive Writing Assignment", "url": "https://drive.google.com/file/d/1wU5WhmwM6NLV-imcNkZON3lWu9Zio_gX/view?usp=sharing"},
+  "gap_by_week": {
+    "2": {"text": "Understanding Story Structure (RL.5.5)", "url": "https://docs.google.com/document/d/1mOckxblmwg8WhczkjNGOsKwaf05CVA9AN6UsCXY8ibw/edit?tab=t.0#bookmark=kix.o0v9h5ah993c", "code": "RL.5.5"},
+    "3": {"text": "Understanding Point of View (RL.5.6)", "url": "https://docs.google.com/document/d/1mOckxblmwg8WhczkjNGOsKwaf05CVA9AN6UsCXY8ibw/edit?tab=t.0#bookmark=kix.lejwth2p2hge", "code": "RL.5.6"},
+    "4": {"text": "Analyzing Visual and Multimedia Elements (RL.5.7)", "url": "https://docs.google.com/document/d/1mOckxblmwg8WhczkjNGOsKwaf05CVA9AN6UsCXY8ibw/edit?tab=t.0#bookmark=id.g5us8kmj6lml", "code": "RL.5.7"},
+    "5": {"text": "Analyzing Multiple Accounts (RI.5.6)", "url": "https://docs.google.com/document/d/1mOckxblmwg8WhczkjNGOsKwaf05CVA9AN6UsCXY8ibw/edit?tab=t.0#bookmark=id.9inzieg658fs", "code": "RI.5.6"},
+    "6": {"text": "Understanding Reasons and Evidence (RI.5.8)", "url": "https://docs.google.com/document/d/1mOckxblmwg8WhczkjNGOsKwaf05CVA9AN6UsCXY8ibw/edit?tab=t.0#bookmark=id.m07rxcawxilh", "code": "RI.5.8"},
+    "7": {"text": "Writing Opinion Pieces (W.5.1.d)", "url": "https://docs.google.com/document/d/1mOckxblmwg8WhczkjNGOsKwaf05CVA9AN6UsCXY8ibw/edit?tab=t.0#bookmark=id.419r8nc1lg11", "code": "W.5.1.d"},
+    "8": {"text": "Linking Ideas in Writing (W.5.2.c)", "url": "https://docs.google.com/document/d/1mOckxblmwg8WhczkjNGOsKwaf05CVA9AN6UsCXY8ibw/edit?tab=t.0#bookmark=id.lmc4rewx64w", "code": "W.5.2.c"},
+    "9": {"text": "Using Narrative Techniques in Writing (W.5.3.b-d)", "url": "https://docs.google.com/document/d/1mOckxblmwg8WhczkjNGOsKwaf05CVA9AN6UsCXY8ibw/edit?tab=t.0#bookmark=id.88ibgi1chryz", "code": "W.5.3.b-d"},
+    "10": {"text": "Using Narrative Techniques in Writing (W.5.3.b-d)", "url": "https://docs.google.com/document/d/1mOckxblmwg8WhczkjNGOsKwaf05CVA9AN6UsCXY8ibw/edit?tab=t.0#bookmark=id.88ibgi1chryz", "code": "W.5.3.b-d"},
+    "11": {"text": "Understanding Conventions of English Grammar (L.5.1.a,d,e)", "url": "https://docs.google.com/document/d/1mOckxblmwg8WhczkjNGOsKwaf05CVA9AN6UsCXY8ibw/edit?tab=t.0#bookmark=id.glsxelchsrrj", "code": "L.5.1.a,d,e"},
+    "12": {"text": "Capitalization, Punctuation and Spelling Mastery (L.5.2.a,b,d)", "url": "https://docs.google.com/document/d/1mOckxblmwg8WhczkjNGOsKwaf05CVA9AN6UsCXY8ibw/edit?tab=t.0#bookmark=id.kudn355alpjo", "code": "L.5.2.a,b,d"},
+    "13": {"text": "Expanding Vocabulary with Academic Language (L.5.6)", "url": "https://docs.google.com/document/d/1mOckxblmwg8WhczkjNGOsKwaf05CVA9AN6UsCXY8ibw/edit?tab=t.0#bookmark=id.9rbd6gj9kpnk", "code": "L.5.6"},
+    "14": {"text": "Applying Phonics and Word Analysis Skills (RF.5.3)", "url": "https://docs.google.com/document/d/1mOckxblmwg8WhczkjNGOsKwaf05CVA9AN6UsCXY8ibw/edit?tab=t.0#bookmark=id.s184cgvwzvu4", "code": "RF.5.3"},
+    "15": {"text": "Reading with Accuracy and Fluency (RF.5.4)", "url": "https://docs.google.com/document/d/1mOckxblmwg8WhczkjNGOsKwaf05CVA9AN6UsCXY8ibw/edit?tab=t.0#bookmark=id.rx4b6a63m6", "code": "RF.5.4"}
+  },
+  "note": "No ELA-row gap activity is named for week 1 or weeks 16-36 in the guide - cursive runs every week regardless, confirmed against the guide's own week-by-week tables and matching the stored LP5-LP10 pacing (btp_g5_ela_pacing.json), which carries only cursive for those LPs. Weeks 9 and 10 both name 'Using Narrative Techniques in Writing (W.5.3.b-d)' under the SAME bookmark (id.88ibgi1chryz, unlike Grade 2's two-different-bookmarks case), and the stored per-LP data already carries this activity twice for LP3 - so both weeks are kept, matching the stored duplicate rather than dropping one. No stray codes with no attached activity link appeared (unlike Grade 4's week 23), and no Science or H-SS gap activity codes appeared in this guide's ELA rows, so no cross-subject exclusion was needed."
+}
