@@ -29,8 +29,10 @@ hidden for them.
 - **Grade 7** - `data/zearn_g7_weeks.json` (36 weeks),
   `data/btp_g7_ela_weeks.json` (14 gap weeks, **no cursive**). ELA reproduces
   the stored per-LP cells on all 10 LPs. Zearn matches on 7 of 10; LP8-LP10
-  are a window-vs-prose drift (below). First grade to require a code change -
-  see "Grades without cursive".
+  are a sustained window-vs-prose drift, reviewed and **accepted** 8/28/26 -
+  the guide's calendar is trusted over Appendix A's grouping, and the file
+  stays exactly as transcribed. First grade to require a code change - see
+  "Grades without cursive".
 - **Grade 6** - `data/zearn_g6_weeks.json` (36 weeks),
   `data/btp_g6_ela_weeks.json` (14 gap weeks + cursive). ELA reproduces the
   stored per-LP cells on all 10 LPs. Zearn matches on 7 of 10, and all three
@@ -237,17 +239,37 @@ LP3 and writes LP4 as "finished", but the guide week carrying lessons 13-17
 (week 13) falls inside LP4's window (13-15), so the week path renders
 `Mission 3: Lessons 1-12` in LP3 and `Mission 3: Lessons 13-17` in LP4.
 
-Grade 7 LP8-LP10 is the larger instance: Appendix A runs about a guide-week
-ahead of the calendar through the whole back third, so it puts Mission 7 as
-finishing inside LP7 and Mission 8 as `Lessons 1-13` in LP8, while the week
-path has Mission 7's last lessons and End-of-Mission Assessment landing in
-week 28 (LP8's window) and Mission 8 reaching only lesson 10 there. The drift
-persists through LP9 and LP10 instead of self-correcting after one boundary.
-Lesson accounting is clean, so it is the same presentational shape, just
-sustained.
-
 Nothing is lost or duplicated - it is grouped by the calendar rather than by
-Appendix A's sentence. The check that settles it is lesson accounting, not
+Appendix A's sentence.
+
+**Grade 7 LP8-LP10 is the second instance, and the sustained one.** Appendix A
+runs about a guide-week ahead of the calendar through the whole back third: it
+has Mission 7 finishing inside LP7 and Mission 8 as `Lessons 1-13` in LP8,
+while the week path has Mission 7's last lessons and its End-of-Mission
+Assessment landing in week 28 - LP8's window - so Mission 8 only reaches
+lesson 10 there. Unlike Grade 6, the offset never re-syncs: LP9 and LP10
+disagree too. Lesson accounting is clean (every mission contiguous from 1,
+matching the source file's own counts), and the week-24, week-33 and week-34
+transcriptions were confirmed against the guide directly.
+
+What a reader notices is larger than the arithmetic suggests - LP8 opens with
+a mission Appendix A says is already finished, and LP10 shows seven lessons
+where Appendix A shows two. That is expected here, not a defect.
+
+### When the guide's calendar and Appendix A disagree, the calendar wins
+
+**This is the standing rule for this project, not a one-off call for Grade 7.**
+Appendix A groups loosely, in prose, and its groupings do not always line up
+with the week numbers the curriculum guide actually prints. The week-level
+files are transcribed from those week numbers, so where the two disagree the
+week path is the more accurate of the pair, and the shifted view is meant to
+follow it.
+
+So: do not "fix" a week file to make it reproduce Appendix A. Confirm the
+transcription against the guide, confirm lesson accounting is clean, and then
+let the divergence stand. The only thing that makes a divergence a defect is
+a lesson going missing, appearing twice, or a mission boundary contradicting
+the guide itself. The check that settles it is lesson accounting, not
 line-by-line comparison: confirm every mission's lessons are contiguous from 1
 with no gaps and no duplicates across all 36 weeks. If they are, the split is
 presentational. If a lesson is missing or appears twice, that IS a defect.
