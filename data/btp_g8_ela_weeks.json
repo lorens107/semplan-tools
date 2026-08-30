@@ -1,0 +1,71 @@
+{
+    "_source": "CORE ELA Pacing Guide 8th Grade (Beyond the Page), and Visions Supplemental Lessons for Moving Beyond the Page 8th, uploaded by Loren 8/29/26. Reused the exact text/url/code/note fields from semester-plan-generator_btp_g8_ela_pacing.json (the stored per-LP pacing); only added which week each activity's guide table names it, from the guide's own per-week 'Visions Standards Gap Activities' row. Two guide occurrences carry cosmetic label variants - week 7 labels its row 'RI.8.9' though the linked document and stored data are 'RL.8.9' (same bookmark id.baxrr6n5z4yp, so same activity), and week 15 labels its row 'Visions Standards Gaps Activtiy' (typo) instead of 'Gaps Activities' - both still matched by bookmark id, not by label text. Week 23 labels its row 'Visions' Supplemental Lesson' rather than 'Visions Standards Gap Activities', again matched by bookmark id.cd17lcyy7oo. All 9 gap activities (LP2-LP8; LP1, LP9, LP10 have none) land within their stored LP's week window, and no Science/HSS-coded activities or stray codes without a matching link were found in this guide's ELA gap rows. NO CURSIVE ENTRY: matching Grade 7's schema, this file has no top-level 'cursive' key. The guide's own Understanding the Language Arts Components table shows no Printing/Cursive column marked for grade 8 (confirmed against the Zearn math guide's parallel table, which lists Printing/Cursive as blank for grades 4-8), and the stored semester-plan-generator_btp_g8_ela_pacing.json has zero mentions of a weekly cursive assignment across all 10 LPs. This means Grade 8 genuinely doesn't carry a cursive component, consistent with the recent_updates note confirming this with Loren.",
+    "gap_by_week": {
+        "5": {
+            "text": "Comparing and Contrasting Text Structures (RL.8.5)",
+            "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.gs0csrkn8aoc",
+            "code": "RL.8.5"
+        },
+        "7": {
+            "text": "Analyzing Modern Works and Their Connections to Myths, Traditional Stories, and Religious Texts (RL.8.9)",
+            "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.baxrr6n5z4yp",
+            "code": "RL.8.9"
+        },
+        "9": {
+            "text": "Analyzing the Structure of Paragraphs and Text Features in Informational Texts (RI.8.5.a)",
+            "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.ucxfsznq3t4t",
+            "code": "RI.8.5.a",
+            "note": "link leaves the grade: url targets the Grade 7 supplemental document, as published"
+        },
+        "11": {
+            "text": "Analyzing Conflicting Information Across Texts (RI.8.9)",
+            "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.vigapycn97v",
+            "code": "RI.8.9"
+        },
+        "13": {
+            "text": "Writing a Strong Argument with Clear Reasons and Relevant Evidence (W.8.1)",
+            "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.t805sa2kvydx",
+            "code": "W.8.1"
+        },
+        "15": {
+            "text": "Writing Informative/Explanatory Texts (W.8.2.a-f)",
+            "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.vluk9k1sv6tp",
+            "code": "W.8.2.a-f"
+        },
+        "17": {
+            "text": "Writing Narratives to Develop Real or Imagined Experiences (W.8.3.a-e)",
+            "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.odgkw0grtrx1",
+            "code": "W.8.3.a-e"
+        },
+        "19": {
+            "text": "Drawing Evidence from Literary or Informational Texts (W.8.9.a-b)",
+            "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.yucumboqj10f",
+            "code": "W.8.9.a-b"
+        },
+        "21": {
+            "text": "Engaging Effectively in Collaborative Discussions (SL.8.1.a-d)",
+            "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.kq7a5du6gav9",
+            "code": "SL.8.1.a-d"
+        },
+        "23": {
+            "text": "Presenting Claims and Findings (SL.8.4.a)",
+            "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.cd17lcyy7oo",
+            "code": "SL.8.4.a"
+        },
+        "25": {
+            "text": "Demonstrating Command of Conventions of Standard English Grammar (L.8.1.b-d)",
+            "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.vy4qvkeucq1k",
+            "code": "L.8.1.b-d"
+        },
+        "27": {
+            "text": "Demonstrating Command of Conventions of Standard English (L.8.2.c)",
+            "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.4p2qvo53pjjx",
+            "code": "L.8.2.c"
+        },
+        "28": {
+            "text": "Understanding Figurative Language, Word Relationships, and Nuances in Word Meanings (L.8.5.a-b)",
+            "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.jrz2gkz0w8ll",
+            "code": "L.8.5.a-b"
+        }
+    }
+}

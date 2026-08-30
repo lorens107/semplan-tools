@@ -14264,6 +14264,284 @@
           }
         }
       }
+    },
+    "8": {
+      "Math": {
+        "Zearn": {
+          "kind": "zearn",
+          "weeks": {
+            "1": {
+              "mission": 1,
+              "topic": "Topic A",
+              "lessons": "1-5"
+            },
+            "2": {
+              "mission": 1,
+              "topic": "Topic B",
+              "lessons": "6-10"
+            },
+            "3": {
+              "mission": 1,
+              "topic": "Topic C",
+              "lessons": "11",
+              "assessment": "Mid-Mission Assessment (Topics A-B)"
+            },
+            "4": {
+              "mission": 1,
+              "topic": "Topic C-D",
+              "lessons": "12-16"
+            },
+            "5": {
+              "mission": 1,
+              "topic": "Topic E",
+              "lessons": "17",
+              "assessment": "End-of-Mission Assessment (Topics C-E)"
+            },
+            "6": {
+              "mission": 2,
+              "topic": "Topic A",
+              "lessons": "1-5"
+            },
+            "7": {
+              "mission": 2,
+              "topic": "Topic B-C",
+              "lessons": "6-10"
+            },
+            "8": {
+              "mission": 2,
+              "topic": "Topic C-D",
+              "lessons": "11-13",
+              "assessment": "End-of-Mission Assessment (Topics A-E)"
+            },
+            "9": {
+              "mission": 3,
+              "topic": "Topic A",
+              "lessons": "1-5"
+            },
+            "10": {
+              "mission": 3,
+              "topic": "Topic B",
+              "lessons": "6-8",
+              "assessment": "Mid-Mission Assessment (Topics A-C)"
+            },
+            "11": {
+              "mission": 3,
+              "topic": "Topic C-D",
+              "lessons": "9-12"
+            },
+            "12": {
+              "mission": 3,
+              "topic": "Topic D-E",
+              "lessons": "13-15",
+              "assessment": "End-of-Mission Assessment (Topics C-E)"
+            },
+            "13": {
+              "mission": 4,
+              "topic": "Topic A-B",
+              "lessons": "1-3"
+            },
+            "14": {
+              "mission": 4,
+              "topic": "Topic B",
+              "lessons": "4-8"
+            },
+            "15": {
+              "mission": 4,
+              "topic": "Topic B-C",
+              "lessons": "9-10",
+              "assessment": "Mid-Mission Assessment (Topics A-B)"
+            },
+            "16": {
+              "mission": 4,
+              "topic": "Topic C",
+              "lessons": "11-15"
+            },
+            "17": {
+              "mission": 4,
+              "topic": "Topic D",
+              "lessons": "16",
+              "assessment": "End-of-Mission Assessment (Topics C-D)"
+            },
+            "18": {
+              "mission": 5,
+              "topic": "Topic A-B",
+              "lessons": "1-5"
+            },
+            "19": {
+              "mission": 5,
+              "topic": "Topic B-C",
+              "lessons": "6-10"
+            },
+            "20": {
+              "mission": 5,
+              "topic": "Topic D",
+              "lessons": "11",
+              "assessment": "Mid-Mission Assessment (Topics A-C)"
+            },
+            "21": {
+              "mission": 5,
+              "topic": "Topic D",
+              "lessons": "12-16"
+            },
+            "22": {
+              "mission": 5,
+              "topic": "Topic E",
+              "lessons": "17-21"
+            },
+            "23": {
+              "mission": 5,
+              "topic": "Topic F",
+              "lessons": "22",
+              "assessment": "End-of-Mission Assessment (Topics C-F)"
+            },
+            "24": {
+              "mission": 6,
+              "topic": "Topic A-B",
+              "lessons": "1-5"
+            },
+            "25": {
+              "mission": 6,
+              "topic": "Topic B-C",
+              "lessons": "6-10"
+            },
+            "26": {
+              "mission": 6,
+              "topic": "Topic D",
+              "lessons": "11-13",
+              "assessment": "End-of-Mission Assessment (Topics A-D)"
+            },
+            "27": {
+              "mission": 7,
+              "topic": "Topic A-B",
+              "lessons": "1-3"
+            },
+            "28": {
+              "mission": 7,
+              "topic": "Topic B",
+              "lessons": "4-8"
+            },
+            "29": {
+              "mission": 7,
+              "topic": "Topic C",
+              "lessons": "9-10",
+              "assessment": "Mid-Mission Assessment (Topics A-B)"
+            },
+            "30": {
+              "mission": 7,
+              "topic": "Topic C",
+              "lessons": "11-15"
+            },
+            "31": {
+              "mission": 7,
+              "topic": "Topic D",
+              "lessons": "16",
+              "assessment": "End-of-Mission Assessment (Topics C-D)"
+            },
+            "32": {
+              "mission": 8,
+              "topic": "Topic A-B",
+              "lessons": "1-5"
+            },
+            "33": {
+              "mission": 8,
+              "topic": "Topic C",
+              "lessons": "6-8",
+              "assessment": "Mid-Mission Assessment (Topics A-B)"
+            },
+            "34": {
+              "mission": 8,
+              "topic": "Topic C-D",
+              "lessons": "9-13"
+            },
+            "35": {
+              "mission": 8,
+              "topic": "Topic E",
+              "lessons": "14-15",
+              "assessment": "End-of-Mission Assessment (Topics C-E)"
+            },
+            "36": {
+              "mission": 9,
+              "topic": "Topic A",
+              "lessons": "1-2"
+            }
+          }
+        }
+      },
+      "ELA": {
+        "Beyond the Page": {
+          "kind": "btp_ela",
+          "weeks": {
+            "gap_by_week": {
+              "5": {
+                "text": "Comparing and Contrasting Text Structures (RL.8.5)",
+                "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.gs0csrkn8aoc",
+                "code": "RL.8.5"
+              },
+              "7": {
+                "text": "Analyzing Modern Works and Their Connections to Myths, Traditional Stories, and Religious Texts (RL.8.9)",
+                "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.baxrr6n5z4yp",
+                "code": "RL.8.9"
+              },
+              "9": {
+                "text": "Analyzing the Structure of Paragraphs and Text Features in Informational Texts (RI.8.5.a)",
+                "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.ucxfsznq3t4t",
+                "code": "RI.8.5.a",
+                "note": "link leaves the grade: url targets the Grade 7 supplemental document, as published"
+              },
+              "11": {
+                "text": "Analyzing Conflicting Information Across Texts (RI.8.9)",
+                "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.vigapycn97v",
+                "code": "RI.8.9"
+              },
+              "13": {
+                "text": "Writing a Strong Argument with Clear Reasons and Relevant Evidence (W.8.1)",
+                "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.t805sa2kvydx",
+                "code": "W.8.1"
+              },
+              "15": {
+                "text": "Writing Informative/Explanatory Texts (W.8.2.a-f)",
+                "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.vluk9k1sv6tp",
+                "code": "W.8.2.a-f"
+              },
+              "17": {
+                "text": "Writing Narratives to Develop Real or Imagined Experiences (W.8.3.a-e)",
+                "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.odgkw0grtrx1",
+                "code": "W.8.3.a-e"
+              },
+              "19": {
+                "text": "Drawing Evidence from Literary or Informational Texts (W.8.9.a-b)",
+                "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.yucumboqj10f",
+                "code": "W.8.9.a-b"
+              },
+              "21": {
+                "text": "Engaging Effectively in Collaborative Discussions (SL.8.1.a-d)",
+                "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.kq7a5du6gav9",
+                "code": "SL.8.1.a-d"
+              },
+              "23": {
+                "text": "Presenting Claims and Findings (SL.8.4.a)",
+                "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.cd17lcyy7oo",
+                "code": "SL.8.4.a"
+              },
+              "25": {
+                "text": "Demonstrating Command of Conventions of Standard English Grammar (L.8.1.b-d)",
+                "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.vy4qvkeucq1k",
+                "code": "L.8.1.b-d"
+              },
+              "27": {
+                "text": "Demonstrating Command of Conventions of Standard English (L.8.2.c)",
+                "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.4p2qvo53pjjx",
+                "code": "L.8.2.c"
+              },
+              "28": {
+                "text": "Understanding Figurative Language, Word Relationships, and Nuances in Word Meanings (L.8.5.a-b)",
+                "url": "https://docs.google.com/document/d/1Xb0LQMDG4321GNI2R8N8yB5qjp6U7F7vBSauRLj_Bvg/edit?tab=t.0#bookmark=id.jrz2gkz0w8ll",
+                "code": "L.8.5.a-b"
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
