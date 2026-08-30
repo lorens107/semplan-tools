@@ -12584,6 +12584,88 @@
             }
           }
         }
+      },
+      "Science": {
+        "Studies Weekly": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "Who Are Scientists and Engineers?",
+            "2": "Big Ideas of Science and Engineering",
+            "3": "Data and Measurement",
+            "4": "The Engineering Design Process",
+            "5": "Forces",
+            "6": "Patterns in Force",
+            "7": "Engineering Design: Why Do I Move When the Car Stops",
+            "8": "Magnetic Forces",
+            "9": "Electromagnets",
+            "10": "Electric Forces",
+            "11": "Engineering Design: Magnetic and Electric Forces",
+            "12": "Surviving in a Group",
+            "13": "Fossils",
+            "14": "Clues From the Past",
+            "15": "Organisms in Their Habitats",
+            "16": "Engineering Design: The Big Mix Up",
+            "17": "Changing Ecosystems",
+            "18": "People and the Ocean",
+            "19": "Engineering Design: Water Collection",
+            "20": "Life Cycles",
+            "21": "Inheriting Traits",
+            "22": "Families",
+            "23": "Adaptations",
+            "24": "Are an Organism’s Traits Influenced by the Environment?",
+            "25": "Variation Helps Organisms Survive",
+            "26": "What Will the Weather Be Today?",
+            "27": "Weather vs. Climate",
+            "28": "Weather Hazards",
+            "29": "Engineering Design: Can We Control the Weather",
+            "30": "Matter",
+            "31": "What Is Energy?",
+            "32": "Engineering Design: Heat Transfer"
+          }
+        }
+      },
+      "HSS": {
+        "Studies Weekly": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "Developing Inquiries",
+            "2": "Sources",
+            "3": "Examining Evidence and Communicating Conclusions",
+            "4": "Taking Action",
+            "5": "Engage in Your Own Inquiry",
+            "6": "The Themes of Geography",
+            "7": "Thinking Like a Geographer",
+            "8": "Map Skills",
+            "9": "Natural Features and Landforms of California",
+            "10": "Natural Features and Landforms: Oceans and Deserts",
+            "11": "California's Natural Regions Today",
+            "12": "Migration",
+            "13": "Water Is a Natural Resource",
+            "14": "Engage in Your Own Inquiry",
+            "15": "The Chumash",
+            "16": "Adapting to the Region",
+            "17": "The Maidu and Sierra Miwok",
+            "18": "The Yurok",
+            "19": "Engage In Your Own Inquiry",
+            "20": "Timelines",
+            "21": "Using Charts, Maps, and Data",
+            "22": "Communities Over Time",
+            "23": "Urban, Suburban, and Rural Land Use",
+            "24": "Producers and Consumers",
+            "25": "Community Interdependence",
+            "26": "Transportation Over Time",
+            "27": "Energy Over Time",
+            "28": "Eyewitnesses to Change Over Time",
+            "29": "Important Documents",
+            "30": "American Government",
+            "31": "American Holidays and Symbols",
+            "32": "The United States Government",
+            "33": "Tribal and State Government",
+            "34": "Local Government",
+            "35": "Engage in Your Own Inquiry",
+            "36": "Year in Review"
+          }
+        }
       }
     },
     "1": {
@@ -12842,6 +12924,88 @@
                 "code": "RF.1.4.a-c"
               }
             }
+          }
+        }
+      },
+      "Science": {
+        "Studies Weekly": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "Scientists and Engineers",
+            "2": "You Can Be a Scientist or Engineer",
+            "3": "Teamwork",
+            "4": "Patterns",
+            "5": "The Engineering Design Process",
+            "6": "Cause and Effect",
+            "7": "What Is Sound?",
+            "8": "Features of Sound",
+            "9": "What Is Light?",
+            "10": "Sources of Light",
+            "11": "Light on Materials",
+            "12": "Sound and Light",
+            "13": "Engineering: Sound and Light",
+            "14": "Structure and Function",
+            "15": "Animals Have Parts That Help Them",
+            "16": "Animals Live in Many Places",
+            "17": "Plants Have Parts That Help Them",
+            "18": "Plants Live in Many Places",
+            "19": "Engineering: Animals and Plants",
+            "20": "Models",
+            "21": "Animal Offspring",
+            "22": "Plant Offspring",
+            "23": "Animals and Their Offspring",
+            "24": "Plants and Their Offspring",
+            "25": "Engineering: Learning from Offspring",
+            "26": "Measurement and Data",
+            "27": "Objects in Space",
+            "28": "Daytime Sky",
+            "29": "Nighttime Sky",
+            "30": "Phases of the Moon",
+            "31": "Seasons",
+            "32": "Engineering Design: Sundial"
+          }
+        }
+      },
+      "HSS": {
+        "Studies Weekly": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "Community",
+            "2": "Rules and Laws",
+            "3": "Principles of Democracy",
+            "4": "Our Government",
+            "5": "Important Documents",
+            "6": "Founders",
+            "7": "Patriotism",
+            "8": "National Patriotic Symbols",
+            "9": "California State Symbols",
+            "10": "National Patriotic Holidays",
+            "11": "Map Skills",
+            "12": "Location",
+            "13": "Physical Characteristics of a Place",
+            "14": "Human Characteristics of a Place",
+            "15": "Adapting to Our Environment",
+            "16": "Geography of California",
+            "17": "Geography of Our Community: Inquiry",
+            "18": "Calendars",
+            "19": "Changes Over Time",
+            "20": "Life Long Ago and Today",
+            "21": "Inventors",
+            "22": "Transportation Over Time",
+            "23": "Communication Over Time",
+            "24": "Culture",
+            "25": "One State, Many People",
+            "26": "Folktales and Legends",
+            "27": "Needs and Wants",
+            "28": "Economics",
+            "29": "Workers Contribute to the Economy",
+            "30": "Economic Choices",
+            "31": "Spending and Saving",
+            "32": "What Is Inquiry?",
+            "33": "Questions Come From Many Places: Part One",
+            "34": "Questions Come From Many Places: Part Two",
+            "35": "Anansi and Inquiry",
+            "36": "Year in Review"
           }
         }
       }
@@ -13115,6 +13279,88 @@
                 "code": "RF.2.4.a-c"
               }
             }
+          }
+        }
+      },
+      "Science": {
+        "Studies Weekly": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "What Is Science? What Is Engineering?",
+            "2": "How Scientists and Engineers Think and Act",
+            "3": "Working Together",
+            "4": "The Engineering Design Process",
+            "5": "Crosscutting Concepts",
+            "6": "Measurement and Data",
+            "7": "States of Matter",
+            "8": "Properties of Matter",
+            "9": "Investigating Matter: Part One",
+            "10": "Investigating Matter: Part Two",
+            "11": "Engineering Design: Catapults",
+            "12": "Assembly and Disassembly",
+            "13": "Changes in States of Matter",
+            "14": "Germination and Plant Growth",
+            "15": "Plant Parts and Functions",
+            "16": "Pollination",
+            "17": "Seed Dispersal",
+            "18": "Engineering Design: Seed Dispersal or Pollination",
+            "19": "Rainforest and Temperate Forest Habitats",
+            "20": "Tundra, Grassland, and Desert Habitats",
+            "21": "Saltwater and Freshwater Habitats",
+            "22": "Human Impact on Habitats",
+            "23": "Earth’s Surface Changes Quickly",
+            "24": "Earth’s Surface Changes Slowly",
+            "25": "Natural Disaster Safeguards",
+            "26": "Engineering Design: Protection Against Flooding",
+            "27": "Engineering Design: Protection Against High Winds",
+            "28": "Landforms",
+            "29": "Bodies of Water",
+            "30": "Water Cycle",
+            "31": "Engineering Design: My Community’s Landforms and Bodies of Water",
+            "32": "Weather"
+          }
+        }
+      },
+      "HSS": {
+        "Studies Weekly": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "Families Today and In the Past",
+            "2": "The Year Ahead",
+            "3": "Thinking Like a Historian",
+            "4": "Sequencing and Chronology",
+            "5": "What Is Inquiry?",
+            "6": "Family History Inquiry",
+            "7": "Culture",
+            "8": "Your Family Culture",
+            "9": "Rules and Laws",
+            "10": "Principles of Democracy",
+            "11": "Solving Problems",
+            "12": "Important Documents",
+            "13": "Purpose and Structure of Government",
+            "14": "State, Local, and Tribal Governments",
+            "15": "Citizenship",
+            "16": "Patriotism",
+            "17": "Important Holidays",
+            "18": "Themes of Geography",
+            "19": "Maps",
+            "20": "Location",
+            "21": "Place: Physical Characteristics",
+            "22": "Place: Human Characteristics",
+            "23": "Human-Environment Interaction",
+            "24": "Movement",
+            "25": "Regions of the World",
+            "26": "Regions of California",
+            "27": "Needs, Wants, and Resources",
+            "28": "Work and Resources",
+            "29": "Economic Concepts",
+            "30": "Supply and Demand",
+            "31": "Farm to Market in the Past",
+            "32": "Farm to Market Today",
+            "33": "Heroes",
+            "34": "Hero Biographies: Part One",
+            "35": "Hero Biographies: Part Two",
+            "36": "Year in Review"
           }
         }
       }
@@ -13400,6 +13646,88 @@
                 "code": "RF.4.4"
               }
             }
+          }
+        }
+      },
+      "Science": {
+        "Studies Weekly": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "Measurement",
+            "2": "Data and Graphing",
+            "3": "Engineering Design Process",
+            "4": "Crosscutting Concepts",
+            "5": "Mindsets",
+            "6": "Sound Energy",
+            "7": "Let's Play Ball!",
+            "8": "Law of Conservation of Energy",
+            "9": "Electricity",
+            "10": "The Energy of Collision",
+            "11": "Types of Energy",
+            "12": "Engineering Design: Rube Goldberg Machine",
+            "13": "Nonrenewable Energy",
+            "14": "Renewable Energy",
+            "15": "What Causes Changes in the Wavelength of a Wave?",
+            "16": "How Much Energy Is in a Wave?",
+            "17": "Transferring Data",
+            "18": "The Science of Eyesight",
+            "19": "Phases of the Moon",
+            "20": "What Is So Special About Leaves?",
+            "21": "Biodiversity",
+            "22": "Engineering Design: Hermit Crabs",
+            "23": "Animal Senses",
+            "24": "The Five Senses",
+            "25": "Adaptation",
+            "26": "What Is a Fossil?",
+            "27": "The Rock Cycle",
+            "28": "Weathering and Erosion",
+            "29": "Maps Are Models",
+            "30": "Volcanoes",
+            "31": "Engineering Design: Natural Disasters",
+            "32": "Stopping the Impact!"
+          }
+        }
+      },
+      "HSS": {
+        "Studies Weekly": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "The Year Ahead",
+            "2": "Developing Questions and Planning Inquiries",
+            "3": "Sources",
+            "4": "Using Evidence to Communicate Conclusions",
+            "5": "Themes of Geography",
+            "6": "Map Skills and Place",
+            "7": "Human-Environment Interaction",
+            "8": "Regions of the United States",
+            "9": "Regions of California",
+            "10": "Culture",
+            "11": "Life in North America Before European Exploration and Colonization",
+            "12": "California American Indian Tribes of the Pacific Coast and Desert Regions",
+            "13": "California American Indian Tribes of the Mountain, Central Valley and Delta Region",
+            "14": "Exploration and Encounters",
+            "15": "Colonization",
+            "16": "The Mission System",
+            "17": "The End of the Mission System",
+            "18": "Government and Economy of California Under Mexican",
+            "19": "Early Settlers",
+            "20": "The Mexican-American War and the Bear Flag Revolt",
+            "21": "Gold Is Discovered in California",
+            "22": "Migration to California",
+            "23": "The Gold Rush",
+            "24": "Gold Rush Stories",
+            "25": "California Statehood",
+            "26": "Technology Changes California",
+            "27": "Challenges to Immigration",
+            "28": "California Government",
+            "29": "California's Education System",
+            "30": "California at the Turn of the 20th Century",
+            "31": "The Great Depression and the Dust Bowl",
+            "32": "World War II",
+            "33": "The Quest for Civil Rights",
+            "34": "The Economy of California",
+            "35": "Water and Its Impact on California",
+            "36": "Looking Back, Looking Forward"
           }
         }
       }
@@ -13688,6 +14016,88 @@
                 "code": "RF.5.4"
               }
             }
+          }
+        }
+      },
+      "Science": {
+        "Studies Weekly": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "Measurement and the Metric System",
+            "2": "Crosscutting Concepts",
+            "3": "Engineering Design Process",
+            "4": "What Is Matter?",
+            "5": "States of Matter",
+            "6": "Law of Conservation of Mass",
+            "7": "Properties of Matter: Part One",
+            "8": "Properties of Matter: Part Two",
+            "9": "Engineering Design: Fixing Potholes",
+            "10": "Matter Flow in Ecosystems",
+            "11": "Photosynthesis",
+            "12": "Plants",
+            "13": "Invasive Species",
+            "14": "The Carbon Connection",
+            "15": "Hydrosphere",
+            "16": "Geosphere",
+            "17": "Atmosphere",
+            "18": "Biosphere",
+            "19": "Engineering Design: Building Dams",
+            "20": "Types of Water",
+            "21": "The Role of Water",
+            "22": "Engineering Design: Oil Spill",
+            "23": "Protecting the Earth",
+            "24": "Engineering Design: Landfills",
+            "25": "What Is Gravity?",
+            "26": "Gravity in Space",
+            "27": "Engineering Design: Mission to Mars",
+            "28": "What Is a Star?",
+            "29": "Shadows",
+            "30": "The Earth",
+            "31": "The Moon",
+            "32": "The Seasons"
+          }
+        }
+      },
+      "HSS": {
+        "Studies Weekly": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "Developing Questions and Planning Inquiries",
+            "2": "Historical Inquiry Sources",
+            "3": "Analyzing and Evaluating Evidence",
+            "4": "Communicating Conclusions",
+            "5": "Engaging in Your Own Inquiry",
+            "6": "Life in the Americas",
+            "7": "American Indian Governments and Culture",
+            "8": "Trade and Economics in North America",
+            "9": "The Age of Encounters",
+            "10": "Consequences of Contact",
+            "11": "Guided Inquiry: Lives of North American Indians",
+            "12": "Colonies in North America",
+            "13": "Jamestown",
+            "14": "Plymouth",
+            "15": "Philadelphia",
+            "16": "Colonial Life",
+            "17": "Conflicts and Awakening",
+            "18": "Clash of the Empires",
+            "19": "Consequences of the French and Indian War",
+            "20": "Guided Inquiry: Impact of North America on Colonial Empires",
+            "21": "The Acts of Parliament",
+            "22": "The Actions of the Colonies",
+            "23": "The Shot Heard 'Round the World",
+            "24": "Independence and Revolution: The People",
+            "25": "The War in the Southern Colonies",
+            "26": "Independence and Revolution: The Military",
+            "27": "The Founders and Process",
+            "28": "Constitution",
+            "29": "The Bill of Rights",
+            "30": "Guided Inquiry: States and the Constitutional Convention",
+            "31": "The New Nation",
+            "32": "America On the Move",
+            "33": "Expansion and Growth",
+            "34": "Impact of Westward Settlement on American Indians",
+            "35": "The Cherokee Nation",
+            "36": "Guided Inquiry: Impact of Expansion and Growth on the United States"
           }
         }
       }
@@ -13979,6 +14389,84 @@
             }
           }
         }
+      },
+      "Science": {
+        "Studies Weekly": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "The Scientific Method",
+            "2": "Properties of Matter",
+            "3": "Changing Matter",
+            "4": "Force",
+            "5": "Motion",
+            "6": "Energy",
+            "7": "Energy Transformation",
+            "8": "Light and Sound",
+            "9": "Machines",
+            "10": "Engineering",
+            "11": "Classification",
+            "12": "Cells, Tissue, Organs",
+            "13": "Genetics and Heredity",
+            "14": "Forensics",
+            "15": "Plants",
+            "16": "Animals",
+            "17": "Adaptation",
+            "18": "Ecology",
+            "19": "Our Planet",
+            "20": "Shaping the Earth",
+            "21": "Natural Disasters",
+            "22": "Global Climate",
+            "23": "Resources",
+            "24": "Water",
+            "25": "Stars, Planets, Galaxies",
+            "26": "Planets",
+            "27": "Earth, Sun and Moon",
+            "28": "Space Exploration"
+          }
+        }
+      },
+      "HSS": {
+        "Studies Weekly": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "Planet Earth",
+            "2": "Studying the Earth",
+            "3": "Earliest Humans",
+            "4": "Human Communities",
+            "5": "The Agricultural Evolution",
+            "6": "Historic Times Begin",
+            "7": "The Akkadian Empire",
+            "8": "Babylon and the Assyrian Empire",
+            "9": "People of Phoenicia",
+            "10": "Politics and Government for the Ages",
+            "11": "Ancient Egypt",
+            "12": "Egyptian Civilization",
+            "13": "Pyramids",
+            "14": "The Kush Civilization",
+            "15": "More African Kingdoms",
+            "16": "Ancient Israelites",
+            "17": "Israelites on the Move",
+            "18": "Judaism Survives",
+            "19": "The Persian Empire",
+            "20": "Ancient Greece",
+            "21": "Greek Civilization",
+            "22": "Greek Mythology",
+            "23": "Alexander the Great",
+            "24": "Ancient India",
+            "25": "Indian Civilization",
+            "26": "Ancient China",
+            "27": "Chinese Civilization",
+            "28": "Ancient Rome",
+            "29": "The Golden Age of Rome",
+            "30": "The Roman Empire",
+            "31": "The Rise of Christianity",
+            "32": "Byzantine Empire",
+            "33": "Roman Contributions",
+            "34": "Mesoamerican Civilizations",
+            "35": "Andean Civilization",
+            "36": "Let’s Review"
+          }
+        }
       }
     },
     "7": {
@@ -14263,6 +14751,84 @@
             }
           }
         }
+      },
+      "Science": {
+        "Studies Weekly": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "The Scientific Method",
+            "2": "Properties of Matter",
+            "3": "Changing Matter",
+            "4": "Force",
+            "5": "Motion",
+            "6": "Energy",
+            "7": "Energy Transformation",
+            "8": "Light and Sound",
+            "9": "Machines",
+            "10": "Engineering",
+            "11": "Classification",
+            "12": "Cells, Tissue, Organs",
+            "13": "Genetics and Heredity",
+            "14": "Forensics",
+            "15": "Plants",
+            "16": "Animals",
+            "17": "Adaptation",
+            "18": "Ecology",
+            "19": "Our Planet",
+            "20": "Shaping the Earth",
+            "21": "Natural Disasters",
+            "22": "Global Climate",
+            "23": "Resources",
+            "24": "Water",
+            "25": "Stars, Planets, Galaxies",
+            "26": "Planets",
+            "27": "Earth, Sun and Moon",
+            "28": "Space Exploration"
+          }
+        }
+      },
+      "HSS": {
+        "Studies Weekly": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "World History and Geography-300-1750 C.E. (foundational/skills week — no specific CA H-SS content standard)",
+            "2": "A Cultural and Geographical Framework (foundational/skills week — no specific CA H-SS content standard)",
+            "3": "World Regions and Interconnections (Standards 7.1, 7.3, 7.4, 7.7)",
+            "4": "The Roman Empire (Standards 7.1, 7.1.1, 7.1.2)",
+            "5": "The Development and Spread of Christianity (Standards 7.1, 7.1.1, 7.6, 7.6.2)",
+            "6": "The Byzantine Empire (Standards 7.1, 7.1.2, 7.1.3)",
+            "7": "Southwestern Asia (Standards 7.2, 7.2.1, 7.2.5, 7.2.6)",
+            "8": "The Development and Spread of Islam (Standards 7.2, 7.2.2, 7.2.3, 7.2.4)",
+            "9": "Southwest Asia Sites of Encounter (Standards 7.2, 7.2.1, 7.2.5, 7.2.6)",
+            "10": "West African Empires: Ghana and Mali (Standards 7.4, 7.4.1, 7.4.2, 7.4.3, 7.4.4, 7.4.5)",
+            "11": "Hinduism (foundational/skills week — no specific CA H-SS content standard)",
+            "12": "Buddhism (Standards 7.3, 7.3.1, 7.5.4)",
+            "13": "The Tang and Song Dynasties (Standards 7.3, 7.3.1, 7.3.2)",
+            "14": "The Chinese Influence in East Asia (Standards 7.3, 7.3.3, 7.3.4, 7.3.5, 7.3.6, 7.5.1)",
+            "15": "Mongols in the Medieval World (Standards 7.3, 7.3.4)",
+            "16": "Medieval Japan (Standards 7.5, 7.5.1, 7.5.2, 7.5.3, 7.5.4, 7.5.5, 7.5.6)",
+            "17": "The Silk Road (Standards 7.8, 7.8.3)",
+            "18": "Europe (Standards 7.2, 7.6, 7.6.1, 7.6.2)",
+            "19": "Medieval Europe (Standards 7.6, 7.6.2, 7.6.5)",
+            "20": "The Feudal System (Standards 7.6, 7.6.3)",
+            "21": "Knights, Guilds and the Code of Chivalry (Standards 7.6, 7.6.3)",
+            "22": "The Crusades (Standards 7.6, 7.6.2, 7.6.4, 7.6.6, 7.6.8, 7.6.9)",
+            "23": "The Bubonic Plague (Standards 7.6, 7.6.7)",
+            "24": "Major Sites of Exchange in the Medieval World (Standards 7.6, 7.6.1)",
+            "25": "Mesoamerica: The Maya (Standards 7.7, 7.7.1, 7.7.2, 7.7.4, 7.7.5)",
+            "26": "Mesoamerica: The Aztec (Standards 7.7, 7.7.1, 7.7.2, 7.7.3, 7.7.4, 7.7.5)",
+            "27": "The Americas: The Inca (Standards 7.7, 7.7.1, 7.7.2, 7.7.3, 7.7.4, 7.7.5)",
+            "28": "The Renaissance (Standards 7.8, 7.8.1, 7.8.2, 7.10.2)",
+            "29": "Renaissance Arts and Literature (Standards 7.8, 7.8.4, 7.8.5)",
+            "30": "The Reformation (Standards 7.9, 7.9.1, 7.9.2, 7.9.3, 7.9.5, 7.9.6)",
+            "31": "Religious Development in the American Colonies (Standards 7.9, 7.9.4, 7.9.6)",
+            "32": "From Cooperation to Inquisition (Standard 7.9.7)",
+            "33": "The Scientific Revolution (Standards 7.10, 7.10.1, 7.10.2, 7.10.3)",
+            "34": "The Age of Enlightenment (Standards 7.11, 7.11.3, 7.11.4, 7.11.5)",
+            "35": "Global Convergence (Standards 7.11, 7.11.1, 7.11.2)",
+            "36": "Democratic Thought (Standards 7.11, 7.11.5, 7.11.6)"
+          }
+        }
       }
     },
     "8": {
@@ -14539,6 +15105,84 @@
                 "code": "L.8.5.a-b"
               }
             }
+          }
+        }
+      },
+      "Science": {
+        "Studies Weekly": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "The Scientific Method",
+            "2": "Properties of Matter",
+            "3": "Changing Matter",
+            "4": "Force",
+            "5": "Motion",
+            "6": "Energy",
+            "7": "Energy Transformation",
+            "8": "Light and Sound",
+            "9": "Machines",
+            "10": "Engineering",
+            "11": "Classification",
+            "12": "Cells, Tissue, Organs",
+            "13": "Genetics and Heredity",
+            "14": "Forensics",
+            "15": "Plants",
+            "16": "Animals",
+            "17": "Adaptation",
+            "18": "Ecology",
+            "19": "Our Planet",
+            "20": "Shaping the Earth",
+            "21": "Natural Disasters",
+            "22": "Global Climate",
+            "23": "Resources",
+            "24": "Water",
+            "25": "Stars, Planets, Galaxies",
+            "26": "Planets",
+            "27": "Earth, Sun and Moon",
+            "28": "Space Exploration"
+          }
+        }
+      },
+      "HSS": {
+        "Studies Weekly": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "The American Revolution Begins",
+            "2": "Results of the American Revolution",
+            "3": "Building a Government",
+            "4": "Political Philosophy Behind the Constitution",
+            "5": "The Constitution: Principles, Powers and Rights",
+            "6": "Federal vs. State Government",
+            "7": "Conflict Brings Change",
+            "8": "Citizen Participation in the Political Process",
+            "9": "Growth of a New National Culture",
+            "10": "The War of 1812",
+            "11": "Rise of Capitalism in America",
+            "12": "Changing Boundaries",
+            "13": "Industrialization Comes to the Northeast",
+            "14": "TImmigrants Flood the Northeast",
+            "15": "Development of the American Education System",
+            "16": "The Presidency of Andrew Jackson",
+            "17": "The Women’s Suffrage Movement",
+            "18": "Development of the Southern Agrarian Economy",
+            "19": "Slavery in America",
+            "20": "Free Blacks in the North and South",
+            "21": "Westward Expansion",
+            "22": "Mexican Settlements",
+            "23": "The Texas War for Independence and the Mexican-American War",
+            "24": "New Roles",
+            "25": "Leaders of the Abolitionist Movement",
+            "26": "The Slavery Issue; Who Would Decide?",
+            "27": "North vs. South-Tensions Rise",
+            "28": "The Civil War Begins",
+            "29": "The Civil War Comes to an End",
+            "30": "Aftermath of the Civil War-Reconstruction",
+            "31": "Lasting Consequences of Reconstruction",
+            "32": "Development of Agriculture and Industry",
+            "33": "The Gilded Age",
+            "34": "Urbanization and Industrialization",
+            "35": "The Labor Movement",
+            "36": "Inventions Improve the Quality of Life"
           }
         }
       }
@@ -14823,6 +15467,88 @@
                 "code": "RF.K.3.d"
               }
             }
+          }
+        }
+      },
+      "Science": {
+        "Studies Weekly": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "Science and Engineering",
+            "2": "Scientists and Engineers Use the Five Senses",
+            "3": "You Can Be a Scientist or Engineer",
+            "4": "The Engineering Design Process",
+            "5": "Structure and Function",
+            "6": "Motion",
+            "7": "What Is a Push?",
+            "8": "What Is a Pull?",
+            "9": "Engineering: Push and Pull",
+            "10": "Measurement and Data",
+            "11": "Living and Nonliving Things",
+            "12": "Plants Have Needs",
+            "13": "Animals Have Needs",
+            "14": "Humans Have Needs",
+            "15": "Engineering: Needs",
+            "16": "Cause and Effect",
+            "17": "Plants Change the Environment",
+            "18": "Animals Change the Environment",
+            "19": "Humans Change the Environment",
+            "20": "Engineering: Change",
+            "21": "Models",
+            "22": "Food Chains",
+            "23": "Habitats",
+            "24": "Engineering: Protect a Habitat",
+            "25": "Patterns",
+            "26": "The Sun",
+            "27": "Sun Protection",
+            "28": "Engineering: Sun Protection",
+            "29": "What Is Weather?",
+            "30": "Weather Has Patterns",
+            "31": "Severe Weather",
+            "32": "Engineering: Weather"
+          }
+        }
+      },
+      "HSS": {
+        "Studies Weekly": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "I Am a Member of a Community",
+            "2": "What Are Rules?",
+            "3": "What Are Laws?",
+            "4": "Our Government",
+            "5": "Learning and Working Together",
+            "6": "Characteristics of Active Citizens",
+            "7": "Patriotism",
+            "8": "National Symbols",
+            "9": "California State Symbols",
+            "10": "National Patriotic Holidays",
+            "11": "Map Skills",
+            "12": "Location",
+            "13": "Finding Places Around Me",
+            "14": "Physical Characteristics of a Place",
+            "15": "Resources",
+            "16": "Human Characteristics of a Place",
+            "17": "My Neighborhood",
+            "18": "Calendars",
+            "19": "Words About Time",
+            "20": "Changes Over Time",
+            "21": "Life Long Ago and Today",
+            "22": "Work Long Ago and Today",
+            "23": "Inventions",
+            "24": "Transportation Over Time",
+            "25": "Communication Over Time",
+            "26": "Culture",
+            "27": "Learning From Stories",
+            "28": "Inquiry: Learning From Stories",
+            "29": "Economics",
+            "30": "Economic Choices",
+            "31": "Spending and Saving",
+            "32": "What Is a Question?",
+            "33": "Asking a Question",
+            "34": "Today's Inquiry: Mountains",
+            "35": "Create Your Own Inquiry",
+            "36": "Year in Review"
           }
         }
       }

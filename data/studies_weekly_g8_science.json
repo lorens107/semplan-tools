@@ -1,0 +1,33 @@
+{
+  "_source": "Appendix A of the 26/27 LP Meeting Plan, extracted 8/27/26 - Studies Weekly names its own weeks, so no separate guide PDF was needed.",
+  "weeks": {
+    "1": "The Scientific Method",
+    "2": "Properties of Matter",
+    "3": "Changing Matter",
+    "4": "Force",
+    "5": "Motion",
+    "6": "Energy",
+    "7": "Energy Transformation",
+    "8": "Light and Sound",
+    "9": "Machines",
+    "10": "Engineering",
+    "11": "Classification",
+    "12": "Cells, Tissue, Organs",
+    "13": "Genetics and Heredity",
+    "14": "Forensics",
+    "15": "Plants",
+    "16": "Animals",
+    "17": "Adaptation",
+    "18": "Ecology",
+    "19": "Our Planet",
+    "20": "Shaping the Earth",
+    "21": "Natural Disasters",
+    "22": "Global Climate",
+    "23": "Resources",
+    "24": "Water",
+    "25": "Stars, Planets, Galaxies",
+    "26": "Planets",
+    "27": "Earth, Sun and Moon",
+    "28": "Space Exploration"
+  }
+}

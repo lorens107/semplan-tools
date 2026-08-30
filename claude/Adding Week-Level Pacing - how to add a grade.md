@@ -18,20 +18,49 @@ cells.
 
 ## Status
 
-**Every grade is wired: TK, K, and Grades 1 through 8** - each for Math/Zearn
-and ELA/Beyond the Page, the only two curricula the feature covers. TK closed
-it out 8/29/26. Every grade is verified end to end in a real browser: the
-panel appears, the fields drive it, and the shifted content renders. It stays
-hidden for every other curriculum a grade offers - Open Up Resources, Lincoln
-Learning, Open Up EL Education, Beast Academy, Dimensions Math, LL, Studies
-Weekly, TCI - none of which has week-level data.
+**Every grade is wired: TK, K, and Grades 1 through 8**, and the feature now
+covers **three curricula, not two**:
 
-There is no next grade. A change here now means a new curriculum, a
-correction to an existing grade's transcription, or a change to the panel
-itself.
+    Math/Zearn              TK, K, 1-8
+    ELA/Beyond the Page     TK, K, 1-8
+    Science/Studies Weekly  K, 1-8   (no TK - TK does not offer it)
+    HSS/Studies Weekly      K, 1-8   (no TK)
+
+Studies Weekly was added 8/29/26 and was the first new *curriculum* rather
+than a new grade - it needed a third `kind`. Every combination is verified
+end to end in a real browser. The panel stays hidden for every curriculum
+without week-level data: Open Up Resources, Lincoln Learning, Open Up EL
+Education, Beast Academy, Dimensions Math, LL and TCI.
+
+A change here now means another new curriculum, a correction to an existing
+transcription, or a change to the panel itself.
 
 ### Changelog
 
+- **Studies Weekly, Science and H-SS, Grades K-8** - 18 files in `data/`,
+  `studies_weekly_g{K,1..8}_{science,hss}.json`, all extracted from Appendix A
+  itself (Studies Weekly names its own weeks, so no separate guide PDF was
+  needed). The first new curriculum rather than a new grade, and the first to
+  need a third `kind`.
+
+  **Its courses finish before the year does, on purpose**: Science runs 32
+  weeks in K-5 and 28 in 6-8; H-SS runs the full 36 everywhere. Confirmed
+  independently against Appendix A, which simply has **no LP entry at all**
+  past the finish - grade 1 Science stops at LP9, grade 6 Science at LP8. All
+  18 files are contiguous from week 1 and end exactly where Appendix A ends.
+
+  **It cannot reproduce its stored cells, by construction.** Appendix A's
+  Studies Weekly cells hold only a week range - `Weeks 1-4` - while the week
+  path names each week's title. So the deficit-0 exact-match check is not a
+  correctness test for this curriculum; the check that replaces it is the one
+  in "Courses that finish before week 36" below.
+
+  One Appendix A oddity, left as-is: **grade 7 Science**. Its file is 28
+  contiguous weeks, matching grades 6 and 8, but Appendix A's LP9 for it reads
+  `Week 36` and its LP10 carries prose about working at your own pace. A
+  28-week course has no week 36, so the panel says `Course finished (no
+  content past week 28)` for both LPs. That is the coherent reading and
+  matches grades 6 and 8; Appendix A is the inconsistent one here.
 - **Grade TK** - `data/zearn_gTK_weeks.json` (36 weeks),
   `data/btp_gTK_ela_weeks.json` (5 gap weeks, no cursive). The last grade.
   Its Zearn file is **byte-identical to Grade K's**, week for week - the same
@@ -279,6 +308,15 @@ check the new grade's files against the schema before assuming it.
 mission into one "Mission N: Lessons lo-hi" line, appending each week's
 `assessment` with " + ".
 
+`kind: "studies_weekly"`
+
+    weeks = {"<week>": "title"}
+
+`studiesWeeklyShiftedContent()` emits one `Week N: title` line per week in the
+window, and appends `Course finished (no content past week N)` when the window
+runs past the last week the course has. No week-range line and no activities -
+this data carries no URLs.
+
 `kind: "btp_ela"`
 
     weeks = {"cursive": {text, url},
@@ -429,6 +467,23 @@ transcriptions were confirmed against the guide directly.
 What a reader notices is larger than the arithmetic suggests - LP8 opens with
 a mission Appendix A says is already finished, and LP10 shows seven lessons
 where Appendix A shows two. That is expected here, not a defect.
+
+### Courses that finish before week 36
+
+Studies Weekly Science ends at week 32 (K-5) or 28 (6-8) against a 36-week
+calendar, so a shifted window can run past the end of the course. That is
+**not** missing data, and the panel says so rather than rendering nothing:
+`Course finished (no content past week 32)`. Appendix A handles the same fact
+by having no LP entry at all - grade 1 Science has no LP10 - so the panel is
+strictly more informative here than the printed plan.
+
+Because Appendix A's Studies Weekly cells hold only week ranges while the week
+path names titles, exact-match against stored is meaningless for this
+curriculum. **Use coverage instead**, the same test the unit-shaped grades
+use: every week in the file should appear exactly once across LP1-LP10, and
+the weeks must be contiguous from 1. `add_week_pacing.py` rejects an interior
+gap outright, since a hole would render as a silently missing week; a short
+course is fine, a holed one is not.
 
 ### When the guide's calendar and Appendix A disagree, the calendar wins
 

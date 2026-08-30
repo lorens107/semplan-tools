@@ -1,0 +1,33 @@
+{
+  "_source": "Appendix A of the 26/27 LP Meeting Plan names the same 28 weeks and titles for Grade 7 Science (Studies Weekly) as Grade 6 and Grade 8 - confirmed identical to studies_weekly_g6_science.json and studies_weekly_g8_science.json by Loren 8/29/26. Excluded from the original build_studies_weekly_weeks.py pass because reconstructing Grade 7's per-LP grouping from this week data fails at LP9-10 - the course runs self-paced from that point, so the standard LP-window grouping (STANDARD_WINDOWS) does not reproduce generate_plan.content_for's output there, even though the week titles themselves are identical to Grade 6 and Grade 8. This file carries the week titles only; do not use its weeks 29-34 (if ever added) to assume standard LP9 grouping without checking the self-paced rule first.",
+  "weeks": {
+    "1": "The Scientific Method",
+    "2": "Properties of Matter",
+    "3": "Changing Matter",
+    "4": "Force",
+    "5": "Motion",
+    "6": "Energy",
+    "7": "Energy Transformation",
+    "8": "Light and Sound",
+    "9": "Machines",
+    "10": "Engineering",
+    "11": "Classification",
+    "12": "Cells, Tissue, Organs",
+    "13": "Genetics and Heredity",
+    "14": "Forensics",
+    "15": "Plants",
+    "16": "Animals",
+    "17": "Adaptation",
+    "18": "Ecology",
+    "19": "Our Planet",
+    "20": "Shaping the Earth",
+    "21": "Natural Disasters",
+    "22": "Global Climate",
+    "23": "Resources",
+    "24": "Water",
+    "25": "Stars, Planets, Galaxies",
+    "26": "Planets",
+    "27": "Earth, Sun and Moon",
+    "28": "Space Exploration"
+  }
+}

@@ -268,6 +268,34 @@
     return { lines: lines, activities: acts };
   }
 
+  /* Studies Weekly names its own weeks - one title per week, no mission or
+   * lesson structure and no gap activities, so it needs its own renderer
+   * rather than a variant of the other two. Its courses also finish before
+   * the year does: Science runs 32 weeks in K-5 and 28 in 6-8, against a
+   * 36-week calendar, while H-SS runs the full 36.
+   *
+   * A window past the end says so in as many words. Silently rendering
+   * nothing would look like missing data, which is exactly what the shifted
+   * view must not do.
+   */
+  function studiesWeeklyShiftedContent(weeks, win) {
+    if (!win) return { lines: ['Curriculum finished before this LP (week range ran out)'], activities: [] };
+    var last = 0;
+    Object.keys(weeks).forEach(function (k) {
+      var n = parseInt(k, 10);
+      if (n > last) last = n;
+    });
+    var lines = [];
+    for (var wk = win[0]; wk <= win[1]; wk++) {
+      var title = weeks[String(wk)];
+      if (title) lines.push('Week ' + wk + ': ' + title);
+    }
+    if (win[1] > last) {
+      lines.push('Course finished (no content past week ' + last + ')');
+    }
+    return { lines: lines, activities: [] };
+  }
+
   // The one entry point build() calls. Returns null when this
   // grade/subject/curriculum has no real week data, so the caller falls back
   // to the normal per-LP content untouched.
@@ -277,6 +305,7 @@
     var win = shiftedWindows(data, deficit)[String(lp)];
     if (pacing.kind === 'zearn') return zearnShiftedContent(pacing.weeks, win);
     if (pacing.kind === 'btp_ela') return btpElaShiftedContent(pacing.weeks, win);
+    if (pacing.kind === 'studies_weekly') return studiesWeeklyShiftedContent(pacing.weeks, win);
     return null;
   }
 

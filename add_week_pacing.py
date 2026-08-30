@@ -20,6 +20,11 @@ be diffed). The contract, from engine.js:
                            "gap_by_week": {"<week>": {text, url, code?}}}
                   -> btpElaShiftedContent() reads gap_by_week[wk] and cursive.
 
+  kind "studies_weekly"
+                  weeks = {"<week>": "title"}
+                  -> studiesWeeklyShiftedContent() names each week in the
+                     window and says so when the window runs past the end.
+
 Anything the engine would trip over is rejected here rather than shipped, so a
 source file in a different shape fails loudly instead of rendering blank cells.
 """
@@ -30,9 +35,11 @@ DATA = WEB / 'web_data.json'
 
 
 def unwrap(payload, kind):
-    """Accept either a bare weeks payload or a {kind, weeks} wrapper."""
-    if isinstance(payload, dict) and 'weeks' in payload and 'kind' in payload:
-        if payload['kind'] != kind:
+    """Accept a bare weeks payload, a {kind, weeks} wrapper, or a file that
+    nests its data under "weeks" alongside provenance keys - which is how the
+    studies_weekly files are written."""
+    if isinstance(payload, dict) and 'weeks' in payload:
+        if 'kind' in payload and payload['kind'] != kind:
             sys.exit('file declares kind %r, expected %r' % (payload['kind'], kind))
         return payload['weeks']
     return payload
@@ -94,14 +101,39 @@ def check_btp(weeks):
     return out
 
 
+def check_studies_weekly(weeks):
+    if not isinstance(weeks, dict):
+        sys.exit('studies_weekly: expected an object keyed by week number')
+    weeks = {k: v for k, v in weeks.items() if not k.startswith('_')}
+    for wk, title in weeks.items():
+        if not str(wk).isdigit() or not 1 <= int(wk) <= 36:
+            sys.exit('studies_weekly: week keys must be "1".."36", got %r' % wk)
+        if not isinstance(title, str) or not title.strip():
+            sys.exit('studies_weekly week %s: title must be a non-empty string' % wk)
+    nums = sorted(int(w) for w in weeks)
+    # These courses finish early on purpose - Science is 32 weeks in K-5 and
+    # 28 in 6-8 - so a short course is fine. A HOLE is not: an interior gap
+    # would render as a silently missing week.
+    if nums != list(range(1, len(nums) + 1)):
+        missing = [n for n in range(1, nums[-1] + 1) if n not in nums]
+        sys.exit('studies_weekly: weeks must run 1..N with no gaps; missing %s'
+                 % ','.join(map(str, missing)))
+    print('  note: %d weeks (1-%d)%s' % (len(nums), nums[-1],
+          '' if nums[-1] == 36 else ' - course finishes before week 36, which is expected here'))
+    return weeks
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--grade', required=True)
     ap.add_argument('--zearn')
     ap.add_argument('--btp-ela', dest='btp_ela')
+    ap.add_argument('--sw-science', dest='sw_science')
+    ap.add_argument('--sw-hss', dest='sw_hss')
     args = ap.parse_args()
-    if not (args.zearn or args.btp_ela):
-        sys.exit('nothing to add: pass --zearn and/or --btp-ela')
+    if not (args.zearn or args.btp_ela or args.sw_science or args.sw_hss):
+        sys.exit('nothing to add: pass --zearn, --btp-ela, --sw-science '
+                 'and/or --sw-hss')
 
     data = json.loads(DATA.read_text(encoding='utf-8'))
     if args.grade not in data['grades']:
@@ -113,6 +145,12 @@ def main():
         jobs.append(('Math', 'Zearn', 'zearn', check_zearn, args.zearn))
     if args.btp_ela:
         jobs.append(('ELA', 'Beyond the Page', 'btp_ela', check_btp, args.btp_ela))
+    if args.sw_science:
+        jobs.append(('Science', 'Studies Weekly', 'studies_weekly',
+                     check_studies_weekly, args.sw_science))
+    if args.sw_hss:
+        jobs.append(('HSS', 'Studies Weekly', 'studies_weekly',
+                     check_studies_weekly, args.sw_hss))
 
     for subject, curriculum, kind, check, path in jobs:
         available = data['grades'][args.grade]['available'].get(subject, [])
