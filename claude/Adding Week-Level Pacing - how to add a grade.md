@@ -25,9 +25,14 @@ covers **three curricula, not two**:
     ELA/Beyond the Page     TK, K, 1-8
     Science/Studies Weekly  K, 1-8   (no TK - TK does not offer it)
     HSS/Studies Weekly      K, 1-8   (no TK)
+    Math/LL                 1-8
+    ELA/Lincoln Learning    1-8
+    Science/Lincoln Learning 1-8
+    HSS/Lincoln Learning    1-8 except grade 3, which does not offer it
 
 Studies Weekly was added 8/29/26 and was the first new *curriculum* rather
-than a new grade - it needed a third `kind`. Every combination is verified
+than a new grade - it needed a third `kind`. Lincoln Learning followed on
+8/30/26 and needed no new kind at all, reusing `studies_weekly`. Every combination is verified
 end to end in a real browser. The panel stays hidden for every curriculum
 without week-level data: Open Up Resources, Lincoln Learning, Open Up EL
 Education, Beast Academy, Dimensions Math, LL and TCI.
@@ -37,6 +42,38 @@ transcription, or a change to the panel itself.
 
 ### Changelog
 
+- **Lincoln Learning, every subject, Grades 1-8** - one file,
+  `data/ll_week_lesson_map.json`, wired into **31 slots**. Reuses
+  `kind: "studies_weekly"` unchanged; no engine change was needed.
+
+  **The first curriculum with no guide-transcribed weeks at all.** Do not go
+  looking for a source PDF: LL's own guides give no per-week granularity -
+  assessments are listed per Learning Period with no week attached, confirmed
+  against 38 district LL pacing guides and against Appendix A's own LL cells.
+  The weeks are *derived*, from the fixed 180-lesson range table already used
+  by the Semester Plan Generator plus the district's 2026-27 school calendar,
+  on the basis that students do one LL lesson per subject per school day.
+  Note the calendar has 175 instructional days against the table's 180, so the
+  day-count weighting is a proportion guide, not a literal one-lesson-per-day
+  count; the fixed table wins, per Loren 8/30/26.
+
+  **One file, many slots.** The map is universal - identical at every grade
+  and subject, because it derives from a table that is itself identical
+  everywhere. `add_week_pacing.py` gained `--ll-math` and `--ll-other` for
+  this: the same path is passed to both, eight invocations cover all 31 slots,
+  and no duplicate copies of the file exist. `--ll-other` covers ELA, Science
+  and HSS and **skips a subject the grade does not offer** rather than
+  failing, which is what grade 3 HSS needs.
+
+  **Two curriculum keys, already established.** The page calls it `LL` under
+  Math and `Lincoln Learning` under everything else. That split predates this
+  work and is baked into each grade's `available[]`; the two flags exist to
+  honour it.
+
+  Verified: every LP window reproduces the fixed lesson range exactly at
+  deficit 0, at every slot checked. Like Studies Weekly it cannot match its
+  stored cells line-for-line - stored holds `Lessons 1-15`, the panel holds
+  the four weeks that make it up - so coverage is again the test.
 - **Studies Weekly, Science and H-SS, Grades K-8** - 18 files in `data/`,
   `studies_weekly_g{K,1..8}_{science,hss}.json`, all extracted from Appendix A
   itself (Studies Weekly names its own weeks, so no separate guide PDF was
@@ -484,6 +521,19 @@ use: every week in the file should appear exactly once across LP1-LP10, and
 the weeks must be contiguous from 1. `add_week_pacing.py` rejects an interior
 gap outright, since a hole would render as a silently missing week; a short
 course is fine, a holed one is not.
+
+### Derived weeks, where no guide has them
+
+Lincoln Learning is the first curriculum whose weeks were not transcribed from
+anything. Its guides carry no per-week granularity, so the weeks are computed
+from a fixed lesson-range table plus the school calendar. **There is no source
+PDF to check it against, and looking for one is wasted effort.**
+
+What replaces guide-verification here is internal consistency: the derived
+weeks must reconstruct the fixed table exactly. Union the lesson ranges of the
+weeks in each LP window and compare against the table - LP1 must come out
+1-15, LP2 16-40, and so on to LP10 at 170-180 - and confirm lessons 1-180 are
+covered once each with no gaps or duplicates. That is the whole check.
 
 ### When the guide's calendar and Appendix A disagree, the calendar wins
 

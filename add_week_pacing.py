@@ -130,10 +130,17 @@ def main():
     ap.add_argument('--btp-ela', dest='btp_ela')
     ap.add_argument('--sw-science', dest='sw_science')
     ap.add_argument('--sw-hss', dest='sw_hss')
+    # Lincoln Learning's week map is universal - one file for every grade,
+    # subject and course - so these two take the same path. The page calls the
+    # curriculum "LL" under Math and "Lincoln Learning" everywhere else, and
+    # that split is already baked into the grades' available[] lists.
+    ap.add_argument('--ll-math', dest='ll_math')
+    ap.add_argument('--ll-other', dest='ll_other')
     args = ap.parse_args()
-    if not (args.zearn or args.btp_ela or args.sw_science or args.sw_hss):
-        sys.exit('nothing to add: pass --zearn, --btp-ela, --sw-science '
-                 'and/or --sw-hss')
+    if not (args.zearn or args.btp_ela or args.sw_science or args.sw_hss
+            or args.ll_math or args.ll_other):
+        sys.exit('nothing to add: pass --zearn, --btp-ela, --sw-science, '
+                 '--sw-hss, --ll-math and/or --ll-other')
 
     data = json.loads(DATA.read_text(encoding='utf-8'))
     if args.grade not in data['grades']:
@@ -151,10 +158,26 @@ def main():
     if args.sw_hss:
         jobs.append(('HSS', 'Studies Weekly', 'studies_weekly',
                      check_studies_weekly, args.sw_hss))
+    if args.ll_math:
+        jobs.append(('Math', 'LL', 'studies_weekly',
+                     check_studies_weekly, args.ll_math))
+    if args.ll_other:
+        # one flag, three subjects: which of them a grade actually offers
+        # varies (grade 3 has no LL under HSS), so these skip rather than
+        # fail when the slot does not exist.
+        for subject in ('ELA', 'Science', 'HSS'):
+            jobs.append((subject, 'Lincoln Learning', 'studies_weekly',
+                         check_studies_weekly, args.ll_other, True))
 
-    for subject, curriculum, kind, check, path in jobs:
+    for job in jobs:
+        subject, curriculum, kind, check, path = job[:5]
+        optional = len(job) > 5 and job[5]
         available = data['grades'][args.grade]['available'].get(subject, [])
         if curriculum not in available:
+            if optional:
+                print('  %s / %s / %s: not offered here, skipped'
+                      % (args.grade, subject, curriculum))
+                continue
             sys.exit('grade %s has no %s under %s - the panel would never show'
                      % (args.grade, curriculum, subject))
         payload = json.loads(pathlib.Path(path).read_text(encoding='utf-8'))
