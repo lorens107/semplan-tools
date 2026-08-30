@@ -18,20 +18,40 @@ cells.
 
 ## Status
 
-**Grades 1 through 8 all have working week-shift data**, each for
-Math/Zearn and ELA/Beyond the Page. Every one is verified end to end in a
-real browser - the panel appears, the fields drive it, and the shifted
-content renders. No other grade has week data, and the panel correctly stays
-hidden for them.
+**Every grade is wired: TK, K, and Grades 1 through 8** - each for Math/Zearn
+and ELA/Beyond the Page, the only two curricula the feature covers. TK closed
+it out 8/29/26. Every grade is verified end to end in a real browser: the
+panel appears, the fields drive it, and the shifted content renders. It stays
+hidden for every other curriculum a grade offers - Open Up Resources, Lincoln
+Learning, Open Up EL Education, Beast Academy, Dimensions Math, LL, Studies
+Weekly, TCI - none of which has week-level data.
 
-**Grade K is live for both subjects**, wired 8/29/26 in commit `f95912f`,
-then adjusted the same day after Loren's direction on what the ELA panel
-should actually show - see "The ELA panel never shows book/unit content,
-even for unit-shaped guides" below before touching TK, which has the same
-guide shape and will raise the same question.
+There is no next grade. A change here now means a new curriculum, a
+correction to an existing grade's transcription, or a change to the panel
+itself.
 
 ### Changelog
 
+- **Grade TK** - `data/zearn_gTK_weeks.json` (36 weeks),
+  `data/btp_gTK_ela_weeks.json` (5 gap weeks, no cursive). The last grade.
+  Its Zearn file is **byte-identical to Grade K's**, week for week - the same
+  course, and TK's Appendix A row matches K's line for line - so it carries
+  the same guide typo at week 19 (a Mission 4 Topic A lesson labelled
+  "Mission 5", transcribed as Mission 4 on lesson continuity) and the same
+  9-of-10 Zearn result, LP3 being Appendix A's own internal overlap rather
+  than a transcription fault. See the Grade K entry for both.
+
+  Its ELA is the sparsest in the project: only 5 of 36 weeks name a gap
+  activity, so LP5-LP10 render as a bare week-range line. That is correct -
+  see "The ELA panel never shows book/unit content, even for unit-shaped
+  guides", the question TK was expected to raise and which was already
+  settled before it was built. All 5 activities point at Grade K's own
+  supplemental document with identical bookmark anchors, tagged with TK's
+  PTKLF codes instead of K's CCSS codes: the same worksheets, shared between
+  the two grades.
+
+  Like Grade K, TK had no `btp_gTK_ela_pacing.json` to check against - see
+  "No stored pacing file to verify against".
 - **Grade K** - `data/zearn_gK_weeks.json` (36 weeks),
   `data/btp_gK_ela_weeks.json` (15 gap weeks, no cursive). Wired 8/29/26,
   commit `f95912f`. Two things made this grade's build different from

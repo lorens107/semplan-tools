@@ -1,0 +1,30 @@
+{
+ "_source": "CORE ELA Pacing Guide Grade TK - Beyond the Page, uploaded by Loren 8/29/26. No btp_gTK_ela_pacing.json existed to verify against - same as Grade K, gap activities were pulled from the guide directly. Only 5 of 36 weeks name a gap activity with an actual link: weeks 2, 8, 10, 11, and 13 (the placeholder phrase 'Visions Standards Gap Activities' also appears in the Learning Period at-a-glance summary blocks for most other weeks, but with no link attached - not a real gap activity for those weeks). All 5 point to the same document Grade K's ELA file uses (1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og, 'Visions Supplemental Lessons for Moving Beyond the Page - K'), and all 5 bookmark anchors are identical to Grade K's bookmarks for the same week numbers - confirming these are the same shared worksheets, tagged with TK's own PTKLF standard code instead of K's CCSS code. Per Loren's direction, the text field carries the worksheet's actual title (reused from Grade K's file, which already established what each worksheet covers) with TK's own code in parens, matching Grade K's file's style - not the guide's literal PTKLF-coded link text. No cursive key: the guide has exactly one passing mention of 'Printing/Cursive' in the general course blurb and nothing per-week, same as Grade K, Grade 7, and Grade 8. Weeks 1, 3-7, 9, 12, and 14-36 name no gap activity in the guide.",
+ "gap_by_week": {
+  "2": {
+   "text": "Exploring Unknown Words About Pets (PTKLF3.3)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.xim7c8sivh0j",
+   "code": "PTKLF3.3"
+  },
+  "8": {
+   "text": "Exploring Opinions with \"Millions of Cats\" (PTKLF.4.1, 4.4)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.18f0qrwp9qtt",
+   "code": "PTKLF.4.1, 4.4"
+  },
+  "10": {
+   "text": "Engaging in Collaborative Conversations with Owl Babies (PTKLF.1.5, 1.8)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.829gosqsrz26",
+   "code": "PTKLF.1.5, 1.8"
+  },
+  "11": {
+   "text": "Exploring Nouns, Verbs, Prepositions, and Question Words (PTKLF.1.4)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.s7oaz6pedkq1",
+   "code": "PTKLF.1.4"
+  },
+  "13": {
+   "text": "Exploring Written Language with Harold and the Purple Crayon (PTKLF.2.7)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.7xion271l3x0",
+   "code": "PTKLF.2.7"
+  }
+ }
+}
