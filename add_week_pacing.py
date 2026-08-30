@@ -82,16 +82,6 @@ def check_btp(weeks):
         for field in ('text', 'url'):
             if field not in act:
                 sys.exit('btp_ela: gap_by_week[%s] is missing %r' % (wk, field))
-    # unit_by_week is optional too: only the unit-shaped grades (K, TK) have it
-    if 'unit_by_week' in weeks:
-        for wk, unit in weeks['unit_by_week'].items():
-            if not str(wk).isdigit() or not 1 <= int(wk) <= 36:
-                sys.exit('btp_ela: unit_by_week key %r is not a week 1-36' % wk)
-            for field in ('text', 'url'):
-                if field not in unit:
-                    sys.exit('btp_ela: unit_by_week[%s] is missing %r' % (wk, field))
-        print('  note: unit content for %d of 36 weeks' % len(weeks['unit_by_week']))
-
     covered = sorted(int(w) for w in weeks['gap_by_week'])
     print('  note: gap activities named for weeks %s; %s'
           % (','.join(map(str, covered)),
@@ -101,8 +91,6 @@ def check_btp(weeks):
     out = {'gap_by_week': weeks['gap_by_week']}
     if 'cursive' in weeks:
         out = {'cursive': weeks['cursive'], 'gap_by_week': weeks['gap_by_week']}
-    if 'unit_by_week' in weeks:
-        out['unit_by_week'] = weeks['unit_by_week']
     return out
 
 

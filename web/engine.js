@@ -250,32 +250,10 @@
     return { lines: lines, activities: [] };
   }
 
-  // The unit or book a week runs, for grades whose ELA row is unit-shaped
-  // rather than gap-activity-shaped - Grade K and TK. One line per run of
-  // consecutive weeks in the window sharing the same text, merged the way
-  // zearnShiftedContent() merges missions, keyed on the text itself since a
-  // unit carries no numeric range to collapse into "lo-hi".
-  function unitsInWindow(unitByWeek, win) {
-    var out = [];
-    for (var wk = win[0]; wk <= win[1]; wk++) {
-      var unit = unitByWeek[String(wk)];
-      if (!unit) continue;
-      var last = out.length ? out[out.length - 1] : null;
-      if (last && last.text === unit.text) continue;
-      out.push(unit);
-    }
-    return out;
-  }
-
   function btpElaShiftedContent(weekTags, win) {
     if (!win) return { lines: ['Curriculum finished before this LP (week range ran out)'], activities: [] };
     var gapByWeek = weekTags.gap_by_week;
     var acts = [];
-    // unit_by_week is optional - only the unit-shaped grades carry it, and it
-    // leads, ahead of the gap activities
-    if (weekTags.unit_by_week) {
-      acts = acts.concat(unitsInWindow(weekTags.unit_by_week, win));
-    }
     for (var wk = win[0]; wk <= win[1]; wk++) {
       var a = gapByWeek[String(wk)];
       if (a) acts.push(a);

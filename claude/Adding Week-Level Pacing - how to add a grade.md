@@ -18,25 +18,56 @@ cells.
 
 ## Status
 
-**Grade K and Grades 1 through 8 all have working week-shift data**, each for
+**Grades 1 through 8 all have working week-shift data**, each for
 Math/Zearn and ELA/Beyond the Page. Every one is verified end to end in a
 real browser - the panel appears, the fields drive it, and the shifted
 content renders. No other grade has week data, and the panel correctly stays
 hidden for them.
 
+**Grade K is live for both subjects**, wired 8/29/26 in commit `f95912f`,
+then adjusted the same day after Loren's direction on what the ELA panel
+should actually show - see "The ELA panel never shows book/unit content,
+even for unit-shaped guides" below before touching TK, which has the same
+guide shape and will raise the same question.
+
 ### Changelog
 
 - **Grade K** - `data/zearn_gK_weeks.json` (36 weeks),
-  `data/btp_gK_ela_weeks.json` (15 gap weeks, no cursive, **36 weeks of
-  `unit_by_week`**). First unit-shaped grade, and the reason `unit_by_week`
-  exists: K's ELA row names a book/unit per week rather than gap activities,
-  so before the schema extension the shifted view dropped the curriculum
-  entirely - LP6-LP10 rendered as a bare week range. All 36 units now render,
-  each exactly once. Zearn matches Appendix A on 9 of 10; LP3 is Appendix A's
-  own internal overlap (its LP3 claims Mission 3 lessons 1-10 while its LP4
-  claims 6-17, double-counting 6-10), and the week path's 1-5 / 6-17 split is
-  the coherent reading. ELA does not reproduce its stored cells on any LP -
-  see "Enumerated units vs a printed range", which is expected, not a defect.
+  `data/btp_gK_ela_weeks.json` (15 gap weeks, no cursive). Wired 8/29/26,
+  commit `f95912f`. Two things made this grade's build different from
+  Grades 1-8, both worth knowing before touching TK:
+
+    1. **The ELA guide is unit-shaped, not Mission-shaped** - one book per
+       week, not lesson-numbered units. A same-day schema/engine change
+       (`unit_by_week`) was built and shipped to render those book names,
+       then **deliberately reverted** after Loren decided the ELA panel
+       should never show book/unit content at all - see "The ELA panel
+       never shows book/unit content, even for unit-shaped guides" below.
+       Read that section before starting TK, which has the same guide shape
+       and will raise the same question again.
+    2. **No `btp_gK_ela_pacing.json` existed to check gap activities
+       against.** Every other grade's gap-activity text/url/code was reused
+       verbatim from an already-built, already-corrected per-LP pacing file.
+       Grade K had none, so the activities were pulled from the guide for
+       the first time in this pass, with Loren confirming the raw list
+       before anything was locked in (see "No stored pacing file to verify
+       against" below).
+
+  Zearn is 9 of 10 against Appendix A - not a defect in the transcription.
+  Appendix A's own LP3/LP4 split double-counts lessons 6-10 (LP3 claims
+  Mission 3 lessons 1-10, LP4 claims lessons 6-17); the week path's 1-5 /
+  6-17 split is the coherent reading, confirmed against both the guide's own
+  week calendar and the LP Meeting Plan document directly, so it stands per
+  the calendar-wins rule even though it means Appendix A itself, not just
+  the transcription, has the inconsistency. One guide typo caught by
+  lesson-content continuity: week 19's body labels a Mission 4 Topic A
+  lesson "Mission 5"; the lesson-1/lesson-2 pair is clearly one continuous
+  sequence, so it's transcribed as Mission 4. Same pattern as Grade 5 wk28 /
+  Grade 7 wks33-34 / Grade 8 wk29. Two other guide slips found but not
+  schema-relevant: weeks 11 and 36 attach 2nd-grade standards codes to
+  Kindergarten lessons, and weeks 15/17 link "Mission 4" materials while
+  still inside Mission 3.
+
 - **Grade 8** - `data/zearn_g8_weeks.json` (36 weeks),
   `data/btp_g8_ela_weeks.json` (13 gap weeks, no cursive). Both subjects
   reproduce their stored data exactly on all 10 LPs - Zearn 10/10 against
@@ -89,10 +120,13 @@ hidden for them.
 ## Grades without cursive
 
 `cursive` is **optional**. Grades 1, 4, 5 and 6 have a cursive component that
-runs every week; **Grades 7 and 8 have none at all** - their guides name no
-weekly cursive assignment and their stored per-LP cells never mention one
+runs every week; **Grades 7, 8, and K have none at all** - their guides name
+no weekly cursive assignment and their stored per-LP cells never mention one
 (Grade 7 verified: zero mentions across all 10 LPs, against Grade 6's mention
-in every LP).
+in every LP; Grade K's guide has exactly one passing mention of "Printing/
+Cursive" in the general course blurb and nothing per-week). **Loren has also
+confirmed TK has no cursive** - expect `btp_gTK_ela_weeks.json` to need the
+same no-`cursive`-key treatment when that grade is built.
 
 Until Grade 7 both `add_week_pacing.py` and `btpElaShiftedContent()` read
 `cursive` unconditionally - the loader exited with `btp_ela: missing
@@ -103,6 +137,80 @@ is exactly what its stored cell says.
 
 **Never invent a cursive entry to satisfy the schema.** A missing key is real
 data about that grade.
+
+## The ELA panel never shows book/unit content, even for unit-shaped guides
+
+Grade K's CORE ELA guide names one book per week (`Unit 1: A - A is for Musk
+Ox`, `Unit 2: H - Hondo and Fabian`, ...), not lesson-numbered units the way
+Grades 1-8 do. This raised a real question: the `btp_ela` schema only ever
+read `gap_by_week` and `cursive`, neither of which describes what book a
+student is on, so wiring Grade K's ELA data as-is renders LP6-LP10 - the
+five LPs with no gap activity at all - as a bare week-range line with no
+other content.
+
+**A `unit_by_week` schema/engine extension was built and briefly shipped**
+(commit `f95912f`, 8/29/26) to fix that: one line per week's book, merged
+across consecutive weeks sharing the same book. It worked - every book
+rendered exactly once across all 36 weeks, Grades 1-8 unaffected - but it
+was **reverted the same day**. Loren's direction: the ELA week-shift panel
+should show the week range plus standards-gap and supplemental activities
+by name, in the same shape as every other grade, and nothing else. Not book
+or unit titles, even where that means a bare week-range line for weeks with
+no gap activity.
+
+**So the bare-week-range result for LP6-LP10 on Grade K's ELA panel is
+correct, not a bug.** Do not read that as content going missing - it's the
+intended shape once you know book/unit content is out of scope for this
+panel by design. If a future session is tempted to re-add `unit_by_week`
+rendering because a grade's later LPs look sparse, check here first: this
+was tried, worked, and was turned down on purpose.
+
+**TK has the same unit-shaped ELA guide** (per the README's "Beyond the Page
+in TK and K" note) and will raise this exact question again. The answer is
+already settled: no book/unit content in the panel, gap activities and
+cursive only, same as every other grade.
+
+## No stored pacing file to verify against
+
+For Grades 1-2 and 4-8, a `btp_gN_ela_pacing.json` (or equivalent) already
+existed before the week-shift file was built - some earlier pass had already
+gone through that grade's guide, decided which "Visions Standards Gap
+Activity" links were real ELA activities, resolved duplicates and stray
+codes, and written the clean result down. Building the week-shift file for
+those grades was just adding "this activity's week is N" to an already-
+trusted list.
+
+**Grade K had no such file.** Nobody had gone through the K guide and made
+those calls yet, so the gap activities in `btp_gK_ela_weeks.json` were
+pulled from the guide directly, for the first time, in this pass - which
+means the same kind of judgment calls Grade 2 and Grade 4 needed were made
+here too, with Loren reviewing the raw list before anything was locked in
+rather than after. If another grade turns up with no stored pacing file
+(TK is the obvious next candidate, per the README's "Beyond the Page in TK
+and K" note), do the same: show the raw list first, don't derive titles/
+codes/URLs and present them as settled.
+
+Two things this pass surfaced that are worth checking for early on any
+future from-scratch grade:
+
+- **The district's own document-link sheet can mislabel a doc's subject.**
+  Grade K's link sheet names two different documents "Visions Standards Gap
+  Activities for Beyond the Page H-SS - Grade K" (cells J5 and C29 of
+  `core_guide_links_raw.json`). Only one of them actually is H-SS (its codes
+  are `K.2`, `K.3` - the same numbering the guide's own "History-Social
+  Science" standard rows use). The other's codes (`K-ESS2-2`, `K-PS2-2`,
+  `K-PS3-1`, `K-PS3-2`) are NGSS Science standards, and its lesson content is
+  entirely science (Earth's Systems, Motion and Stability, Energy). Don't
+  trust a doc's title in the link sheet over what its actual codes say.
+- **A code can sit outside the markdown link's brackets.** Most gap-activity
+  rows read `[Visions Standards Gap Activity - CODE](url)`, but a few read
+  `[Visions Standards Gap Activity -](url) CODE` - the code trails after the
+  closing bracket instead of living inside it. A regex written for the first
+  shape silently drops weeks written the second way (this cost Grade K's
+  first pass two weeks, 5 and 17, both caught only because the total gap-
+  activity count didn't match the guide's own supplement-document lesson
+  count). Capture the whole row, not just the link text, and count the result
+  against the supplement document's own lesson count before trusting it.
 
 ## Adding a grade is mostly data, not code
 
@@ -133,19 +241,13 @@ mission into one "Mission N: Lessons lo-hi" line, appending each week's
 
 `kind: "btp_ela"`
 
-    weeks = {"cursive": {text, url},                        (optional)
-             "gap_by_week": {"<week>": {text, url, code?}},
-             "unit_by_week": {"<week>": {text, url}}}       (optional)
+    weeks = {"cursive": {text, url},
+             "gap_by_week": {"<week>": {text, url, code?}}}
 
-`btpElaShiftedContent()` emits a week-range line, then the unit content **if
-the grade has `unit_by_week`**, then each gap activity whose week falls in the
-window, then `cursive` **if the grade has one**. `code` is never read.
-
-`unit_by_week` is for grades whose ELA row names a book or unit per week
-rather than gap activities - **Grade K, and TK when it is built**. Consecutive
-weeks in the window sharing the exact same `text` merge into one line, the way
-`zearnShiftedContent()` merges missions, keyed on the text since a unit has no
-numeric range to collapse. A grade without the key renders exactly as before.
+`btpElaShiftedContent()` emits a week-range line, then each gap activity whose
+week falls in the window, then `cursive` **if the grade has one**. `code` is
+never read. **This is the only content the ELA panel ever shows - see below
+for why book/unit content was tried and then deliberately left out.**
 
 `week_windows` is **global, not per grade**: `{lp: [startWeek, endWeek]}` over
 weeks 1-36. LP1 is `[1, 4]`, which is why `app.js` uses `normalWeeks = 4` and
@@ -287,28 +389,6 @@ transcriptions were confirmed against the guide directly.
 What a reader notices is larger than the arithmetic suggests - LP8 opens with
 a mission Appendix A says is already finished, and LP10 shows seven lessons
 where Appendix A shows two. That is expected here, not a defect.
-
-### Enumerated units vs a printed range
-
-The third expected divergence, and the one where the week path can never match
-stored no matter how good the data is. It applies to the unit-shaped grades -
-Grade K now, TK later.
-
-Appendix A writes a grade K LP as a compact range, `Units 1-4`. The week path
-writes one line per unit, naming each book. Those shapes cannot be equal, so
-**a unit-shaped grade scores 0/10 on the exact-match check by construction**.
-Do not read that as a failure and do not try to make it match.
-
-Appendix A's unit ranges also do not track the calendar: they overlap at the
-boundaries and then fall behind, e.g. LP1 `Units 1-4` and LP2 `Units 4-8`
-count unit 4 twice, and by LP6 stored reads `Units 18-22` where the calendar
-holds units 20-23. That is the ordinary window-vs-prose shape on top of the
-representation difference.
-
-The check that replaces exact-match here is **coverage**: every week's unit
-must appear exactly once across LP1-LP10, with none missing and none repeated.
-Grade K passes - 36 units, 36 rendered, no gaps or duplicates. A missing or
-doubled unit IS a defect.
 
 ### When the guide's calendar and Appendix A disagree, the calendar wins
 
