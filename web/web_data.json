@@ -36,18 +36,22 @@
       "label": "TK",
       "available": {
         "ELA": [
-          "Beyond the Page"
+          "Beyond the Page",
+          "Lincoln Learning"
         ],
         "Math": [
+          "LL",
           "Open Up Resources",
           "Zearn"
         ],
         "Science": [
           "Beyond the Page",
+          "Lincoln Learning",
           "TCI"
         ],
         "HSS": [
           "Beyond the Page",
+          "Lincoln Learning",
           "TCI"
         ]
       },
@@ -56,6 +60,10 @@
           "Beyond the Page": {
             "name": "Beyond the Page - TK",
             "url": "https://docs.google.com/document/d/1tUM31Xrb-eOzEF3wqTe8CVeo9BZLNg_fB40-1Z-xWyc/edit?usp=sharing"
+          },
+          "Lincoln Learning": {
+            "name": "Integrated TK Pacing Guide - VIE",
+            "url": "https://docs.google.com/spreadsheets/d/1-VQjMChWkBxPemaFkE65BFkqttcJbxQFxpKVywZbk1o/edit"
           }
         },
         "Math": {
@@ -66,6 +74,10 @@
           "Zearn": {
             "name": "Zearn Math - TK",
             "url": "https://docs.google.com/document/d/16UBdNwWeJ2D9LPIdrXXxn0gVcQYcFE5Nr5maUcyN3dM/edit?usp=sharing"
+          },
+          "LL": {
+            "name": "Integrated TK Pacing Guide - VIE",
+            "url": "https://docs.google.com/spreadsheets/d/1-VQjMChWkBxPemaFkE65BFkqttcJbxQFxpKVywZbk1o/edit"
           }
         },
         "Science": {
@@ -76,6 +88,10 @@
           "TCI": {
             "name": "TCI - TK",
             "url": "https://docs.google.com/document/d/1BvDjsazCxZgPqWBzXyNV1Jbzr7ex8z4R8XXayBGakuk/edit?usp=sharing"
+          },
+          "Lincoln Learning": {
+            "name": "Integrated TK Pacing Guide - VIE",
+            "url": "https://docs.google.com/spreadsheets/d/1-VQjMChWkBxPemaFkE65BFkqttcJbxQFxpKVywZbk1o/edit"
           }
         },
         "HSS": {
@@ -86,6 +102,10 @@
           "TCI": {
             "name": "TCI - TK",
             "url": "https://docs.google.com/document/d/1MYVrsSq0bZpNr07OA8yReDcaFbYEA7qx-l6bgguvOzs/edit?usp=sharing"
+          },
+          "Lincoln Learning": {
+            "name": "Integrated TK Pacing Guide - VIE",
+            "url": "https://docs.google.com/spreadsheets/d/1-VQjMChWkBxPemaFkE65BFkqttcJbxQFxpKVywZbk1o/edit"
           }
         }
       },
@@ -150,6 +170,68 @@
             "10": {
               "lines": [
                 "Lessons 7-10"
+              ],
+              "activities": []
+            }
+          },
+          "Lincoln Learning": {
+            "1": {
+              "lines": [
+                "Lessons 1-15"
+              ],
+              "activities": []
+            },
+            "2": {
+              "lines": [
+                "Lessons 16-40"
+              ],
+              "activities": []
+            },
+            "3": {
+              "lines": [
+                "Lessons 41-63"
+              ],
+              "activities": []
+            },
+            "4": {
+              "lines": [
+                "Lessons 64-78"
+              ],
+              "activities": []
+            },
+            "5": {
+              "lines": [
+                "Lessons 79-95"
+              ],
+              "activities": []
+            },
+            "6": {
+              "lines": [
+                "Lessons 96-113"
+              ],
+              "activities": []
+            },
+            "7": {
+              "lines": [
+                "Lessons 114-133"
+              ],
+              "activities": []
+            },
+            "8": {
+              "lines": [
+                "Lessons 134-148"
+              ],
+              "activities": []
+            },
+            "9": {
+              "lines": [
+                "Lessons 149-169"
+              ],
+              "activities": []
+            },
+            "10": {
+              "lines": [
+                "Lessons 170-180"
               ],
               "activities": []
             }
@@ -292,6 +374,68 @@
               ],
               "activities": []
             }
+          },
+          "LL": {
+            "1": {
+              "lines": [
+                "Lessons 1-15"
+              ],
+              "activities": []
+            },
+            "2": {
+              "lines": [
+                "Lessons 16-40"
+              ],
+              "activities": []
+            },
+            "3": {
+              "lines": [
+                "Lessons 41-63"
+              ],
+              "activities": []
+            },
+            "4": {
+              "lines": [
+                "Lessons 64-78"
+              ],
+              "activities": []
+            },
+            "5": {
+              "lines": [
+                "Lessons 79-95"
+              ],
+              "activities": []
+            },
+            "6": {
+              "lines": [
+                "Lessons 96-113"
+              ],
+              "activities": []
+            },
+            "7": {
+              "lines": [
+                "Lessons 114-133"
+              ],
+              "activities": []
+            },
+            "8": {
+              "lines": [
+                "Lessons 134-148"
+              ],
+              "activities": []
+            },
+            "9": {
+              "lines": [
+                "Lessons 149-169"
+              ],
+              "activities": []
+            },
+            "10": {
+              "lines": [
+                "Lessons 170-180"
+              ],
+              "activities": []
+            }
           }
         },
         "Science": {
@@ -420,6 +564,68 @@
               ],
               "activities": []
             }
+          },
+          "Lincoln Learning": {
+            "1": {
+              "lines": [
+                "Lessons 1-15"
+              ],
+              "activities": []
+            },
+            "2": {
+              "lines": [
+                "Lessons 16-40"
+              ],
+              "activities": []
+            },
+            "3": {
+              "lines": [
+                "Lessons 41-63"
+              ],
+              "activities": []
+            },
+            "4": {
+              "lines": [
+                "Lessons 64-78"
+              ],
+              "activities": []
+            },
+            "5": {
+              "lines": [
+                "Lessons 79-95"
+              ],
+              "activities": []
+            },
+            "6": {
+              "lines": [
+                "Lessons 96-113"
+              ],
+              "activities": []
+            },
+            "7": {
+              "lines": [
+                "Lessons 114-133"
+              ],
+              "activities": []
+            },
+            "8": {
+              "lines": [
+                "Lessons 134-148"
+              ],
+              "activities": []
+            },
+            "9": {
+              "lines": [
+                "Lessons 149-169"
+              ],
+              "activities": []
+            },
+            "10": {
+              "lines": [
+                "Lessons 170-180"
+              ],
+              "activities": []
+            }
           }
         },
         "HSS": {
@@ -544,6 +750,68 @@
             "10": {
               "lines": [
                 "Unit 8"
+              ],
+              "activities": []
+            }
+          },
+          "Lincoln Learning": {
+            "1": {
+              "lines": [
+                "Lessons 1-15"
+              ],
+              "activities": []
+            },
+            "2": {
+              "lines": [
+                "Lessons 16-40"
+              ],
+              "activities": []
+            },
+            "3": {
+              "lines": [
+                "Lessons 41-63"
+              ],
+              "activities": []
+            },
+            "4": {
+              "lines": [
+                "Lessons 64-78"
+              ],
+              "activities": []
+            },
+            "5": {
+              "lines": [
+                "Lessons 79-95"
+              ],
+              "activities": []
+            },
+            "6": {
+              "lines": [
+                "Lessons 96-113"
+              ],
+              "activities": []
+            },
+            "7": {
+              "lines": [
+                "Lessons 114-133"
+              ],
+              "activities": []
+            },
+            "8": {
+              "lines": [
+                "Lessons 134-148"
+              ],
+              "activities": []
+            },
+            "9": {
+              "lines": [
+                "Lessons 149-169"
+              ],
+              "activities": []
+            },
+            "10": {
+              "lines": [
+                "Lessons 170-180"
               ],
               "activities": []
             }
@@ -675,19 +943,23 @@
       "available": {
         "ELA": [
           "Beyond the Page",
+          "Lincoln Learning",
           "Open Up EL Education"
         ],
         "Math": [
+          "LL",
           "Open Up Resources",
           "Zearn"
         ],
         "Science": [
           "Beyond the Page",
+          "Lincoln Learning",
           "Studies Weekly",
           "TCI"
         ],
         "HSS": [
           "Beyond the Page",
+          "Lincoln Learning",
           "Studies Weekly",
           "TCI"
         ]
@@ -701,6 +973,10 @@
           "Open Up EL Education": {
             "name": "Open Up (EL Education) - Kindergarten",
             "url": "https://docs.google.com/document/d/1KRDwNHIVHTM4Xn3yGWVmfR-VwccsosbEmtKV9Vwy1t0/edit"
+          },
+          "Lincoln Learning": {
+            "name": "ELA K Pacing Guide - VIE",
+            "url": "https://docs.google.com/spreadsheets/d/16VBOJrKoU2fAWnpj8I0VsCNKijYXrchJwh-cKWeRFXk/edit"
           }
         },
         "Math": {
@@ -711,6 +987,10 @@
           "Zearn": {
             "name": "Zearn Math - Kindergarten",
             "url": "https://docs.google.com/document/d/1KVuIrxt1GE3AXzzTBgR-TV9AD_GAVry1ao3CmNAGTIM/edit"
+          },
+          "LL": {
+            "name": "Mathematics K Pacing Guide - VIE",
+            "url": "https://docs.google.com/spreadsheets/d/1yr7LbN4UgurROMDSFpepVWpsiVTFXsp3tx7Y5BGd7uM/edit"
           }
         },
         "Science": {
@@ -725,6 +1005,10 @@
           "TCI": {
             "name": "TCI - Kindergarten",
             "url": "https://docs.google.com/document/d/154CubY8NiSS6EgtlwPtGQ8m3zCNsHVvzWD0ENh98VKU/edit?usp=sharing"
+          },
+          "Lincoln Learning": {
+            "name": "Science K Pacing Guide - VIE",
+            "url": "https://docs.google.com/spreadsheets/d/1J5qDN1f0Ejz75P7yoMxX9kK63yKpEu1bq4cwxFocISU/edit"
           }
         },
         "HSS": {
@@ -739,6 +1023,10 @@
           "TCI": {
             "name": "TCI - Kindergarten",
             "url": "https://docs.google.com/document/d/1jAarLQRyfkhql-HCRS7CNuYcy8vGNTksACgs9uGLunw/edit?usp=sharing"
+          },
+          "Lincoln Learning": {
+            "name": "History-Social Science K Pacing Guide - VIE",
+            "url": "https://docs.google.com/spreadsheets/d/1eWoKqdGD4rq_l52eBJHc95Gd2eEXX4X6ecva3kRvzPg/edit"
           }
         }
       },
@@ -883,6 +1171,68 @@
               ],
               "activities": []
             }
+          },
+          "Lincoln Learning": {
+            "1": {
+              "lines": [
+                "Lessons 1-15"
+              ],
+              "activities": []
+            },
+            "2": {
+              "lines": [
+                "Lessons 16-40"
+              ],
+              "activities": []
+            },
+            "3": {
+              "lines": [
+                "Lessons 41-63"
+              ],
+              "activities": []
+            },
+            "4": {
+              "lines": [
+                "Lessons 64-78"
+              ],
+              "activities": []
+            },
+            "5": {
+              "lines": [
+                "Lessons 79-95"
+              ],
+              "activities": []
+            },
+            "6": {
+              "lines": [
+                "Lessons 96-113"
+              ],
+              "activities": []
+            },
+            "7": {
+              "lines": [
+                "Lessons 114-133"
+              ],
+              "activities": []
+            },
+            "8": {
+              "lines": [
+                "Lessons 134-148"
+              ],
+              "activities": []
+            },
+            "9": {
+              "lines": [
+                "Lessons 149-169"
+              ],
+              "activities": []
+            },
+            "10": {
+              "lines": [
+                "Lessons 170-180"
+              ],
+              "activities": []
+            }
           }
         },
         "Math": {
@@ -1019,6 +1369,68 @@
             "10": {
               "lines": [
                 "Mission 6: Lessons 1 - End-of-Mission Assessment"
+              ],
+              "activities": []
+            }
+          },
+          "LL": {
+            "1": {
+              "lines": [
+                "Lessons 1-15"
+              ],
+              "activities": []
+            },
+            "2": {
+              "lines": [
+                "Lessons 16-40"
+              ],
+              "activities": []
+            },
+            "3": {
+              "lines": [
+                "Lessons 41-63"
+              ],
+              "activities": []
+            },
+            "4": {
+              "lines": [
+                "Lessons 64-78"
+              ],
+              "activities": []
+            },
+            "5": {
+              "lines": [
+                "Lessons 79-95"
+              ],
+              "activities": []
+            },
+            "6": {
+              "lines": [
+                "Lessons 96-113"
+              ],
+              "activities": []
+            },
+            "7": {
+              "lines": [
+                "Lessons 114-133"
+              ],
+              "activities": []
+            },
+            "8": {
+              "lines": [
+                "Lessons 134-148"
+              ],
+              "activities": []
+            },
+            "9": {
+              "lines": [
+                "Lessons 149-169"
+              ],
+              "activities": []
+            },
+            "10": {
+              "lines": [
+                "Lessons 170-180"
               ],
               "activities": []
             }
@@ -1205,6 +1617,68 @@
             "10": {
               "lines": [
                 "Unit 3: Lessons 5-6"
+              ],
+              "activities": []
+            }
+          },
+          "Lincoln Learning": {
+            "1": {
+              "lines": [
+                "Lessons 1-15"
+              ],
+              "activities": []
+            },
+            "2": {
+              "lines": [
+                "Lessons 16-40"
+              ],
+              "activities": []
+            },
+            "3": {
+              "lines": [
+                "Lessons 41-63"
+              ],
+              "activities": []
+            },
+            "4": {
+              "lines": [
+                "Lessons 64-78"
+              ],
+              "activities": []
+            },
+            "5": {
+              "lines": [
+                "Lessons 79-95"
+              ],
+              "activities": []
+            },
+            "6": {
+              "lines": [
+                "Lessons 96-113"
+              ],
+              "activities": []
+            },
+            "7": {
+              "lines": [
+                "Lessons 114-133"
+              ],
+              "activities": []
+            },
+            "8": {
+              "lines": [
+                "Lessons 134-148"
+              ],
+              "activities": []
+            },
+            "9": {
+              "lines": [
+                "Lessons 149-169"
+              ],
+              "activities": []
+            },
+            "10": {
+              "lines": [
+                "Lessons 170-180"
               ],
               "activities": []
             }
@@ -1396,6 +1870,68 @@
             "10": {
               "lines": [
                 "Unit 8"
+              ],
+              "activities": []
+            }
+          },
+          "Lincoln Learning": {
+            "1": {
+              "lines": [
+                "Lessons 1-15"
+              ],
+              "activities": []
+            },
+            "2": {
+              "lines": [
+                "Lessons 16-40"
+              ],
+              "activities": []
+            },
+            "3": {
+              "lines": [
+                "Lessons 41-63"
+              ],
+              "activities": []
+            },
+            "4": {
+              "lines": [
+                "Lessons 64-78"
+              ],
+              "activities": []
+            },
+            "5": {
+              "lines": [
+                "Lessons 79-95"
+              ],
+              "activities": []
+            },
+            "6": {
+              "lines": [
+                "Lessons 96-113"
+              ],
+              "activities": []
+            },
+            "7": {
+              "lines": [
+                "Lessons 114-133"
+              ],
+              "activities": []
+            },
+            "8": {
+              "lines": [
+                "Lessons 134-148"
+              ],
+              "activities": []
+            },
+            "9": {
+              "lines": [
+                "Lessons 149-169"
+              ],
+              "activities": []
+            },
+            "10": {
+              "lines": [
+                "Lessons 170-180"
               ],
               "activities": []
             }
@@ -16655,6 +17191,47 @@
               "assessment": "End-of-Mission Assessment (Topics A-B)"
             }
           }
+        },
+        "LL": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "Lessons 1-4",
+            "2": "Lessons 5-8",
+            "3": "Lessons 9-11",
+            "4": "Lessons 12-15",
+            "5": "Lessons 16-22",
+            "6": "Lessons 23-28",
+            "7": "Lessons 29-34",
+            "8": "Lessons 35-40",
+            "9": "Lessons 41-46",
+            "10": "Lessons 47-52",
+            "11": "Lessons 53-58",
+            "12": "Lessons 59-63",
+            "13": "Lessons 64-68",
+            "14": "Lessons 69-73",
+            "15": "Lessons 74-78",
+            "16": "Lessons 79-83",
+            "17": "Lessons 84-87",
+            "18": "Lessons 88-91",
+            "19": "Lessons 92-95",
+            "20": "Lessons 96-100",
+            "21": "Lessons 101-105",
+            "22": "Lessons 106-109",
+            "23": "Lessons 110-113",
+            "24": "Lessons 114-118",
+            "25": "Lessons 119-123",
+            "26": "Lessons 124-128",
+            "27": "Lessons 129-133",
+            "28": "Lessons 134-138",
+            "29": "Lessons 139-143",
+            "30": "Lessons 144-148",
+            "31": "Lessons 149-154",
+            "32": "Lessons 155-159",
+            "33": "Lessons 160-164",
+            "34": "Lessons 165-169",
+            "35": "Lessons 170-175",
+            "36": "Lessons 176-180"
+          }
         }
       },
       "ELA": {
@@ -16739,6 +17316,47 @@
               }
             }
           }
+        },
+        "Lincoln Learning": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "Lessons 1-4",
+            "2": "Lessons 5-8",
+            "3": "Lessons 9-11",
+            "4": "Lessons 12-15",
+            "5": "Lessons 16-22",
+            "6": "Lessons 23-28",
+            "7": "Lessons 29-34",
+            "8": "Lessons 35-40",
+            "9": "Lessons 41-46",
+            "10": "Lessons 47-52",
+            "11": "Lessons 53-58",
+            "12": "Lessons 59-63",
+            "13": "Lessons 64-68",
+            "14": "Lessons 69-73",
+            "15": "Lessons 74-78",
+            "16": "Lessons 79-83",
+            "17": "Lessons 84-87",
+            "18": "Lessons 88-91",
+            "19": "Lessons 92-95",
+            "20": "Lessons 96-100",
+            "21": "Lessons 101-105",
+            "22": "Lessons 106-109",
+            "23": "Lessons 110-113",
+            "24": "Lessons 114-118",
+            "25": "Lessons 119-123",
+            "26": "Lessons 124-128",
+            "27": "Lessons 129-133",
+            "28": "Lessons 134-138",
+            "29": "Lessons 139-143",
+            "30": "Lessons 144-148",
+            "31": "Lessons 149-154",
+            "32": "Lessons 155-159",
+            "33": "Lessons 160-164",
+            "34": "Lessons 165-169",
+            "35": "Lessons 170-175",
+            "36": "Lessons 176-180"
+          }
         }
       },
       "Science": {
@@ -16777,6 +17395,47 @@
             "30": "Weather Has Patterns",
             "31": "Severe Weather",
             "32": "Engineering: Weather"
+          }
+        },
+        "Lincoln Learning": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "Lessons 1-4",
+            "2": "Lessons 5-8",
+            "3": "Lessons 9-11",
+            "4": "Lessons 12-15",
+            "5": "Lessons 16-22",
+            "6": "Lessons 23-28",
+            "7": "Lessons 29-34",
+            "8": "Lessons 35-40",
+            "9": "Lessons 41-46",
+            "10": "Lessons 47-52",
+            "11": "Lessons 53-58",
+            "12": "Lessons 59-63",
+            "13": "Lessons 64-68",
+            "14": "Lessons 69-73",
+            "15": "Lessons 74-78",
+            "16": "Lessons 79-83",
+            "17": "Lessons 84-87",
+            "18": "Lessons 88-91",
+            "19": "Lessons 92-95",
+            "20": "Lessons 96-100",
+            "21": "Lessons 101-105",
+            "22": "Lessons 106-109",
+            "23": "Lessons 110-113",
+            "24": "Lessons 114-118",
+            "25": "Lessons 119-123",
+            "26": "Lessons 124-128",
+            "27": "Lessons 129-133",
+            "28": "Lessons 134-138",
+            "29": "Lessons 139-143",
+            "30": "Lessons 144-148",
+            "31": "Lessons 149-154",
+            "32": "Lessons 155-159",
+            "33": "Lessons 160-164",
+            "34": "Lessons 165-169",
+            "35": "Lessons 170-175",
+            "36": "Lessons 176-180"
           }
         }
       },
@@ -16820,6 +17479,47 @@
             "34": "Today's Inquiry: Mountains",
             "35": "Create Your Own Inquiry",
             "36": "Year in Review"
+          }
+        },
+        "Lincoln Learning": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "Lessons 1-4",
+            "2": "Lessons 5-8",
+            "3": "Lessons 9-11",
+            "4": "Lessons 12-15",
+            "5": "Lessons 16-22",
+            "6": "Lessons 23-28",
+            "7": "Lessons 29-34",
+            "8": "Lessons 35-40",
+            "9": "Lessons 41-46",
+            "10": "Lessons 47-52",
+            "11": "Lessons 53-58",
+            "12": "Lessons 59-63",
+            "13": "Lessons 64-68",
+            "14": "Lessons 69-73",
+            "15": "Lessons 74-78",
+            "16": "Lessons 79-83",
+            "17": "Lessons 84-87",
+            "18": "Lessons 88-91",
+            "19": "Lessons 92-95",
+            "20": "Lessons 96-100",
+            "21": "Lessons 101-105",
+            "22": "Lessons 106-109",
+            "23": "Lessons 110-113",
+            "24": "Lessons 114-118",
+            "25": "Lessons 119-123",
+            "26": "Lessons 124-128",
+            "27": "Lessons 129-133",
+            "28": "Lessons 134-138",
+            "29": "Lessons 139-143",
+            "30": "Lessons 144-148",
+            "31": "Lessons 149-154",
+            "32": "Lessons 155-159",
+            "33": "Lessons 160-164",
+            "34": "Lessons 165-169",
+            "35": "Lessons 170-175",
+            "36": "Lessons 176-180"
           }
         }
       }
@@ -17021,6 +17721,47 @@
               "assessment": "End-of-Mission Assessment (Topics A-B)"
             }
           }
+        },
+        "LL": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "Lessons 1-4",
+            "2": "Lessons 5-8",
+            "3": "Lessons 9-11",
+            "4": "Lessons 12-15",
+            "5": "Lessons 16-22",
+            "6": "Lessons 23-28",
+            "7": "Lessons 29-34",
+            "8": "Lessons 35-40",
+            "9": "Lessons 41-46",
+            "10": "Lessons 47-52",
+            "11": "Lessons 53-58",
+            "12": "Lessons 59-63",
+            "13": "Lessons 64-68",
+            "14": "Lessons 69-73",
+            "15": "Lessons 74-78",
+            "16": "Lessons 79-83",
+            "17": "Lessons 84-87",
+            "18": "Lessons 88-91",
+            "19": "Lessons 92-95",
+            "20": "Lessons 96-100",
+            "21": "Lessons 101-105",
+            "22": "Lessons 106-109",
+            "23": "Lessons 110-113",
+            "24": "Lessons 114-118",
+            "25": "Lessons 119-123",
+            "26": "Lessons 124-128",
+            "27": "Lessons 129-133",
+            "28": "Lessons 134-138",
+            "29": "Lessons 139-143",
+            "30": "Lessons 144-148",
+            "31": "Lessons 149-154",
+            "32": "Lessons 155-159",
+            "33": "Lessons 160-164",
+            "34": "Lessons 165-169",
+            "35": "Lessons 170-175",
+            "36": "Lessons 176-180"
+          }
         }
       },
       "ELA": {
@@ -17054,6 +17795,133 @@
                 "code": "PTKLF.2.7"
               }
             }
+          }
+        },
+        "Lincoln Learning": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "Lessons 1-4",
+            "2": "Lessons 5-8",
+            "3": "Lessons 9-11",
+            "4": "Lessons 12-15",
+            "5": "Lessons 16-22",
+            "6": "Lessons 23-28",
+            "7": "Lessons 29-34",
+            "8": "Lessons 35-40",
+            "9": "Lessons 41-46",
+            "10": "Lessons 47-52",
+            "11": "Lessons 53-58",
+            "12": "Lessons 59-63",
+            "13": "Lessons 64-68",
+            "14": "Lessons 69-73",
+            "15": "Lessons 74-78",
+            "16": "Lessons 79-83",
+            "17": "Lessons 84-87",
+            "18": "Lessons 88-91",
+            "19": "Lessons 92-95",
+            "20": "Lessons 96-100",
+            "21": "Lessons 101-105",
+            "22": "Lessons 106-109",
+            "23": "Lessons 110-113",
+            "24": "Lessons 114-118",
+            "25": "Lessons 119-123",
+            "26": "Lessons 124-128",
+            "27": "Lessons 129-133",
+            "28": "Lessons 134-138",
+            "29": "Lessons 139-143",
+            "30": "Lessons 144-148",
+            "31": "Lessons 149-154",
+            "32": "Lessons 155-159",
+            "33": "Lessons 160-164",
+            "34": "Lessons 165-169",
+            "35": "Lessons 170-175",
+            "36": "Lessons 176-180"
+          }
+        }
+      },
+      "Science": {
+        "Lincoln Learning": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "Lessons 1-4",
+            "2": "Lessons 5-8",
+            "3": "Lessons 9-11",
+            "4": "Lessons 12-15",
+            "5": "Lessons 16-22",
+            "6": "Lessons 23-28",
+            "7": "Lessons 29-34",
+            "8": "Lessons 35-40",
+            "9": "Lessons 41-46",
+            "10": "Lessons 47-52",
+            "11": "Lessons 53-58",
+            "12": "Lessons 59-63",
+            "13": "Lessons 64-68",
+            "14": "Lessons 69-73",
+            "15": "Lessons 74-78",
+            "16": "Lessons 79-83",
+            "17": "Lessons 84-87",
+            "18": "Lessons 88-91",
+            "19": "Lessons 92-95",
+            "20": "Lessons 96-100",
+            "21": "Lessons 101-105",
+            "22": "Lessons 106-109",
+            "23": "Lessons 110-113",
+            "24": "Lessons 114-118",
+            "25": "Lessons 119-123",
+            "26": "Lessons 124-128",
+            "27": "Lessons 129-133",
+            "28": "Lessons 134-138",
+            "29": "Lessons 139-143",
+            "30": "Lessons 144-148",
+            "31": "Lessons 149-154",
+            "32": "Lessons 155-159",
+            "33": "Lessons 160-164",
+            "34": "Lessons 165-169",
+            "35": "Lessons 170-175",
+            "36": "Lessons 176-180"
+          }
+        }
+      },
+      "HSS": {
+        "Lincoln Learning": {
+          "kind": "studies_weekly",
+          "weeks": {
+            "1": "Lessons 1-4",
+            "2": "Lessons 5-8",
+            "3": "Lessons 9-11",
+            "4": "Lessons 12-15",
+            "5": "Lessons 16-22",
+            "6": "Lessons 23-28",
+            "7": "Lessons 29-34",
+            "8": "Lessons 35-40",
+            "9": "Lessons 41-46",
+            "10": "Lessons 47-52",
+            "11": "Lessons 53-58",
+            "12": "Lessons 59-63",
+            "13": "Lessons 64-68",
+            "14": "Lessons 69-73",
+            "15": "Lessons 74-78",
+            "16": "Lessons 79-83",
+            "17": "Lessons 84-87",
+            "18": "Lessons 88-91",
+            "19": "Lessons 92-95",
+            "20": "Lessons 96-100",
+            "21": "Lessons 101-105",
+            "22": "Lessons 106-109",
+            "23": "Lessons 110-113",
+            "24": "Lessons 114-118",
+            "25": "Lessons 119-123",
+            "26": "Lessons 124-128",
+            "27": "Lessons 129-133",
+            "28": "Lessons 134-138",
+            "29": "Lessons 139-143",
+            "30": "Lessons 144-148",
+            "31": "Lessons 149-154",
+            "32": "Lessons 155-159",
+            "33": "Lessons 160-164",
+            "34": "Lessons 165-169",
+            "35": "Lessons 170-175",
+            "36": "Lessons 176-180"
           }
         }
       }

@@ -25,10 +25,10 @@ covers **three curricula, not two**:
     ELA/Beyond the Page     TK, K, 1-8
     Science/Studies Weekly  K, 1-8   (no TK - TK does not offer it)
     HSS/Studies Weekly      K, 1-8   (no TK)
-    Math/LL                 1-8
-    ELA/Lincoln Learning    1-8
-    Science/Lincoln Learning 1-8
-    HSS/Lincoln Learning    1-8 except grade 3, which does not offer it
+    Math/LL                 TK, K, 1-8
+    ELA/Lincoln Learning    TK, K, 1-8
+    Science/Lincoln Learning TK, K, 1-8
+    HSS/Lincoln Learning    TK, K, 1-8 except grade 3, which does not offer it
 
 Studies Weekly was added 8/29/26 and was the first new *curriculum* rather
 than a new grade - it needed a third `kind`. Lincoln Learning followed on
@@ -42,6 +42,25 @@ transcription, or a change to the panel itself.
 
 ### Changelog
 
+- **Lincoln Learning at TK and K** - 8 further slots, taking LL to **39**.
+  Not a week-pacing job: `ll_week_lesson_map.json` is grade-agnostic and
+  covered TK/K the moment `available[]` named them, so this was the baseline
+  data those grades had never had. TK and K carried **nothing** for LL
+  beforehand - absent from `available`, `display` and `content` alike.
+
+  The per-LP content needed no authoring. All 31 existing LL slots share one
+  identical block, `Lessons 1-15` through `Lessons 170-180` - the same fixed
+  table the week map derives from - so the new slots reuse it verbatim.
+
+  What did need sourcing was `display`, one name and URL per slot, and the
+  two grades differ:
+
+    - **TK has a single integrated guide** covering all four subjects,
+      "Integrated TK Pacing Guide - VIE", filed under ELA. All four TK slots
+      point at that one URL. **This is correct, not a copy-paste error** - do
+      not "fix" it into four separate links.
+    - **K has four real per-subject guides**, one URL each. Never reuse TK's
+      integrated URL for K.
 - **Lincoln Learning, every subject, Grades 1-8** - one file,
   `data/ll_week_lesson_map.json`, wired into **31 slots**. Reuses
   `kind: "studies_weekly"` unchanged; no engine change was needed.

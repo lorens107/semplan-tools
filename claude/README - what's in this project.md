@@ -32,7 +32,8 @@ Build outputs that are *not* committed are listed in `.gitignore`.
 **Week-level pacing is live for every grade, TK through 8**, across four
 curricula: Math/Zearn and ELA/Beyond the Page in every grade, Studies Weekly
 for Science and History/Social Science in Grades K-8 (TK does not offer it),
-and Lincoln Learning in every subject it is offered for in Grades 1-8 - keyed
+and Lincoln Learning in every subject it is offered for in Grades TK-8 -
+keyed
 `LL` under Math and `Lincoln Learning` elsewhere, as the page already named
 it. The "Behind on weeks?" panel appears only for those
 grade/subject/curriculum combinations and stays hidden for every other
