@@ -108,14 +108,29 @@ guide shape and will raise the same question.
   unchanged. Its Zearn file uses the previous-mission assessment convention
   (week 7 is Mission 3 but carries "Mission 2 End-of-Mission Assessment"),
   same as Grade 2.
-- **Grade 3** - arrived with the original uploaded build, and was the one
-  grade with no source files in `data/` until 8/29/26, when
-  `data/zearn_g3_weeks.json` (36 weeks) and `data/btp_g3_ela_weeks.json`
-  (13 gap weeks + cursive) were found already transcribed and verified, and
-  wired in. They proved **identical to the data already in
-  `web/web_data.json`** - every week, every gap activity, the same cursive -
-  so the merge was a byte-for-byte no-op on both `web_data.json` and
-  `index.html`. Every grade now has its source in `data/`.
+- **Grade 3** - **correction, 8/29/26: the previous entry was wrong.** It
+  said Grade 3 was the one grade with no source files and could not be
+  re-derived. That was false - `zearn_g3_weeks.json` (36 weeks) and
+  `btp_g3_ela_weeks.json` (13 gap weeks + cursive) both existed in the Claude
+  Project, transcribed 8/27/26 the same way every other grade was, and were
+  simply never wired into this repo's `data/` folder or committed. Verified
+  against Appendix A: Zearn matches its lesson ranges exactly on all 10 LPs
+  (Mission 1 1-18/19-21, Mission 2 1-13/14-21, Mission 3 11-21, Mission 4
+  1-16, Mission 5 1-17/18-30, Mission 6 6-9, Mission 7 11-27/28-34).
+
+  **Now wired**, commit `a59b854`. The open question that correction raised -
+  whether the Project files held the same data as the original uploaded build
+  or different data - was checked before the merge, since
+  `add_week_pacing.py` would have overwritten the live content had they
+  differed. **They are identical**: all 36 Zearn weeks, all 13 gap
+  activities, the same cursive; the only extra keys are `_source` and `note`,
+  which the loader strips. So the merge was a byte-for-byte no-op on both
+  `web_data.json` and `index.html` - nothing to publish, no note copy to
+  change, no regression check to run, because the page did not change. What
+  it bought is reproducibility: **every wired grade now has its source in
+  `data/`**, so Grade 3's block can be regenerated rather than only
+  inherited. If a future doc copy still says "no source files, cannot be
+  re-derived," it predates this correction and is wrong.
 - **Grade 2** - `data/zearn_g2_weeks.json` (36 weeks),
   `data/btp_g2_ela_weeks.json` (11 gap weeks + cursive).
 - **Grade 1** - `data/zearn_g1_weeks.json` (36 weeks),
