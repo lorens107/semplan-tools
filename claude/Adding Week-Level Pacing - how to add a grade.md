@@ -18,13 +18,27 @@ cells.
 
 ## Status
 
-**Grades 1 through 7 all have working week-shift data**, each for
+**Grades 1 through 8 all have working week-shift data**, each for
 Math/Zearn and ELA/Beyond the Page. Every one is verified end to end in a
 real browser - the panel appears, the fields drive it, and the shifted
 content renders. No other grade has week data, and the panel correctly stays
 hidden for them.
 
 ### Changelog
+
+- **Grade 8** - `data/zearn_g8_weeks.json` (36 weeks),
+  `data/btp_g8_ela_weeks.json` (13 gap weeks, no cursive). Both subjects
+  reproduce their stored data exactly on all 10 LPs - Zearn 10/10 against
+  Appendix A, ELA 10/10 against the stored per-LP cells. First grade since
+  Grade 4 with no window-vs-prose divergence anywhere in the year; the
+  guide's calendar and Appendix A agree on every mission boundary and lesson
+  range. One guide typo corrected via lesson-content continuity: week 29's
+  header reads "Mission 8", but the body is entirely Mission 7 (Mid-Mission
+  Assessment, Topic C Lessons 9-10), and correcting it is what lets weeks
+  28-30 merge into Appendix A's LP8 line verbatim ("Mission 7: Lessons
+  4-15") instead of splitting into three unmatched chunks. Same mislabel
+  pattern as Grade 5's week 28 and Grade 7's weeks 33/34. Cursive-optional
+  path from Grade 7 carried Grade 8 with no further code change.
 
 - **Grade 7** - `data/zearn_g7_weeks.json` (36 weeks),
   `data/btp_g7_ela_weeks.json` (14 gap weeks, **no cursive**). ELA reproduces
