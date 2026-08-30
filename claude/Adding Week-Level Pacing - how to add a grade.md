@@ -29,23 +29,62 @@ covers **five curricula**:
     ELA/Lincoln Learning        TK, K, 1-8
     Science/Lincoln Learning    TK, K, 1-8
     HSS/Lincoln Learning        TK, K, 1-8 except grade 3, which does not offer it
-    Math/Open Up Resources      K only
-    ELA/Open Up EL Education    K only
+    Math/Open Up Resources      K, 1
+    ELA/Open Up EL Education    K, 1
 
 Studies Weekly was added 8/29/26 and was the first new *curriculum* rather
 than a new grade - it needed a third `kind`. Lincoln Learning followed on
 8/30/26 and needed no new kind at all, reusing `studies_weekly`. Open Up
 Resources (OUR Math) and Open Up EL Education followed the same day and needed
-a fourth kind, `module_unit_lesson`; they are wired at **Grade K only**, and
-the other grades that offer them still show no panel. Every combination is
-verified end to end in a real browser. The panel stays hidden for every
-curriculum without week-level data: Beast Academy, Dimensions Math, TCI, and
-Open Up Resources / Open Up EL Education in every grade except K.
+a fourth kind, `module_unit_lesson`; Grade 1 followed the same day. They are
+wired at **Grades K and 1 only**, and the other grades that offer them still
+show no panel. Every combination is verified end to end in a real browser. The
+panel stays hidden for every curriculum without week-level data: Beast
+Academy, Dimensions Math, TCI, and Open Up Resources / Open Up EL Education in
+every grade except K and 1.
 
 A change here now means another new curriculum, a correction to an existing
 transcription, or a change to the panel itself.
 
 ### Changelog
+
+- **OUR Math and Open Up EL Education at Grade 1** - 8/30/26. The second grade
+  on `module_unit_lesson`, and **data-only**: no engine change, no loader
+  change, no new kind. Grade 1 already offered both curricula with ten LPs of
+  baseline content, so this added week data to two existing slots rather than
+  creating them - unlike Lincoln Learning at TK/K, which needed the baseline
+  built first. Week-pacing slots: 79 to **81**.
+
+  **OUR Math Grade 1 finishes at week 35, not 36.** Week 36 in the guide is a
+  generic "Review" page - two open-ended activities, no Unit/Section/Lesson
+  content - so the source file simply has no `"36"` key. That is correct, and
+  it is also inert: `shiftedWindows()` only ever moves windows *earlier*, so
+  week 36 is reached only at deficit 0, where the stored per-LP cells are what
+  render. `moduleUnitLessonShiftedContent()` skips a missing week key
+  silently, and no LP came out empty at any deficit - checked all ten, at all
+  five weeks-completed values. This is the first `module_unit_lesson` file
+  that is short of 36 weeks; `check_module_unit_lesson()` already tolerated it
+  and prints `no entry for weeks 36`.
+
+  Two transcription quirks are preserved on purpose and should not be
+  "corrected" later: week 34's checkpoint is printed as **"Section C
+  Checklist"** where all seven others say Checkpoint, and Units 3, 4, 6 and 8
+  end in **"Assessments"** (plural) while Units 2, 5 and 7 say "Assessment".
+  Both are as printed in the guide. The file's own `_note` also records a
+  guide typo - the header rows for weeks 3-4, 5, 10, 16, 21, 24, 28 and 32
+  undercount the outgoing section's last lesson - resolved in favour of the
+  week's own lesson-by-lesson content and confirmed against Appendix A.
+
+  Verified the same way as Grade K, coverage-as-ordered-prefix: at deficits 1,
+  2 and 3 the rendered segments are an exact ordered prefix of the source
+  file, losing only tail weeks. OUR Math gives 42, 41 and 40 of 42 segments -
+  **42 of 42 at deficit 1**, because a course that already ends at week 35
+  loses nothing to a one-week shift - and EL Education 39, 38 and 37 of 40.
+  Lesson accounting is clean in both: OUR Math contiguous from 1 within each
+  Unit (1-15, 1-22, 1-28, 1-23, 1-14, 1-17, 1-17, 1-10), EL Education
+  contiguous within each Module/Unit pair, no gaps or duplicates. All 10
+  previously wired grades are byte-identical, and Grade K's own OUR Math and
+  EL Education output is unchanged at every deficit.
 
 - **OUR Math and Open Up EL Education at Grade K** - 8/30/26. Two new
   curricula and a fourth `kind`, `module_unit_lesson`, wired at **Grade K
@@ -432,7 +471,12 @@ this data carries no URLs.
 
 Note the shape: a week's value is a **list of segments**, so a week that
 crosses a Unit or Module boundary carries both halves without folding or
-dropping a lesson. At least one of `lessons` / `assessment` must be present.
+dropping a lesson. At least one of `lessons` / `assessment` must be present. A
+week the guide gives no Unit/Section/Lesson content for simply has **no key**
+- OUR Math Grade 1 stops at 35 - and the renderer skips a missing key without
+comment. Unlike `studies_weekly`, this kind prints no "Course finished" line;
+it does not need one, because a window only ever reaches week 36 at deficit 0,
+where the stored cells render instead.
 
 The stored block also carries a `labels` pair naming the two levels, because
 they differ per curriculum:
@@ -620,6 +664,14 @@ use: every week in the file should appear exactly once across LP1-LP10, and
 the weeks must be contiguous from 1. `add_week_pacing.py` rejects an interior
 gap outright, since a hole would render as a silently missing week; a short
 course is fine, a holed one is not.
+
+`module_unit_lesson` handles an early finish differently and deliberately:
+OUR Math Grade 1 has no `"36"` key, and nothing is printed for that week. No
+"Course finished" line is needed because `shiftedWindows()` only moves windows
+earlier, so a shifted view never reaches the missing tail - only deficit 0
+does, and that renders the stored cells. What to check instead is that no LP
+comes out **empty** at any deficit; an empty cell would mean a whole window
+landed on missing weeks.
 
 ### Derived weeks, where no guide has them
 
