@@ -1,0 +1,76 @@
+{
+    "_source": "CORE ELA Pacing Guide 7th Grade (Beyond the Page), and Visions Supplemental Lessons for Moving Beyond the Page 7th, uploaded by Loren 8/28/26. Reused the exact text/url/code fields from semester-plan-generator_btp_g7_ela_pacing.json (the stored per-LP pacing); only added which week each activity's guide table names it, from the guide's own per-week 'Visions Standards Gap Activities' row (one guide occurrence has a typo, 'Gaps Activtiy' instead of 'Gaps Activities' for W.7.2.a-f - cosmetic only, still matched by its bookmark id). All 14 gap activities land within their stored LP's week window, and no Science/HSS-coded activities or stray codes without a matching link were found in this guide's ELA gap rows. NO CURSIVE ENTRY: unlike Grades 1, 4, 5, and 6, this file has no top-level 'cursive' key. The guide's own course-overview paragraph mentions 'Printing/Cursive' only as a generic blurb, with no dedicated weekly assignment link anywhere in the 36-week table, and the stored semester-plan-generator_btp_g7_ela_pacing.json has zero mentions of 'Cursive Writing Assignment' across all 10 LPs (confirmed by grep) - unlike G5/G6's stored data, which mentions it in every LP. This means Grade 7 genuinely doesn't carry a cursive component, so none was invented. This is a real gap against the documented schema (`kind: btp_ela` weeks require a top-level 'cursive' key, and week_shift.py's btp_ela_content() unconditionally reads week_tags['cursive']), and against web/engine.js's own btpElaShiftedContent(), which the how-to doc says always emits cursive at the end of every LP. Flag for Claude Code: either the engine needs a null-check for grades without cursive before this file is spliced into web_data.json, or confirm independently that Grade 7 really has no cursive assignment before wiring it in.",
+    "gap_by_week": {
+        "5": {
+            "text": "Analyzing Points of View of Different Characters or Narrators (RL.7.6)",
+            "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.rf0l1ai7peud",
+            "code": "RL.7.6"
+        },
+        "7": {
+            "text": "Analyzing Text Structure and Features (RI.7.5)",
+            "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.1mxfvyuhn7kv",
+            "code": "RI.7.5"
+        },
+        "9": {
+            "text": "Evaluating Arguments and Claims in a Text (RI.7.8)",
+            "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.ucxfsznq3t4t",
+            "code": "RI.7.8"
+        },
+        "11": {
+            "text": "Analyzing Different Presentations of Information by Multiple Authors (RI.7.9)",
+            "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.u8uuk0cyr3kp",
+            "code": "RI.7.9"
+        },
+        "13": {
+            "text": "Writing Arguments with Clear Reasons and Relevant Evidence (W.7.1.a-e)",
+            "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.gorascu2r71r",
+            "code": "W.7.1.a-e"
+        },
+        "15": {
+            "text": "Writing Informative/Explanatory Texts with Clear Structure and Development (W.7.2.a-f)",
+            "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.1dg0trshk6ea",
+            "code": "W.7.2.a-f"
+        },
+        "17": {
+            "text": "Writing Narratives with Effective Techniques (W.7.3.a, c-e)",
+            "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.f8z6ji2vawbc",
+            "code": "W.7.3.a, c-e"
+        },
+        "19": {
+            "text": "Engaging in Collaborative Discussions (SL.7.1.a-d)",
+            "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.avx9ph8nqo8b",
+            "code": "SL.7.1.a-d"
+        },
+        "21": {
+            "text": "Analyzing and Evaluating a Speaker's Argument (SL.7.3)",
+            "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.ikoxc16ic9gq",
+            "code": "SL.7.3"
+        },
+        "23": {
+            "text": "Presenting Claims and Findings (SL.7.4.a)",
+            "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.n7le1bualrs6",
+            "code": "SL.7.4.a"
+        },
+        "25": {
+            "text": "Command of Conventions of Standard English Grammar and Usage (L.7.1.a, c)",
+            "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.yhmix7qfym85",
+            "code": "L.7.1.a, c"
+        },
+        "27": {
+            "text": "Using Knowledge of Language Conventions (L.7.3.a)",
+            "url": "https://docs.google.com/document/d/1pEgFMZyu2np2d0y4-RKUVFyRYTPgrub9YfJRx32_EDI/edit?tab=t.0#bookmark=id.2z8chjrm376a",
+            "code": "L.7.3.a",
+            "note": "link leaves the grade: url targets the Grade 6 supplemental document, as published"
+        },
+        "29": {
+            "text": "Determining and Clarifying the Meaning of Words and Phrases (L.7.4.c, d)",
+            "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.hbsv7318a8ra",
+            "code": "L.7.4.c, d"
+        },
+        "31": {
+            "text": "Understanding Figurative Language and Word Relationships (L.7.5.b, c)",
+            "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.e0e51uxc79ug",
+            "code": "L.7.5.b, c"
+        }
+    }
+}

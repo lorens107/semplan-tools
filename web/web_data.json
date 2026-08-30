@@ -13980,6 +13980,290 @@
           }
         }
       }
+    },
+    "7": {
+      "Math": {
+        "Zearn": {
+          "kind": "zearn",
+          "weeks": {
+            "1": {
+              "mission": 1,
+              "lessons": "1-5",
+              "topic": "Topic A"
+            },
+            "2": {
+              "mission": 1,
+              "lessons": "6-10",
+              "topic": "Topic A-B"
+            },
+            "3": {
+              "mission": 1,
+              "lessons": "11-13",
+              "topic": "Topic B-C",
+              "assessment": "End-of-Mission Assessment (Topics A-C)"
+            },
+            "4": {
+              "mission": 2,
+              "lessons": "1-5",
+              "topic": "Topic A-B"
+            },
+            "5": {
+              "mission": 2,
+              "lessons": "6-9",
+              "topic": "Topic B-C",
+              "assessment": "Mid-Mission Assessment (Topics A-C), Day 1"
+            },
+            "6": {
+              "mission": 2,
+              "lessons": "10-13",
+              "topic": "Topic D",
+              "assessment": "Mid-Mission Assessment (Topics A-C), Day 2"
+            },
+            "7": {
+              "mission": 2,
+              "lessons": "14-15",
+              "topic": "Topic E",
+              "assessment": "End-of-Mission Assessment (Topics D-E)"
+            },
+            "8": {
+              "mission": 3,
+              "lessons": "1-5",
+              "topic": "Topic A"
+            },
+            "9": {
+              "mission": 3,
+              "lessons": "6-10",
+              "topic": "Topic B-C"
+            },
+            "10": {
+              "mission": 3,
+              "lessons": "11",
+              "topic": "Topic C",
+              "assessment": "End-of-Mission Assessment (Topics A-C)"
+            },
+            "11": {
+              "mission": 4,
+              "lessons": "1-5",
+              "topic": "Topic A"
+            },
+            "12": {
+              "mission": 4,
+              "lessons": "6-8",
+              "topic": "Topic B",
+              "assessment": "Mid-Mission Assessment (Topic A)"
+            },
+            "13": {
+              "mission": 4,
+              "lessons": "9-13",
+              "topic": "Topic B-C"
+            },
+            "14": {
+              "mission": 4,
+              "lessons": "14-16",
+              "topic": "Topic C-D",
+              "assessment": "End-of-Mission Assessment (Topics B-D)"
+            },
+            "15": {
+              "mission": 5,
+              "lessons": "1-5",
+              "topic": "Topic A-B"
+            },
+            "16": {
+              "mission": 5,
+              "lessons": "6-9",
+              "topic": "Topic B-C",
+              "assessment": "Mid-Mission Assessment (Topics A-B)"
+            },
+            "17": {
+              "mission": 5,
+              "lessons": "10-14",
+              "topic": "Topic C-D"
+            },
+            "18": {
+              "mission": 5,
+              "lessons": "15-17",
+              "topic": "Topic E-F",
+              "assessment": "End-of-Mission Assessment (Topics C-F)"
+            },
+            "19": {
+              "mission": 6,
+              "lessons": "1-5",
+              "topic": "Topic A"
+            },
+            "20": {
+              "mission": 6,
+              "lessons": "6-10",
+              "topic": "Topic A-B"
+            },
+            "21": {
+              "mission": 6,
+              "lessons": "11-12",
+              "topic": "Topic B",
+              "assessment": "Mid-Mission Assessment (Topics A-B)"
+            },
+            "22": {
+              "mission": 6,
+              "lessons": "13-17",
+              "topic": "Topic C"
+            },
+            "23": {
+              "mission": 6,
+              "lessons": "18-22",
+              "topic": "Topic D"
+            },
+            "24": {
+              "mission": 7,
+              "lessons": "1",
+              "topic": "",
+              "assessment": "Mission 6 End-of-Mission Assessment (Topics C-D)"
+            },
+            "25": {
+              "mission": 7,
+              "lessons": "1-5",
+              "topic": "Topic A"
+            },
+            "26": {
+              "mission": 7,
+              "lessons": "6-10",
+              "topic": "Topic B"
+            },
+            "27": {
+              "mission": 7,
+              "lessons": "11-14",
+              "topic": "Topic C",
+              "assessment": "Mid-Mission Assessment (Topics A-B)"
+            },
+            "28": {
+              "mission": 7,
+              "lessons": "15-17",
+              "topic": "Topic C-D",
+              "assessment": "End-of-Mission Assessment (Topics C-D)"
+            },
+            "29": {
+              "mission": 8,
+              "lessons": "1-5",
+              "topic": "Topic A"
+            },
+            "30": {
+              "mission": 8,
+              "lessons": "6-10",
+              "topic": "Topic A-B"
+            },
+            "31": {
+              "mission": 8,
+              "lessons": "11-13",
+              "topic": "Topic C",
+              "assessment": "Mid-Mission Assessment (Topics A-B)"
+            },
+            "32": {
+              "mission": 8,
+              "lessons": "14-18",
+              "topic": "Topic C-D"
+            },
+            "33": {
+              "mission": 8,
+              "lessons": "19-20",
+              "topic": "Topic D-E",
+              "assessment": "End-of-Mission Assessment (Topics C-E)"
+            },
+            "34": {
+              "mission": 9,
+              "lessons": "1-4",
+              "topic": "Topic A"
+            },
+            "35": {
+              "mission": 9,
+              "lessons": "5-9",
+              "topic": "Topic B"
+            },
+            "36": {
+              "mission": 9,
+              "lessons": "10-11",
+              "topic": "Topic C"
+            }
+          }
+        }
+      },
+      "ELA": {
+        "Beyond the Page": {
+          "kind": "btp_ela",
+          "weeks": {
+            "gap_by_week": {
+              "5": {
+                "text": "Analyzing Points of View of Different Characters or Narrators (RL.7.6)",
+                "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.rf0l1ai7peud",
+                "code": "RL.7.6"
+              },
+              "7": {
+                "text": "Analyzing Text Structure and Features (RI.7.5)",
+                "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.1mxfvyuhn7kv",
+                "code": "RI.7.5"
+              },
+              "9": {
+                "text": "Evaluating Arguments and Claims in a Text (RI.7.8)",
+                "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.ucxfsznq3t4t",
+                "code": "RI.7.8"
+              },
+              "11": {
+                "text": "Analyzing Different Presentations of Information by Multiple Authors (RI.7.9)",
+                "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.u8uuk0cyr3kp",
+                "code": "RI.7.9"
+              },
+              "13": {
+                "text": "Writing Arguments with Clear Reasons and Relevant Evidence (W.7.1.a-e)",
+                "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.gorascu2r71r",
+                "code": "W.7.1.a-e"
+              },
+              "15": {
+                "text": "Writing Informative/Explanatory Texts with Clear Structure and Development (W.7.2.a-f)",
+                "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.1dg0trshk6ea",
+                "code": "W.7.2.a-f"
+              },
+              "17": {
+                "text": "Writing Narratives with Effective Techniques (W.7.3.a, c-e)",
+                "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.f8z6ji2vawbc",
+                "code": "W.7.3.a, c-e"
+              },
+              "19": {
+                "text": "Engaging in Collaborative Discussions (SL.7.1.a-d)",
+                "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.avx9ph8nqo8b",
+                "code": "SL.7.1.a-d"
+              },
+              "21": {
+                "text": "Analyzing and Evaluating a Speaker's Argument (SL.7.3)",
+                "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.ikoxc16ic9gq",
+                "code": "SL.7.3"
+              },
+              "23": {
+                "text": "Presenting Claims and Findings (SL.7.4.a)",
+                "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.n7le1bualrs6",
+                "code": "SL.7.4.a"
+              },
+              "25": {
+                "text": "Command of Conventions of Standard English Grammar and Usage (L.7.1.a, c)",
+                "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.yhmix7qfym85",
+                "code": "L.7.1.a, c"
+              },
+              "27": {
+                "text": "Using Knowledge of Language Conventions (L.7.3.a)",
+                "url": "https://docs.google.com/document/d/1pEgFMZyu2np2d0y4-RKUVFyRYTPgrub9YfJRx32_EDI/edit?tab=t.0#bookmark=id.2z8chjrm376a",
+                "code": "L.7.3.a",
+                "note": "link leaves the grade: url targets the Grade 6 supplemental document, as published"
+              },
+              "29": {
+                "text": "Determining and Clarifying the Meaning of Words and Phrases (L.7.4.c, d)",
+                "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.hbsv7318a8ra",
+                "code": "L.7.4.c, d"
+              },
+              "31": {
+                "text": "Understanding Figurative Language and Word Relationships (L.7.5.b, c)",
+                "url": "https://docs.google.com/document/d/1oa2ODiDRYmRZT349ogFZWCmVWof4F9jhR9nKa1nXxRI/edit?tab=t.0#bookmark=id.e0e51uxc79ug",
+                "code": "L.7.5.b, c"
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

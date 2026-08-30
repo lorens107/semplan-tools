@@ -66,12 +66,16 @@ def check_zearn(weeks):
 def check_btp(weeks):
     if not isinstance(weeks, dict):
         sys.exit('btp_ela: expected an object')
-    for field in ('cursive', 'gap_by_week'):
-        if field not in weeks:
-            sys.exit('btp_ela: missing %r' % field)
-    for field in ('text', 'url'):
-        if field not in weeks['cursive']:
-            sys.exit('btp_ela: cursive is missing %r' % field)
+    if 'gap_by_week' not in weeks:
+        sys.exit('btp_ela: missing %r' % 'gap_by_week')
+    # cursive is OPTIONAL. Grades 7 and 8 genuinely have no cursive component -
+    # their guides name none and their stored per-LP cells never mention one -
+    # so a missing key is real data, not an omission to paper over. Never
+    # invent one to satisfy the schema.
+    if 'cursive' in weeks:
+        for field in ('text', 'url'):
+            if field not in weeks['cursive']:
+                sys.exit('btp_ela: cursive is missing %r' % field)
     for wk, act in weeks['gap_by_week'].items():
         if not str(wk).isdigit():
             sys.exit('btp_ela: gap_by_week key %r is not a week number' % wk)
@@ -79,10 +83,15 @@ def check_btp(weeks):
             if field not in act:
                 sys.exit('btp_ela: gap_by_week[%s] is missing %r' % (wk, field))
     covered = sorted(int(w) for w in weeks['gap_by_week'])
-    print('  note: gap activities named for weeks %s; cursive runs every week'
-          % ','.join(map(str, covered)))
+    print('  note: gap activities named for weeks %s; %s'
+          % (','.join(map(str, covered)),
+             'cursive runs every week' if 'cursive' in weeks
+             else 'no cursive component for this grade - none will be emitted'))
     # keep only what the engine reads, matching grade 3's stored block
-    return {'cursive': weeks['cursive'], 'gap_by_week': weeks['gap_by_week']}
+    out = {'gap_by_week': weeks['gap_by_week']}
+    if 'cursive' in weeks:
+        out = {'cursive': weeks['cursive'], 'gap_by_week': weeks['gap_by_week']}
+    return out
 
 
 def main():

@@ -258,7 +258,8 @@
       var a = gapByWeek[String(wk)];
       if (a) acts.push(a);
     }
-    acts.push(weekTags.cursive);
+    // cursive is optional - grades 7 and 8 carry no cursive component at all
+    if (weekTags.cursive) acts.push(weekTags.cursive);
     var lines = [weekRangeLine(win)];
     acts.forEach(function (a, i) {
       if (i) lines.push('');

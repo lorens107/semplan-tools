@@ -1,0 +1,198 @@
+{
+    "_source": "CORE Math Pacing Guide 7th Grade - Zearn, uploaded by Loren 8/28/26, transcribed by week from the actual per-week lesson lists (not just header rows). Three header/body mismatches found and resolved in favor of the body (the actual Lesson Pacing & Assignments row): week 8's header claims a 'Pre-Mission Assessment' with no matching entry anywhere in the body's lesson list, so none was recorded; week 32's header repeats 'Mid-Mission Assessment' from week 31 with no matching body entry, so none was recorded; week 33's header likewise repeats 'Mid-Mission Assessment' with no matching body entry. Two body mission-mislabels found and corrected via lesson-content continuity (same pattern as Grade 5's week 28): week 33's Lesson 19 is labeled 'Mission 6' in the body despite continuing Mission 8's Lesson 18 from the prior week and being followed by Mission 8's Lesson 20 and End-of-Mission Assessment - corrected to Mission 8. Week 34's Lesson 4 and its Flex Day are labeled 'Mission 6' despite continuing Mission 9's Lessons 1-3 - corrected to Mission 9. Week 22's own header mislabels the grade as 'Grade 5' instead of 'Grade 7' (cosmetic only, no data impact). One multi-day assessment split across two guide-weeks (not contained in a single week like every other 2-3 day assessment in this guide): Mission 2's Mid-Mission Assessment (Topics A-C, 2 Days) has Day 1 in week 5 and Day 2 in week 6, both tagged accordingly. One assessment-only mission tail at week 24 (Mission 6 to Mission 7 boundary, which also happens to be the LP6/LP7 boundary at deficit 0): week 24 is entirely 'End-of-Mission Assessment (Topics C-D), 3 Days' plus Flex Days, with zero lesson content for either Mission 6 or Mission 7 - unlike Grade 5's LP5 and Grade 6's LP9 instances of this shape, where the tail assessment shared a guide-week with the incoming mission's first real lessons, this guide gives the tail assessment its own dedicated week and doesn't start Mission 7's Lesson 1 until week 25. Tagged to the incoming mission (7) with lessons '1', matching Mission 7 Lesson 1's real value (not fabricated - the same value appears again in week 25 and the merge in zearn_content() just takes it as a shared lower bound, producing 'Lessons 1-X' with no visible duplicate lesson), assessment prefixed 'Mission 6 End-of-Mission Assessment (Topics C-D)'. This is a new variant of the assessment-only-tail shape and should be confirmed against Appendix A during the Claude Code wiring session, since Appendix A's own bookkeeping convention for it hasn't been checked here (no repo access in this chat). Lesson accounting verified independently: every mission's lessons are contiguous from 1 with no gaps or duplicates across all 36 weeks (Mission 1: 1-13, Mission 2: 1-15, Mission 3: 1-11, Mission 4: 1-16, Mission 5: 1-17, Mission 6: 1-22, Mission 7: 1-17, Mission 8: 1-20, Mission 9: 1-11).",
+    "1": {
+        "mission": 1,
+        "lessons": "1-5",
+        "topic": "Topic A"
+    },
+    "2": {
+        "mission": 1,
+        "lessons": "6-10",
+        "topic": "Topic A-B"
+    },
+    "3": {
+        "mission": 1,
+        "lessons": "11-13",
+        "topic": "Topic B-C",
+        "assessment": "End-of-Mission Assessment (Topics A-C)"
+    },
+    "4": {
+        "mission": 2,
+        "lessons": "1-5",
+        "topic": "Topic A-B"
+    },
+    "5": {
+        "mission": 2,
+        "lessons": "6-9",
+        "topic": "Topic B-C",
+        "assessment": "Mid-Mission Assessment (Topics A-C), Day 1"
+    },
+    "6": {
+        "mission": 2,
+        "lessons": "10-13",
+        "topic": "Topic D",
+        "assessment": "Mid-Mission Assessment (Topics A-C), Day 2"
+    },
+    "7": {
+        "mission": 2,
+        "lessons": "14-15",
+        "topic": "Topic E",
+        "assessment": "End-of-Mission Assessment (Topics D-E)"
+    },
+    "8": {
+        "mission": 3,
+        "lessons": "1-5",
+        "topic": "Topic A"
+    },
+    "9": {
+        "mission": 3,
+        "lessons": "6-10",
+        "topic": "Topic B-C"
+    },
+    "10": {
+        "mission": 3,
+        "lessons": "11",
+        "topic": "Topic C",
+        "assessment": "End-of-Mission Assessment (Topics A-C)"
+    },
+    "11": {
+        "mission": 4,
+        "lessons": "1-5",
+        "topic": "Topic A"
+    },
+    "12": {
+        "mission": 4,
+        "lessons": "6-8",
+        "topic": "Topic B",
+        "assessment": "Mid-Mission Assessment (Topic A)"
+    },
+    "13": {
+        "mission": 4,
+        "lessons": "9-13",
+        "topic": "Topic B-C"
+    },
+    "14": {
+        "mission": 4,
+        "lessons": "14-16",
+        "topic": "Topic C-D",
+        "assessment": "End-of-Mission Assessment (Topics B-D)"
+    },
+    "15": {
+        "mission": 5,
+        "lessons": "1-5",
+        "topic": "Topic A-B"
+    },
+    "16": {
+        "mission": 5,
+        "lessons": "6-9",
+        "topic": "Topic B-C",
+        "assessment": "Mid-Mission Assessment (Topics A-B)"
+    },
+    "17": {
+        "mission": 5,
+        "lessons": "10-14",
+        "topic": "Topic C-D"
+    },
+    "18": {
+        "mission": 5,
+        "lessons": "15-17",
+        "topic": "Topic E-F",
+        "assessment": "End-of-Mission Assessment (Topics C-F)"
+    },
+    "19": {
+        "mission": 6,
+        "lessons": "1-5",
+        "topic": "Topic A"
+    },
+    "20": {
+        "mission": 6,
+        "lessons": "6-10",
+        "topic": "Topic A-B"
+    },
+    "21": {
+        "mission": 6,
+        "lessons": "11-12",
+        "topic": "Topic B",
+        "assessment": "Mid-Mission Assessment (Topics A-B)"
+    },
+    "22": {
+        "mission": 6,
+        "lessons": "13-17",
+        "topic": "Topic C"
+    },
+    "23": {
+        "mission": 6,
+        "lessons": "18-22",
+        "topic": "Topic D"
+    },
+    "24": {
+        "mission": 7,
+        "lessons": "1",
+        "topic": "",
+        "assessment": "Mission 6 End-of-Mission Assessment (Topics C-D)"
+    },
+    "25": {
+        "mission": 7,
+        "lessons": "1-5",
+        "topic": "Topic A"
+    },
+    "26": {
+        "mission": 7,
+        "lessons": "6-10",
+        "topic": "Topic B"
+    },
+    "27": {
+        "mission": 7,
+        "lessons": "11-14",
+        "topic": "Topic C",
+        "assessment": "Mid-Mission Assessment (Topics A-B)"
+    },
+    "28": {
+        "mission": 7,
+        "lessons": "15-17",
+        "topic": "Topic C-D",
+        "assessment": "End-of-Mission Assessment (Topics C-D)"
+    },
+    "29": {
+        "mission": 8,
+        "lessons": "1-5",
+        "topic": "Topic A"
+    },
+    "30": {
+        "mission": 8,
+        "lessons": "6-10",
+        "topic": "Topic A-B"
+    },
+    "31": {
+        "mission": 8,
+        "lessons": "11-13",
+        "topic": "Topic C",
+        "assessment": "Mid-Mission Assessment (Topics A-B)"
+    },
+    "32": {
+        "mission": 8,
+        "lessons": "14-18",
+        "topic": "Topic C-D"
+    },
+    "33": {
+        "mission": 8,
+        "lessons": "19-20",
+        "topic": "Topic D-E",
+        "assessment": "End-of-Mission Assessment (Topics C-E)"
+    },
+    "34": {
+        "mission": 9,
+        "lessons": "1-4",
+        "topic": "Topic A"
+    },
+    "35": {
+        "mission": 9,
+        "lessons": "5-9",
+        "topic": "Topic B"
+    },
+    "36": {
+        "mission": 9,
+        "lessons": "10-11",
+        "topic": "Topic C"
+    }
+}

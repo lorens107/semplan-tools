@@ -18,7 +18,7 @@ cells.
 
 ## Status
 
-**Grades 1 through 6 all have working week-shift data**, each for
+**Grades 1 through 7 all have working week-shift data**, each for
 Math/Zearn and ELA/Beyond the Page. Every one is verified end to end in a
 real browser - the panel appears, the fields drive it, and the shifted
 content renders. No other grade has week data, and the panel correctly stays
@@ -26,6 +26,11 @@ hidden for them.
 
 ### Changelog
 
+- **Grade 7** - `data/zearn_g7_weeks.json` (36 weeks),
+  `data/btp_g7_ela_weeks.json` (14 gap weeks, **no cursive**). ELA reproduces
+  the stored per-LP cells on all 10 LPs. Zearn matches on 7 of 10; LP8-LP10
+  are a window-vs-prose drift (below). First grade to require a code change -
+  see "Grades without cursive".
 - **Grade 6** - `data/zearn_g6_weeks.json` (36 weeks),
   `data/btp_g6_ela_weeks.json` (14 gap weeks + cursive). ELA reproduces the
   stored per-LP cells on all 10 LPs. Zearn matches on 7 of 10, and all three
@@ -54,12 +59,35 @@ hidden for them.
   `data/btp_g1_ela_weeks.json` (9 gap weeks + cursive). Commit 4c46ace, which
   also split the page's source out of the build and into `web/`.
 
-## Adding a grade is data, not code
+## Grades without cursive
+
+`cursive` is **optional**. Grades 1, 4, 5 and 6 have a cursive component that
+runs every week; **Grades 7 and 8 have none at all** - their guides name no
+weekly cursive assignment and their stored per-LP cells never mention one
+(Grade 7 verified: zero mentions across all 10 LPs, against Grade 6's mention
+in every LP).
+
+Until Grade 7 both `add_week_pacing.py` and `btpElaShiftedContent()` read
+`cursive` unconditionally - the loader exited with `btp_ela: missing
+'cursive'`, and the engine would have thrown on `undefined.text`. Both now
+treat it as optional. A grade with no cursive renders LPs that have no gap
+activity as just the week-range line, e.g. Grade 7 LP1 is `Weeks 1-4`, which
+is exactly what its stored cell says.
+
+**Never invent a cursive entry to satisfy the schema.** A missing key is real
+data about that grade.
+
+## Adding a grade is mostly data, not code
 
 `optionsFor()` derives `weekShiftable` straight from whether
 `week_pacing[grade][subject][curriculum]` exists, and `updateWeekShiftFields()`
 reveals the panel if any picked curriculum is shiftable. There is no per-grade
-list anywhere in the JS. Adding a grade means adding data - plus one copy edit.
+list anywhere in the JS. Adding a grade normally means adding data - plus one
+copy edit.
+
+Grade 7 was the first exception: a grade whose shape the engine did not yet
+support (no cursive) needed a one-line engine change. Expect data-only, but
+check the new grade's files against the schema before assuming it.
 
 ## The schema
 
@@ -82,7 +110,8 @@ mission into one "Mission N: Lessons lo-hi" line, appending each week's
              "gap_by_week": {"<week>": {text, url, code?}}}
 
 `btpElaShiftedContent()` emits a week-range line, then each gap activity whose
-week falls in the window, then always `cursive`. `code` is never read.
+week falls in the window, then `cursive` **if the grade has one**. `code` is
+never read.
 
 `week_windows` is **global, not per grade**: `{lp: [startWeek, endWeek]}` over
 weeks 1-36. LP1 is `[1, 4]`, which is why `app.js` uses `normalWeeks = 4` and
@@ -207,6 +236,15 @@ guide weeks. Grade 6 Mission 3 has 17 lessons; Appendix A puts all 17 under
 LP3 and writes LP4 as "finished", but the guide week carrying lessons 13-17
 (week 13) falls inside LP4's window (13-15), so the week path renders
 `Mission 3: Lessons 1-12` in LP3 and `Mission 3: Lessons 13-17` in LP4.
+
+Grade 7 LP8-LP10 is the larger instance: Appendix A runs about a guide-week
+ahead of the calendar through the whole back third, so it puts Mission 7 as
+finishing inside LP7 and Mission 8 as `Lessons 1-13` in LP8, while the week
+path has Mission 7's last lessons and End-of-Mission Assessment landing in
+week 28 (LP8's window) and Mission 8 reaching only lesson 10 there. The drift
+persists through LP9 and LP10 instead of self-correcting after one boundary.
+Lesson accounting is clean, so it is the same presentational shape, just
+sustained.
 
 Nothing is lost or duplicated - it is grouped by the calendar rather than by
 Appendix A's sentence. The check that settles it is lesson accounting, not
