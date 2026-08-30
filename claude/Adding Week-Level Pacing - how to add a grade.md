@@ -48,6 +48,43 @@ transcription, or a change to the panel itself.
 
 ### Changelog
 
+- **Lincoln Learning week map rebuilt from the real school calendar** -
+  8/30/26. `data/ll_week_lesson_map.json` replaced and re-merged into all
+  **39** LL slots. No new slots, no code change, no schema change: LL is
+  derived data, so a correction to the map is a correction everywhere at once.
+
+  The old file weighted weeks by a rough sense of which had more instructional
+  days. The new one divides each LP's lesson count by that LP's actual
+  instructional-day count from the 2026-27 Visions calendar. Most of the year
+  was already right: **33 of 36 weeks are byte-identical**, and the change is
+  confined to **weeks 17, 18 and 19**. Week 19 has only 2 real instructional
+  days (MLK Day on 1/18 plus two non-instructional days on 1/21-22), not the 4
+  the old file assumed, so LP5's 17 lessons now split 5/5/5/2 across weeks
+  16-19 instead of 5/4/4/4:
+
+        week 17   Lessons 84-87  ->  84-88
+        week 18   Lessons 88-91  ->  89-93
+        week 19   Lessons 92-95  ->  94-95
+
+  LP10's 6/5 split is unchanged, but for a new reason - it is now the outcome
+  of the deliberate 7/6 day split described above rather than of the old
+  weighting. Same numbers, different provenance; see "Derived weeks" below.
+
+  Verification: all 10 LP windows still reconstruct the fixed lesson table
+  exactly (LP1 1-15 through LP10 170-180), lessons 1-180 appear once each with
+  no gaps or duplicates, and all 39 slots carry the identical new map. Across
+  every LL slot at every weeks-completed value - 9,503 rendered lines - the
+  only lines that changed are weeks 17-19, and nothing changed at
+  weeks-completed 0 or 4, where the stored LP-level cells render instead of
+  the week path. Zearn and Beyond the Page output is byte-identical for all 10
+  grades.
+
+  A driver note worth keeping: **at TK and K the LL rows are named after the
+  VIE pacing guides** ("Mathematics K Pacing Guide - VIE", "Integrated TK
+  Pacing Guide - VIE"), not "Lincoln Learning". A row filter matching on the
+  curriculum name silently misses eight of the 39 slots. Capture the whole
+  rendered body instead.
+
 - **OUR Math and Open Up EL Education at Grade 4** - 8/30/26. Data-only, and
   the fourth grade on this kind: the rollout now covers **K through 4**.
   Grades 5-8 and TK still show no panel for these two curricula. Week-pacing
@@ -824,6 +861,23 @@ weeks must reconstruct the fixed table exactly. Union the lesson ranges of the
 weeks in each LP window and compare against the table - LP1 must come out
 1-15, LP2 16-40, and so on to LP10 at 170-180 - and confirm lessons 1-180 are
 covered once each with no gaps or duplicates. That is the whole check.
+
+The derivation itself, as of the 8/30/26 rebuild: each LP's lesson count is
+divided by that LP's real instructional-day count from the **2026-27 Visions
+School Year Calendar** (18, 20, 19, 15, 17, 18, 20, 15, 20, 13 days), giving a
+per-LP lessons-per-day rate; each week then gets its own day count times that
+rate, rounded by largest remainder, with fractions going to the longer week
+first so a short week never absorbs a rounded-up lesson it has no days for.
+The two fully non-instructional weeks (Thanksgiving and Spring recess) are
+skipped rather than numbered.
+
+**One place is a judgment call, not arithmetic.** LP10's window (5/17-6/3)
+covers three real calendar weeks, but `week_windows` has only two slots for it
+(35 and 36), because every curriculum here runs on a fixed 36-week grid. Per
+Loren's direction the 13 real days were split as evenly as the slots allow -
+7 to week 35, 6 to week 36 - producing 6 lessons then 5. **That split is a
+decision baked into the data. Do not "correct" it toward a calendar-week
+boundary.**
 
 ### Enumerated segments vs a compressed LP range
 

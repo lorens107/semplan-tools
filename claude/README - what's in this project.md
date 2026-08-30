@@ -41,7 +41,10 @@ curriculum a grade offers, including Open Up at TK and in Grades 5 through 8.
 
 `data/` holds the guide-sourced per-week files for **every wired grade** -
 TK, K and Grades 1 through 8 - and for every curriculum except Lincoln
-Learning, whose weeks are derived rather than transcribed. Grade 3 was the
+Learning, whose weeks are derived rather than transcribed: one universal
+`ll_week_lesson_map.json` computed from the fixed lesson table and the 2026-27
+Visions school calendar, shared by all 39 LL slots, so a correction to it
+changes every grade and subject at once. Grade 3 was the
 last grade to get its source files:
 its week data arrived inside the original uploaded build and lived only in
 `web/web_data.json` until 8/29/26, when the transcriptions were found and
