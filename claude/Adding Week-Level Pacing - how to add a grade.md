@@ -29,24 +29,74 @@ covers **five curricula**:
     ELA/Lincoln Learning        TK, K, 1-8
     Science/Lincoln Learning    TK, K, 1-8
     HSS/Lincoln Learning        TK, K, 1-8 except grade 3, which does not offer it
-    Math/Open Up Resources      K, 1, 2, 3
-    ELA/Open Up EL Education    K, 1, 2, 3
+    Math/Open Up Resources      K, 1, 2, 3, 4
+    ELA/Open Up EL Education    K, 1, 2, 3, 4
 
 Studies Weekly was added 8/29/26 and was the first new *curriculum* rather
 than a new grade - it needed a third `kind`. Lincoln Learning followed on
 8/30/26 and needed no new kind at all, reusing `studies_weekly`. Open Up
 Resources (OUR Math) and Open Up EL Education followed the same day and needed
-a fourth kind, `module_unit_lesson`; Grades 1, 2 and 3 followed the same day.
-They are wired at **Grades K through 3 only**, and the other grades that offer
+a fourth kind, `module_unit_lesson`; Grades 1 through 4 followed the same day.
+They are wired at **Grades K through 4 only**, and the other grades that offer
 them still show no panel. Every combination is verified end to end in a real
 browser. The panel stays hidden for every curriculum without week-level data:
 Beast Academy, Dimensions Math, TCI, and Open Up Resources / Open Up EL
-Education in Grades 4 through 8 and TK.
+Education in Grades 5 through 8 and TK.
 
 A change here now means another new curriculum, a correction to an existing
 transcription, or a change to the panel itself.
 
 ### Changelog
+
+- **OUR Math and Open Up EL Education at Grade 4** - 8/30/26. Data-only, and
+  the fourth grade on this kind: the rollout now covers **K through 4**.
+  Grades 5-8 and TK still show no panel for these two curricula. Week-pacing
+  slots: 85 to **87**. OUR Math ends at week 35 again (no `"36"` key); EL
+  Education runs the full 36 and is the first file here where **no week
+  crosses a Module or Unit boundary** - all 36 weeks are single segments.
+  Coverage as ordered prefix is exact in both: OUR Math 40, 39 and 38 of 40
+  segments at deficits 1, 2 and 3, EL Education 35, 34 and 33 of 36. No LP
+  empty at any deficit.
+
+  **Two shapes that were flagged as possible validator problems, and are
+  not.** `check_module_unit_lesson()` needed no change for either:
+
+    - **A three-way section merge, `unit: "B-C-D"`** (week 34, the first in
+      the project). The validator only requires `unit` to be a non-empty
+      string; it never parses hyphens, so any number of them is fine. It
+      renders as `Unit 9 | Section B-C-D: Lessons 6-10`.
+    - **Unit 4 has no Lesson 1** - a real gap in the guide, which jumps from
+      "Check Your Readiness" straight to Lesson 2. Unit 4 runs 2-23, not 1-23.
+      No exception was needed, because the validator checks segment *shape*
+      and never lesson continuity. Worth knowing what that implies: **the
+      loader would not catch a genuine lesson gap either.** Contiguity is
+      checked outside it, by lesson accounting, which here confirms Unit 4 has
+      no *interior* gap (2..23 complete) and every other Unit is contiguous
+      from 1.
+
+  Assessment-only segments are pervasive at this grade - every Unit's own
+  Assessment is printed the guide-week after the section it follows (weeks 3,
+  7, 11, 16, 20), rather than the three isolated cases at Grade 3.
+
+  **Appendix A comparison: ELA exact, Math differs at three LP boundaries.**
+  The source file's note says all 10 LPs agree exactly for both curricula;
+  that holds for EL Education, and for Math it holds only once Appendix A's
+  closed ranges are also read as non-authoritative at section boundaries. The
+  three:
+
+    - **LP1**, Unit 2: Appendix A `Lessons 1-9`, week path 1-7 (8-9 open LP2,
+      where Appendix A also starts at 8 - so Appendix A itself carries 8-9
+      twice).
+    - **LP2**, Unit 3: Appendix A `Lessons 1-10`, week path 1-9, with lesson
+      10 opening LP3 - and Appendix A's LP3 line also starts at 10.
+    - **LP3**, Unit 4: Appendix A `Lessons 1-8`, week path 2-8 - the missing
+      Lesson 1 above. Appendix A prints the header range but lists only L2 and
+      L3 as titles.
+
+  All three are the guide's header rows undercounting the outgoing section,
+  which this guide does at nearly every section boundary and Appendix A
+  copies. Nothing is lost: lesson accounting proves every lesson appears
+  exactly once across the file. Body wins, per the standing rule.
 
 - **OUR Math and Open Up EL Education at Grade 3** - 8/30/26. Data-only, the
   third grade on this kind. Week-pacing slots: 83 to **85**. OUR Math Grade 3

@@ -1,0 +1,298 @@
+{
+ "_source": "CORE Math Pacing Guide 4th Grade - Open Up Resources with Open Up (OUR Math), uploaded 8/30/26, transcribed by week. Same segment-list schema as Grades K/1/2/3's our_math_g{K,1,2,3}_weeks.json.",
+ "_note": "Module = Unit (OUR Math's own numbering), Unit = Section (hyphenated when a week's lessons span multiple sections within the same Unit and both sections have real lesson content that week, e.g. 'A-B'; week 34 is a three-way merge, 'B-C-D', the first instance of that shape in this project - Sections B, C and D each have real lessons in that single week, so all three merge per the same rule that produces two-way hyphens elsewhere). Course finishes at week 35 (Unit 9 Assessment); week 36 is generic 'Deck of Cards Math Review'/'Math Fact Mastery' review activities with no Unit/Section/Lesson content, so it carries no key here - same shape as Grades 1, 2 and 3's course ending one week early. This guide's header row undercounts the outgoing section's lessons at nearly every section boundary (a pattern already seen in Grades 1-3) - every segment here is transcribed from the week's own lesson-by-lesson body, not its header table, and confirmed against Appendix A's Grade 4 OUR Math bullets in 2627_LP_Meeting_Plan.md: all 10 LPs agree exactly (lesson lists, checkpoint/assessment placement, and even the header typos and title duplications) once Appendix A's own open-ended 'Lessons 1 - Unit N Review' phrasing is read as non-comparable, not as a range. Detached checkpoints/assessments: every Unit's own Assessment is printed the guide-week AFTER the section whose Checkpoint it follows (weeks 3, 7, 11, 16, 20 all carry a Unit Assessment with no lessons that week, attached to the prior week's last section) - a more pervasive version of the detached-checkpoint shape first seen at Grade 3. Two Section Checkpoints (Unit 6's Section D, week 25; Unit 8's Section B, week 32) land in the SAME week as their Unit's own Assessment rather than detached, and Unit 8's Section D never gets a Checkpoint at all (like Grade 3's Unit 8) and Unit 9 likewise has no Section D Checkpoint. One genuine guide gap, not a transcription defect: Unit 4 Section A has no Lesson 1 anywhere in the guide - the week 11 table jumps from 'Unit 4 Check Your Readiness' straight to Lesson 2 with no Lesson 1 link or title printed - confirmed absent from Appendix A's own bullet too (its 'Lessons 1-3' header lists only L2 and L3 as titles). Lesson accounting for Unit 4 is therefore contiguous 2-23 (22 lessons), not 1-23; every other Unit is contiguous from 1 with no gaps or duplicates (Units 1-9: 8, 17, 20, 22, 18, 25, 16, 10, 12 lessons). Week 34's header prints 'Section C | Lesson 10' a second time where the body's own URL for that lesson is unit-9/section-d/lesson-10 - resolved as Section D, per body-wins.",
+ "1": [
+  {
+   "module": 1,
+   "unit": "A",
+   "lessons": "1-4",
+   "assessment": "Section A Checkpoint"
+  }
+ ],
+ "2": [
+  {
+   "module": 1,
+   "unit": "B",
+   "lessons": "5-8",
+   "assessment": "Section B Checkpoint"
+  }
+ ],
+ "3": [
+  {
+   "module": 1,
+   "unit": "B",
+   "assessment": "Unit 1 Assessment"
+  },
+  {
+   "module": 2,
+   "unit": "A",
+   "lessons": "1-3"
+  }
+ ],
+ "4": [
+  {
+   "module": 2,
+   "unit": "A-B",
+   "lessons": "4-7",
+   "assessment": "Section A Checkpoint"
+  }
+ ],
+ "5": [
+  {
+   "module": 2,
+   "unit": "B-C",
+   "lessons": "8-12",
+   "assessment": "Section B Checkpoint"
+  }
+ ],
+ "6": [
+  {
+   "module": 2,
+   "unit": "C",
+   "lessons": "13-17",
+   "assessment": "Section C Checkpoint"
+  }
+ ],
+ "7": [
+  {
+   "module": 2,
+   "unit": "C",
+   "assessment": "Unit 2 Assessment"
+  },
+  {
+   "module": 3,
+   "unit": "A",
+   "lessons": "1-4"
+  }
+ ],
+ "8": [
+  {
+   "module": 3,
+   "unit": "A-B",
+   "lessons": "5-9",
+   "assessment": "Section A Checkpoint"
+  }
+ ],
+ "9": [
+  {
+   "module": 3,
+   "unit": "B",
+   "lessons": "10-14",
+   "assessment": "Section B Checkpoint"
+  }
+ ],
+ "10": [
+  {
+   "module": 3,
+   "unit": "C",
+   "lessons": "15-20"
+  }
+ ],
+ "11": [
+  {
+   "module": 3,
+   "unit": "C",
+   "assessment": "Section C Checkpoint + Unit 3 Assessment"
+  },
+  {
+   "module": 4,
+   "unit": "A",
+   "lessons": "2-3"
+  }
+ ],
+ "12": [
+  {
+   "module": 4,
+   "unit": "A-B",
+   "lessons": "4-8",
+   "assessment": "Section A Checkpoint"
+  }
+ ],
+ "13": [
+  {
+   "module": 4,
+   "unit": "B-C",
+   "lessons": "9-13",
+   "assessment": "Section B Checkpoint"
+  }
+ ],
+ "14": [
+  {
+   "module": 4,
+   "unit": "C-D",
+   "lessons": "14-18",
+   "assessment": "Section C Checkpoint"
+  }
+ ],
+ "15": [
+  {
+   "module": 4,
+   "unit": "D",
+   "lessons": "19-23",
+   "assessment": "Section D Checkpoint"
+  }
+ ],
+ "16": [
+  {
+   "module": 4,
+   "unit": "D",
+   "assessment": "Unit 4 Assessment"
+  },
+  {
+   "module": 5,
+   "unit": "A",
+   "lessons": "1-3"
+  }
+ ],
+ "17": [
+  {
+   "module": 5,
+   "unit": "A-B",
+   "lessons": "4-8",
+   "assessment": "Section A Checkpoint"
+  }
+ ],
+ "18": [
+  {
+   "module": 5,
+   "unit": "B",
+   "lessons": "9-13",
+   "assessment": "Section B Checkpoint"
+  }
+ ],
+ "19": [
+  {
+   "module": 5,
+   "unit": "C",
+   "lessons": "14-18",
+   "assessment": "Section C Checkpoint"
+  }
+ ],
+ "20": [
+  {
+   "module": 5,
+   "unit": "C",
+   "assessment": "Unit 5 Assessment"
+  },
+  {
+   "module": 6,
+   "unit": "A",
+   "lessons": "1-3"
+  }
+ ],
+ "21": [
+  {
+   "module": 6,
+   "unit": "A-B",
+   "lessons": "4-8",
+   "assessment": "Section A Checkpoint"
+  }
+ ],
+ "22": [
+  {
+   "module": 6,
+   "unit": "B-C",
+   "lessons": "9-13",
+   "assessment": "Section B Checkpoint"
+  }
+ ],
+ "23": [
+  {
+   "module": 6,
+   "unit": "C",
+   "lessons": "14-18"
+  }
+ ],
+ "24": [
+  {
+   "module": 6,
+   "unit": "C-D",
+   "lessons": "19-23",
+   "assessment": "Section C Checkpoint"
+  }
+ ],
+ "25": [
+  {
+   "module": 6,
+   "unit": "D",
+   "lessons": "24-25",
+   "assessment": "Section D Checkpoint + Unit 6 Assessment"
+  }
+ ],
+ "26": [
+  {
+   "module": 7,
+   "unit": "A",
+   "lessons": "1-5",
+   "assessment": "Section A Checkpoint"
+  }
+ ],
+ "27": [
+  {
+   "module": 7,
+   "unit": "B",
+   "lessons": "6-10"
+  }
+ ],
+ "28": [
+  {
+   "module": 7,
+   "unit": "B-C",
+   "lessons": "11-15",
+   "assessment": "Section B Checkpoint"
+  }
+ ],
+ "29": [
+  {
+   "module": 7,
+   "unit": "C",
+   "lessons": "16",
+   "assessment": "Section C Checkpoint + Unit 7 Assessment"
+  }
+ ],
+ "30": [
+  {
+   "module": 8,
+   "unit": "A",
+   "lessons": "1-4"
+  }
+ ],
+ "31": [
+  {
+   "module": 8,
+   "unit": "A-B",
+   "lessons": "5-9",
+   "assessment": "Section A Checkpoint"
+  }
+ ],
+ "32": [
+  {
+   "module": 8,
+   "unit": "B",
+   "lessons": "10",
+   "assessment": "Section B Checkpoint + Unit 8 Assessment"
+  }
+ ],
+ "33": [
+  {
+   "module": 9,
+   "unit": "A-B",
+   "lessons": "1-5"
+  }
+ ],
+ "34": [
+  {
+   "module": 9,
+   "unit": "B-C-D",
+   "lessons": "6-10"
+  }
+ ],
+ "35": [
+  {
+   "module": 9,
+   "unit": "D",
+   "lessons": "11-12",
+   "assessment": "Unit 9 Assessment"
+  }
+ ]
+}

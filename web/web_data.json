@@ -16422,6 +16422,309 @@
             "35": "Lessons 170-175",
             "36": "Lessons 176-180"
           }
+        },
+        "Open Up Resources": {
+          "kind": "module_unit_lesson",
+          "labels": {
+            "outer": "Unit",
+            "inner": "Section"
+          },
+          "weeks": {
+            "1": [
+              {
+                "module": 1,
+                "unit": "A",
+                "lessons": "1-4",
+                "assessment": "Section A Checkpoint"
+              }
+            ],
+            "2": [
+              {
+                "module": 1,
+                "unit": "B",
+                "lessons": "5-8",
+                "assessment": "Section B Checkpoint"
+              }
+            ],
+            "3": [
+              {
+                "module": 1,
+                "unit": "B",
+                "assessment": "Unit 1 Assessment"
+              },
+              {
+                "module": 2,
+                "unit": "A",
+                "lessons": "1-3"
+              }
+            ],
+            "4": [
+              {
+                "module": 2,
+                "unit": "A-B",
+                "lessons": "4-7",
+                "assessment": "Section A Checkpoint"
+              }
+            ],
+            "5": [
+              {
+                "module": 2,
+                "unit": "B-C",
+                "lessons": "8-12",
+                "assessment": "Section B Checkpoint"
+              }
+            ],
+            "6": [
+              {
+                "module": 2,
+                "unit": "C",
+                "lessons": "13-17",
+                "assessment": "Section C Checkpoint"
+              }
+            ],
+            "7": [
+              {
+                "module": 2,
+                "unit": "C",
+                "assessment": "Unit 2 Assessment"
+              },
+              {
+                "module": 3,
+                "unit": "A",
+                "lessons": "1-4"
+              }
+            ],
+            "8": [
+              {
+                "module": 3,
+                "unit": "A-B",
+                "lessons": "5-9",
+                "assessment": "Section A Checkpoint"
+              }
+            ],
+            "9": [
+              {
+                "module": 3,
+                "unit": "B",
+                "lessons": "10-14",
+                "assessment": "Section B Checkpoint"
+              }
+            ],
+            "10": [
+              {
+                "module": 3,
+                "unit": "C",
+                "lessons": "15-20"
+              }
+            ],
+            "11": [
+              {
+                "module": 3,
+                "unit": "C",
+                "assessment": "Section C Checkpoint + Unit 3 Assessment"
+              },
+              {
+                "module": 4,
+                "unit": "A",
+                "lessons": "2-3"
+              }
+            ],
+            "12": [
+              {
+                "module": 4,
+                "unit": "A-B",
+                "lessons": "4-8",
+                "assessment": "Section A Checkpoint"
+              }
+            ],
+            "13": [
+              {
+                "module": 4,
+                "unit": "B-C",
+                "lessons": "9-13",
+                "assessment": "Section B Checkpoint"
+              }
+            ],
+            "14": [
+              {
+                "module": 4,
+                "unit": "C-D",
+                "lessons": "14-18",
+                "assessment": "Section C Checkpoint"
+              }
+            ],
+            "15": [
+              {
+                "module": 4,
+                "unit": "D",
+                "lessons": "19-23",
+                "assessment": "Section D Checkpoint"
+              }
+            ],
+            "16": [
+              {
+                "module": 4,
+                "unit": "D",
+                "assessment": "Unit 4 Assessment"
+              },
+              {
+                "module": 5,
+                "unit": "A",
+                "lessons": "1-3"
+              }
+            ],
+            "17": [
+              {
+                "module": 5,
+                "unit": "A-B",
+                "lessons": "4-8",
+                "assessment": "Section A Checkpoint"
+              }
+            ],
+            "18": [
+              {
+                "module": 5,
+                "unit": "B",
+                "lessons": "9-13",
+                "assessment": "Section B Checkpoint"
+              }
+            ],
+            "19": [
+              {
+                "module": 5,
+                "unit": "C",
+                "lessons": "14-18",
+                "assessment": "Section C Checkpoint"
+              }
+            ],
+            "20": [
+              {
+                "module": 5,
+                "unit": "C",
+                "assessment": "Unit 5 Assessment"
+              },
+              {
+                "module": 6,
+                "unit": "A",
+                "lessons": "1-3"
+              }
+            ],
+            "21": [
+              {
+                "module": 6,
+                "unit": "A-B",
+                "lessons": "4-8",
+                "assessment": "Section A Checkpoint"
+              }
+            ],
+            "22": [
+              {
+                "module": 6,
+                "unit": "B-C",
+                "lessons": "9-13",
+                "assessment": "Section B Checkpoint"
+              }
+            ],
+            "23": [
+              {
+                "module": 6,
+                "unit": "C",
+                "lessons": "14-18"
+              }
+            ],
+            "24": [
+              {
+                "module": 6,
+                "unit": "C-D",
+                "lessons": "19-23",
+                "assessment": "Section C Checkpoint"
+              }
+            ],
+            "25": [
+              {
+                "module": 6,
+                "unit": "D",
+                "lessons": "24-25",
+                "assessment": "Section D Checkpoint + Unit 6 Assessment"
+              }
+            ],
+            "26": [
+              {
+                "module": 7,
+                "unit": "A",
+                "lessons": "1-5",
+                "assessment": "Section A Checkpoint"
+              }
+            ],
+            "27": [
+              {
+                "module": 7,
+                "unit": "B",
+                "lessons": "6-10"
+              }
+            ],
+            "28": [
+              {
+                "module": 7,
+                "unit": "B-C",
+                "lessons": "11-15",
+                "assessment": "Section B Checkpoint"
+              }
+            ],
+            "29": [
+              {
+                "module": 7,
+                "unit": "C",
+                "lessons": "16",
+                "assessment": "Section C Checkpoint + Unit 7 Assessment"
+              }
+            ],
+            "30": [
+              {
+                "module": 8,
+                "unit": "A",
+                "lessons": "1-4"
+              }
+            ],
+            "31": [
+              {
+                "module": 8,
+                "unit": "A-B",
+                "lessons": "5-9",
+                "assessment": "Section A Checkpoint"
+              }
+            ],
+            "32": [
+              {
+                "module": 8,
+                "unit": "B",
+                "lessons": "10",
+                "assessment": "Section B Checkpoint + Unit 8 Assessment"
+              }
+            ],
+            "33": [
+              {
+                "module": 9,
+                "unit": "A-B",
+                "lessons": "1-5"
+              }
+            ],
+            "34": [
+              {
+                "module": 9,
+                "unit": "B-C-D",
+                "lessons": "6-10"
+              }
+            ],
+            "35": [
+              {
+                "module": 9,
+                "unit": "D",
+                "lessons": "11-12",
+                "assessment": "Unit 9 Assessment"
+              }
+            ]
+          }
         }
       },
       "ELA": {
@@ -16545,6 +16848,293 @@
             "34": "Lessons 165-169",
             "35": "Lessons 170-175",
             "36": "Lessons 176-180"
+          }
+        },
+        "Open Up EL Education": {
+          "kind": "module_unit_lesson",
+          "labels": {
+            "outer": "Module",
+            "inner": "Unit"
+          },
+          "weeks": {
+            "1": [
+              {
+                "module": 1,
+                "unit": "1",
+                "lessons": "1-4"
+              }
+            ],
+            "2": [
+              {
+                "module": 1,
+                "unit": "1",
+                "lessons": "5-8",
+                "assessment": "Unit 1 Assessment"
+              }
+            ],
+            "3": [
+              {
+                "module": 1,
+                "unit": "1",
+                "lessons": "9-12",
+                "assessment": "Unit 1 Assessment"
+              }
+            ],
+            "4": [
+              {
+                "module": 1,
+                "unit": "2",
+                "lessons": "1-4",
+                "assessment": "Unit 2 Assessment"
+              }
+            ],
+            "5": [
+              {
+                "module": 1,
+                "unit": "2",
+                "lessons": "5-9"
+              }
+            ],
+            "6": [
+              {
+                "module": 1,
+                "unit": "2",
+                "lessons": "10-14",
+                "assessment": "Unit 2 Assessment"
+              }
+            ],
+            "7": [
+              {
+                "module": 1,
+                "unit": "3",
+                "lessons": "1-3",
+                "assessment": "Unit 3 Assessment"
+              }
+            ],
+            "8": [
+              {
+                "module": 1,
+                "unit": "3",
+                "lessons": "4-7"
+              }
+            ],
+            "9": [
+              {
+                "module": 1,
+                "unit": "3",
+                "lessons": "8-11",
+                "assessment": "Unit 3 Assessment + Performance Task"
+              }
+            ],
+            "10": [
+              {
+                "module": 2,
+                "unit": "1",
+                "lessons": "1-4"
+              }
+            ],
+            "11": [
+              {
+                "module": 2,
+                "unit": "1",
+                "lessons": "5-8",
+                "assessment": "Unit 1 Assessment"
+              }
+            ],
+            "12": [
+              {
+                "module": 2,
+                "unit": "1",
+                "lessons": "9-11",
+                "assessment": "Unit 1 Assessment"
+              }
+            ],
+            "13": [
+              {
+                "module": 2,
+                "unit": "2",
+                "lessons": "1-4"
+              }
+            ],
+            "14": [
+              {
+                "module": 2,
+                "unit": "2",
+                "lessons": "5-8",
+                "assessment": "Unit 2 Assessment"
+              }
+            ],
+            "15": [
+              {
+                "module": 2,
+                "unit": "2",
+                "lessons": "9-12",
+                "assessment": "Unit 2 Assessment"
+              }
+            ],
+            "16": [
+              {
+                "module": 2,
+                "unit": "3",
+                "lessons": "1-5",
+                "assessment": "Performance Task"
+              }
+            ],
+            "17": [
+              {
+                "module": 2,
+                "unit": "3",
+                "lessons": "6-10",
+                "assessment": "Unit 3 Assessment"
+              }
+            ],
+            "18": [
+              {
+                "module": 2,
+                "unit": "3",
+                "lessons": "11-15",
+                "assessment": "Unit 3 Assessment"
+              }
+            ],
+            "19": [
+              {
+                "module": 3,
+                "unit": "1",
+                "lessons": "1-4"
+              }
+            ],
+            "20": [
+              {
+                "module": 3,
+                "unit": "1",
+                "lessons": "5-8",
+                "assessment": "Unit 1 Assessment"
+              }
+            ],
+            "21": [
+              {
+                "module": 3,
+                "unit": "1",
+                "lessons": "9-11",
+                "assessment": "Unit 1 Assessment"
+              }
+            ],
+            "22": [
+              {
+                "module": 3,
+                "unit": "2",
+                "lessons": "1-5"
+              }
+            ],
+            "23": [
+              {
+                "module": 3,
+                "unit": "2",
+                "lessons": "6-10",
+                "assessment": "Unit 2 Assessment"
+              }
+            ],
+            "24": [
+              {
+                "module": 3,
+                "unit": "2",
+                "lessons": "11-13",
+                "assessment": "Unit 2 Assessment"
+              }
+            ],
+            "25": [
+              {
+                "module": 3,
+                "unit": "3",
+                "lessons": "1-5",
+                "assessment": "Unit 3 Assessment"
+              }
+            ],
+            "26": [
+              {
+                "module": 3,
+                "unit": "3",
+                "lessons": "6-10"
+              }
+            ],
+            "27": [
+              {
+                "module": 3,
+                "unit": "3",
+                "lessons": "11-15",
+                "assessment": "Unit 3 Assessment + Performance Task"
+              }
+            ],
+            "28": [
+              {
+                "module": 4,
+                "unit": "1",
+                "lessons": "1-4",
+                "assessment": "Unit 1 Assessment"
+              }
+            ],
+            "29": [
+              {
+                "module": 4,
+                "unit": "1",
+                "lessons": "5-7",
+                "assessment": "Unit 1 Assessment"
+              }
+            ],
+            "30": [
+              {
+                "module": 4,
+                "unit": "1",
+                "lessons": "8-10",
+                "assessment": "Unit 1 Assessment"
+              }
+            ],
+            "31": [
+              {
+                "module": 4,
+                "unit": "2",
+                "lessons": "1-5"
+              }
+            ],
+            "32": [
+              {
+                "module": 4,
+                "unit": "2",
+                "lessons": "6-10",
+                "assessment": "Unit 2 Assessment"
+              }
+            ],
+            "33": [
+              {
+                "module": 4,
+                "unit": "2",
+                "lessons": "11-13",
+                "assessment": "Unit 2 Assessment"
+              }
+            ],
+            "34": [
+              {
+                "module": 4,
+                "unit": "3",
+                "lessons": "1-5",
+                "assessment": "Unit 3 Assessment"
+              }
+            ],
+            "35": [
+              {
+                "module": 4,
+                "unit": "3",
+                "lessons": "6-10"
+              }
+            ],
+            "36": [
+              {
+                "module": 4,
+                "unit": "3",
+                "lessons": "11-15",
+                "assessment": "Unit 3 Assessment + Performance Task"
+              }
+            ]
           }
         }
       },
