@@ -29,24 +29,69 @@ covers **five curricula**:
     ELA/Lincoln Learning        TK, K, 1-8
     Science/Lincoln Learning    TK, K, 1-8
     HSS/Lincoln Learning        TK, K, 1-8 except grade 3, which does not offer it
-    Math/Open Up Resources      K, 1
-    ELA/Open Up EL Education    K, 1
+    Math/Open Up Resources      K, 1, 2
+    ELA/Open Up EL Education    K, 1, 2
 
 Studies Weekly was added 8/29/26 and was the first new *curriculum* rather
 than a new grade - it needed a third `kind`. Lincoln Learning followed on
 8/30/26 and needed no new kind at all, reusing `studies_weekly`. Open Up
 Resources (OUR Math) and Open Up EL Education followed the same day and needed
-a fourth kind, `module_unit_lesson`; Grade 1 followed the same day. They are
-wired at **Grades K and 1 only**, and the other grades that offer them still
-show no panel. Every combination is verified end to end in a real browser. The
-panel stays hidden for every curriculum without week-level data: Beast
-Academy, Dimensions Math, TCI, and Open Up Resources / Open Up EL Education in
-every grade except K and 1.
+a fourth kind, `module_unit_lesson`; Grades 1 and 2 followed the same day.
+They are wired at **Grades K, 1 and 2 only**, and the other grades that offer
+them still show no panel. Every combination is verified end to end in a real
+browser. The panel stays hidden for every curriculum without week-level data:
+Beast Academy, Dimensions Math, TCI, and Open Up Resources / Open Up EL
+Education in every grade except K, 1 and 2.
 
 A change here now means another new curriculum, a correction to an existing
 transcription, or a change to the panel itself.
 
 ### Changelog
+
+- **OUR Math and Open Up EL Education at Grade 2** - 8/30/26. Data-only, like
+  Grade 1: both curricula were already offered with ten LPs of baseline
+  content, so this filled two existing slots. Week-pacing slots: 81 to **83**.
+  OUR Math Grade 2 also finishes at week 35 - week 36 is a generic "Review"
+  page (dice games, math mosaics) with no M|U|L content - so the file has no
+  `"36"` key, and no LP rendered empty at any deficit.
+
+  Coverage as ordered prefix, exact in both: OUR Math 41, 40 and 39 of 41
+  segments at deficits 1, 2 and 3 (**41 of 41 at deficit 1**, the early-finish
+  signature Grade 1 showed too), EL Education 39, 38 and 37 of 40. Lesson
+  accounting clean in both - OUR Math contiguous from 1 within each of Units
+  1-9, EL Education within each of the twelve Module/Unit pairs.
+
+  **The deficit-0 check is not a string comparison, and cannot be.** At
+  deficit 0 the panel renders the *stored* Appendix A cells, not generated
+  content, so "does deficit 0 reproduce stored" is true by construction and
+  proves nothing. What is worth checking, and what was checked here, is the
+  week path *called directly* at deficit 0 (`weekShiftedContentFor(..., 0)`)
+  against the stored cells, comparing the outer-level and lesson endpoints per
+  LP. Both EL Education files at K, 1 and 2 agree exactly. OUR Math shows one
+  or two LP-boundary differences per grade, all of the documented
+  window-vs-prose kind:
+
+    - **Grade 2, LP7/LP8**: Appendix A puts Unit 7 "Lessons 1-13" in LP7 *and*
+      "Lessons 13 - ..." in LP8, double-counting lesson 13. The week path puts
+      1-12 in LP7 and 13-18 in LP8, so lesson 13 appears exactly once. This is
+      the guide's own week-27 header typo, which the transcriber resolved in
+      favour of the week's lesson-by-lesson body; the calendar wins, per the
+      standing rule.
+    - **Grade 1, LP2 and LP5**, and **Grade K, LP7**: the same shape - a
+      unit's tail sits one LP earlier or later in the week calendar than in
+      Appendix A's prose grouping.
+
+  The guide typos are recorded in the file's own `_note`: the header rows for
+  weeks 23, 24, 26 and 27 undercount the outgoing section's lesson range, and
+  Appendix A reproduces the same header text next to a title list that matches
+  the body rather than the header - which is what settles it.
+
+  One thing that looks like a duplicate and is not: **"Unit 1 Assessment" in
+  both weeks 11 and 12** (Module 2 Unit 1) and **"Unit 2 Assessment" in both
+  weeks 32 and 33** (Module 4 Unit 2) are multi-week assessments spanning two
+  weeks, the same shape confirmed at Grade K's LP9. The file's `_note` covers
+  the narrower case - a tag repeated across lessons *within* one segment is
+  written once - which is a different thing.
 
 - **OUR Math and Open Up EL Education at Grade 1** - 8/30/26. The second grade
   on `module_unit_lesson`, and **data-only**: no engine change, no loader
