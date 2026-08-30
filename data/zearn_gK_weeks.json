@@ -1,0 +1,194 @@
+{
+ "_source": "CORE Math Pacing Guide Grade K - Zearn, uploaded by Loren 8/29/26, transcribed by week from the per-week lesson lists (not just the header row). Guide typo caught via lesson-content continuity: week 19's body labels Mission 4 Topic A Lesson 2 as 'Mission 5' - the lesson-1/lesson-2 pair is clearly one continuous Mission 4 Topic A sequence (both build compositions/decompositions of numbers to 5), so it's transcribed as Mission 4. Same pattern as Grade 5 week 28, Grade 7 weeks 33/34, Grade 8 week 29. Two other guide slips noticed but not schema-relevant: weeks 11 and 36 attach 2nd-grade standards codes (2.OA.1 etc.) to Kindergarten shape lessons, and weeks 15/17 link 'Mission 4 Teacher and Student Materials' while still inside Mission 3 - both are standards/materials-link errors in the guide itself, outside the mission/lessons/topic/assessment schema this file carries. Lesson accounting verified: every mission's lessons are contiguous from 1 with no gaps or duplicates across all 36 weeks (Mission 1: 1-37, Mission 2: 1-10, Mission 3: 1-32, Mission 4: 1-41, Mission 5: 1-24, Mission 6: 1-8). Verified against Appendix A's Grade K Zearn row at deficit=0 across all 10 LPs using week_shift.py's shifted_windows and zearn_content: lesson ranges and mission boundaries match Appendix A exactly on all 10 LPs (LP1 Mission 1 Lessons 1-17 + Mid-Mission Assessment; LP2 Mission 1 Lessons 18-37; LP3 Mission 2 Lessons 1-10 + End-of-Mission Assessment, Mission 3 Lessons 1-5; LP4 Mission 3 Lessons 6-17 + Mid-Mission Assessment; LP5 Mission 3 Lessons 18-32, Mission 4 Lessons 1-2; LP6 Mission 4 Lessons 3-22; LP7 Mission 4 Lessons 23-39 + Mid-Mission Assessment; LP8 Mission 4 Lessons 40-41 + End-of-Mission Assessment, Mission 5 Lessons 1-10; LP9 Mission 5 Lessons 11-24 + Mid- and End-of-Mission Assessments; LP10 Mission 6 Lessons 1-8 + End-of-Mission Assessment). Only assessment wording differs from Appendix A's generic phrasing, which is the expected, documented Zearn shape and not a defect. No window-vs-prose divergence and no assessment-only mission tail anywhere in the year - first grade with a clean match on all 10 LPs since Grade 8.",
+ "1": {
+  "mission": 1,
+  "topic": "Topic A-B",
+  "lessons": "1-5"
+ },
+ "2": {
+  "mission": 1,
+  "topic": "Topic B-C",
+  "lessons": "6-10"
+ },
+ "3": {
+  "mission": 1,
+  "topic": "Topic C-D",
+  "lessons": "11-15"
+ },
+ "4": {
+  "mission": 1,
+  "topic": "Topic D-E",
+  "lessons": "16-17",
+  "assessment": "Mid-Mission Assessment (Topics A-D)"
+ },
+ "5": {
+  "mission": 1,
+  "topic": "Topic E",
+  "lessons": "18-22"
+ },
+ "6": {
+  "mission": 1,
+  "topic": "Topic F",
+  "lessons": "23-27"
+ },
+ "7": {
+  "mission": 1,
+  "topic": "Topic F-G",
+  "lessons": "28-32"
+ },
+ "8": {
+  "mission": 1,
+  "topic": "Topic H",
+  "lessons": "33-37"
+ },
+ "9": {
+  "mission": 2,
+  "topic": "Topic A",
+  "lessons": "1-2",
+  "assessment": "Mission 1 End-of-Mission Assessment (Topics E-H)"
+ },
+ "10": {
+  "mission": 2,
+  "topic": "Topic A-B",
+  "lessons": "3-7"
+ },
+ "11": {
+  "mission": 2,
+  "topic": "Topic B-C",
+  "lessons": "8-10",
+  "assessment": "End-of-Mission Assessment (Topics A-C)"
+ },
+ "12": {
+  "mission": 3,
+  "topic": "Topic A-B",
+  "lessons": "1-5"
+ },
+ "13": {
+  "mission": 3,
+  "topic": "Topic B-C",
+  "lessons": "6-10"
+ },
+ "14": {
+  "mission": 3,
+  "topic": "Topic C-D",
+  "lessons": "11-15"
+ },
+ "15": {
+  "mission": 3,
+  "topic": "Topic E",
+  "lessons": "16-17",
+  "assessment": "Mid-Mission Assessment (Topics A-D)"
+ },
+ "16": {
+  "mission": 3,
+  "topic": "Topic E-F",
+  "lessons": "18-22"
+ },
+ "17": {
+  "mission": 3,
+  "topic": "Topic F-G",
+  "lessons": "23-27"
+ },
+ "18": {
+  "mission": 3,
+  "topic": "Topic G-H",
+  "lessons": "28-32"
+ },
+ "19": {
+  "mission": 4,
+  "topic": "Topic A",
+  "lessons": "1-2",
+  "assessment": "Mission 3 End-of-Mission Assessment (Topics E-H)"
+ },
+ "20": {
+  "mission": 4,
+  "topic": "Topic A-B",
+  "lessons": "3-7"
+ },
+ "21": {
+  "mission": 4,
+  "topic": "Topic B",
+  "lessons": "8-12"
+ },
+ "22": {
+  "mission": 4,
+  "topic": "Topic C",
+  "lessons": "13-17"
+ },
+ "23": {
+  "mission": 4,
+  "topic": "Topic C-D",
+  "lessons": "18-22"
+ },
+ "24": {
+  "mission": 4,
+  "topic": "Topic D",
+  "lessons": "23-24",
+  "assessment": "Mid-Mission Assessment (Topics A-D)"
+ },
+ "25": {
+  "mission": 4,
+  "topic": "Topic E-F",
+  "lessons": "25-29"
+ },
+ "26": {
+  "mission": 4,
+  "topic": "Topic F-G",
+  "lessons": "30-34"
+ },
+ "27": {
+  "mission": 4,
+  "topic": "Topic G-H",
+  "lessons": "35-39"
+ },
+ "28": {
+  "mission": 4,
+  "topic": "Topic H",
+  "lessons": "40-41",
+  "assessment": "End-of-Mission Assessment (Topics E-H)"
+ },
+ "29": {
+  "mission": 5,
+  "topic": "Topic A",
+  "lessons": "1-5"
+ },
+ "30": {
+  "mission": 5,
+  "topic": "Topic B-C",
+  "lessons": "6-10"
+ },
+ "31": {
+  "mission": 5,
+  "topic": "Topic C",
+  "lessons": "11-14",
+  "assessment": "Mid-Mission Assessment (Topics A-C), Day 1"
+ },
+ "32": {
+  "mission": 5,
+  "topic": "Topic D",
+  "lessons": "15-17",
+  "assessment": "Mid-Mission Assessment (Topics A-C), Days 2-3"
+ },
+ "33": {
+  "mission": 5,
+  "topic": "Topic D-E",
+  "lessons": "18-22"
+ },
+ "34": {
+  "mission": 5,
+  "topic": "Topic E",
+  "lessons": "23-24",
+  "assessment": "End-of-Mission Assessment (Topics D-E)"
+ },
+ "35": {
+  "mission": 6,
+  "topic": "Topic A-B",
+  "lessons": "1-5"
+ },
+ "36": {
+  "mission": 6,
+  "topic": "Topic B",
+  "lessons": "6-8",
+  "assessment": "End-of-Mission Assessment (Topics A-B)"
+ }
+}

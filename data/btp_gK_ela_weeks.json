@@ -1,0 +1,226 @@
+{
+ "_source": "CORE ELA Pacing Guide Grade K - Beyond the Page, uploaded by Loren 8/29/26. Grade K's guide is a different shape from Grades 1-8: one book/unit per week rather than Mission/Topic/Lesson, so this file carries only cursive (absent) and gap_by_week, the two things the week-shift schema actually reads - the book/unit content itself isn't part of this schema. No cursive key: the guide names no weekly cursive assignment anywhere (one passing mention of 'Printing/Cursive' in the general course blurb, nothing per-week), same shape as Grades 7 and 8, confirmed by Loren for both K and TK. Gap activities: 15 of 36 weeks name one, all from the 'Visions Supplemental Lessons for Moving Beyond the Page - K' document (1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og), matched to Loren's uploaded PDF of that document by code and by the guide's own week-by-week order, which lines up 1:1 with the PDF's own worksheet order (all 15 PDF worksheets used exactly once). Two other documents were excluded from this file after Loren supplied the actual H-SS doc for comparison: weeks 8, 15, 31 and 35 additionally name activities from 1awmHSBif3E4f9HQmC4uCjOKsylQqrhiNvpxwADOE7UY (codes K-ESS2-2, K-PS2-2, PS3-1, PS3-2 - NGSS Science standards, despite the district's own link sheet mislabeling this document 'H-SS - Grade K') and 1z8nvZgFHsZRpiwumZufrgx788BQEQ-f_lmN91E6wTxQ (codes K.2, K.3 - genuine CA H-SS standards, matching the K.2/K.3/K.4 pattern used elsewhere in this guide's own 'History-Social Science' rows). Both are out of scope for the ELA week-shift file; they belong to Science and H-SS gap-activity data respectively, not covered here. One guide typo caught by elimination: week 18 names 'RF.K.3.c', which matches no worksheet in the PDF. Week 17 already accounts for RF.K.3.b (Marshmallow) - confirmed by Loren, since the code sits outside the week 17 link's markdown brackets and an earlier pass missed it - which leaves RF.K.3.d (Umbrella) as the only unused worksheet for week 18, also confirmed by Loren directly from the PDF's own stated standard. Recorded as RF.K.3.d, not the guide's literal RF.K.3.c. Weeks 1, 3, 15, and 19-36 name no ELA gap activity in the guide. unit_by_week added 8/29/26: the book/unit named in each week's own detail-table header row, for the week-shift engine's proposed unit-content rendering (see the schema-extension note handed to Claude Code). Two guide slips corrected: week 7's unit has no link in its own detail row (found instead in the LP2 At-a-Glance summary, unitID=222), and week 12's header duplicates the unit label as 'Unit 1: Unit 12: D - Dinosaurs Big and Small' - cleaned to 'Unit 12: ...'. Weeks 27-36 run the 'Age 5-7 Reading Semester 1' program instead of a lettered book unit, one numbered Lesson per week (Lesson 1-10); week 29 additionally starts Unit 30: February Celebrations mid-week, carried in the same text field since the schema has no second-unit slot.",
+ "gap_by_week": {
+  "2": {
+   "text": "Exploring Unknown Words About Pets (RI.K.4)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.xim7c8sivh0j",
+   "code": "RI.K.4"
+  },
+  "4": {
+   "text": "Exploring Authors and Illustrators (RI.K.6)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.xt3nhsfht50j",
+   "code": "RI.K.6"
+  },
+  "5": {
+   "text": "Exploring Leaves: Understanding Informational Text (RI.K.8)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.ce0ndwrm4nz5",
+   "code": "RI.K.8"
+  },
+  "6": {
+   "text": "Exploring Fireflies - Comparing Informational Texts (RI.K.9)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.8lhas9kmazp",
+   "code": "RI.K.9"
+  },
+  "7": {
+   "text": "Exploring Elephants: Using Illustrations to Make Predictions (RI.K.10b)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.iyim6hiask7o",
+   "code": "RI.K.10b"
+  },
+  "8": {
+   "text": "Exploring Opinions with \"Millions of Cats\" (W.K.1)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.18f0qrwp9qtt",
+   "code": "W.K.1"
+  },
+  "9": {
+   "text": "Strengthening Writing Skills through Nursery Rhymes (W.K.5)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.1kvk783sjp0s",
+   "code": "W.K.5"
+  },
+  "10": {
+   "text": "Engaging in Collaborative Conversations with Owl Babies (SL.K.1.a-b)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.829gosqsrz26",
+   "code": "SL.K.1.a-b"
+  },
+  "11": {
+   "text": "Exploring Nouns, Verbs, Prepositions, and Question Words (L.K.1.b-d,f)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.s7oaz6pedkq1",
+   "code": "L.K.1.b-d,f"
+  },
+  "12": {
+   "text": "Exploring Words: Uncovering New Meanings (L.K.4.a-b)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.mbmvj2ma8o3c",
+   "code": "L.K.4.a-b"
+  },
+  "13": {
+   "text": "Exploring Written Language with Harold and the Purple Crayon (RF.K.1.b)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.7xion271l3x0",
+   "code": "RF.K.1.b"
+  },
+  "14": {
+   "text": "Exploring Syllables and Onsets & Rimes (RF.K.2.b-c)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.rqgqo5pvac5o",
+   "code": "RF.K.2.b-c"
+  },
+  "16": {
+   "text": "Exploring Phonemes with \"Night in the Country\" (RF.K.2.d-f)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.55oblkijy7up",
+   "code": "RF.K.2.d-f"
+  },
+  "17": {
+   "text": "Exploring Vowel Sounds in \"Marshmallow\" (RF.K.3.b)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.vuk15ap95yuy",
+   "code": "RF.K.3.b"
+  },
+  "18": {
+   "text": "Exploring Sounds in Words with \"Umbrella\" (RF.K.3.d)",
+   "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.ds6dl5d937nk",
+   "code": "RF.K.3.d"
+  }
+ },
+ "unit_by_week": {
+  "1": {
+   "text": "Unit 1: A - A is for Musk Ox",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=216"
+  },
+  "2": {
+   "text": "Unit 2: H - Hondo and Fabian",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=217"
+  },
+  "3": {
+   "text": "Unit 3: I - The Little Island",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=218"
+  },
+  "4": {
+   "text": "Unit 4: T - What Do You Do with a Tail Like This?",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=219"
+  },
+  "5": {
+   "text": "Unit 5: L - We're Going on a Leaf Hunt",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=220"
+  },
+  "6": {
+   "text": "Unit 6: F - Fireflies",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=221"
+  },
+  "7": {
+   "text": "Unit 7: E - But No Elephants",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=222"
+  },
+  "8": {
+   "text": "Unit 8: C - Millions of Cats",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=223"
+  },
+  "9": {
+   "text": "Unit 9: G - The Real Mother Goose",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=224"
+  },
+  "10": {
+   "text": "Unit 10: O - Owl Babies",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=225"
+  },
+  "11": {
+   "text": "Unit 11: S - Seasons of Arnold's Apple Tree",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=226"
+  },
+  "12": {
+   "text": "Unit 12: D - Dinosaurs Big and Small",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=499"
+  },
+  "13": {
+   "text": "Unit 13: P - Harold and the Purple Crayon",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=228"
+  },
+  "14": {
+   "text": "Unit 14: B - Blueberries for Sal",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=229"
+  },
+  "15": {
+   "text": "Unit 15: R - Rain",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=230"
+  },
+  "16": {
+   "text": "Unit 16: N - Night in the Country",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=231"
+  },
+  "17": {
+   "text": "Unit 17: M - Marshmallow",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=232"
+  },
+  "18": {
+   "text": "Unit 18: U - Umbrella",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=233"
+  },
+  "19": {
+   "text": "Unit 19: J - Jump Frog Jump",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=234"
+  },
+  "20": {
+   "text": "Unit 20: K - Kindness",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=357"
+  },
+  "21": {
+   "text": "Unit 21: V - Zin! Zin! Zin! A Violin",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=236"
+  },
+  "22": {
+   "text": "Unit 22: Y - Little Blue and Little Yellow",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=237"
+  },
+  "23": {
+   "text": "Unit 23: W - George Washington's Birthday",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=238"
+  },
+  "24": {
+   "text": "Unit 24: Q - The Quilt Story",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=239"
+  },
+  "25": {
+   "text": "Unit 25: X - An Extraordinary Egg",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=240"
+  },
+  "26": {
+   "text": "Unit 26: Z - Greedy Zebra",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=241"
+  },
+  "27": {
+   "text": "Age 5-7 Reading Semester 1, Lesson 1",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+  },
+  "28": {
+   "text": "Age 5-7 Reading Semester 1, Lesson 2",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+  },
+  "29": {
+   "text": "Age 5-7 Reading Semester 1, Lesson 3; Unit 30: February Celebrations",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+  },
+  "30": {
+   "text": "Age 5-7 Reading Semester 1, Lesson 4",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+  },
+  "31": {
+   "text": "Age 5-7 Reading Semester 1, Lesson 5",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+  },
+  "32": {
+   "text": "Age 5-7 Reading Semester 1, Lesson 6",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+  },
+  "33": {
+   "text": "Age 5-7 Reading Semester 1, Lesson 7",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+  },
+  "34": {
+   "text": "Age 5-7 Reading Semester 1, Lesson 8",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+  },
+  "35": {
+   "text": "Age 5-7 Reading Semester 1, Lesson 9",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+  },
+  "36": {
+   "text": "Age 5-7 Reading Semester 1, Lesson 10",
+   "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+  }
+ }
+}

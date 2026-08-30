@@ -18,7 +18,7 @@ cells.
 
 ## Status
 
-**Grades 1 through 8 all have working week-shift data**, each for
+**Grade K and Grades 1 through 8 all have working week-shift data**, each for
 Math/Zearn and ELA/Beyond the Page. Every one is verified end to end in a
 real browser - the panel appears, the fields drive it, and the shifted
 content renders. No other grade has week data, and the panel correctly stays
@@ -26,6 +26,17 @@ hidden for them.
 
 ### Changelog
 
+- **Grade K** - `data/zearn_gK_weeks.json` (36 weeks),
+  `data/btp_gK_ela_weeks.json` (15 gap weeks, no cursive, **36 weeks of
+  `unit_by_week`**). First unit-shaped grade, and the reason `unit_by_week`
+  exists: K's ELA row names a book/unit per week rather than gap activities,
+  so before the schema extension the shifted view dropped the curriculum
+  entirely - LP6-LP10 rendered as a bare week range. All 36 units now render,
+  each exactly once. Zearn matches Appendix A on 9 of 10; LP3 is Appendix A's
+  own internal overlap (its LP3 claims Mission 3 lessons 1-10 while its LP4
+  claims 6-17, double-counting 6-10), and the week path's 1-5 / 6-17 split is
+  the coherent reading. ELA does not reproduce its stored cells on any LP -
+  see "Enumerated units vs a printed range", which is expected, not a defect.
 - **Grade 8** - `data/zearn_g8_weeks.json` (36 weeks),
   `data/btp_g8_ela_weeks.json` (13 gap weeks, no cursive). Both subjects
   reproduce their stored data exactly on all 10 LPs - Zearn 10/10 against
@@ -122,12 +133,19 @@ mission into one "Mission N: Lessons lo-hi" line, appending each week's
 
 `kind: "btp_ela"`
 
-    weeks = {"cursive": {text, url},
-             "gap_by_week": {"<week>": {text, url, code?}}}
+    weeks = {"cursive": {text, url},                        (optional)
+             "gap_by_week": {"<week>": {text, url, code?}},
+             "unit_by_week": {"<week>": {text, url}}}       (optional)
 
-`btpElaShiftedContent()` emits a week-range line, then each gap activity whose
-week falls in the window, then `cursive` **if the grade has one**. `code` is
-never read.
+`btpElaShiftedContent()` emits a week-range line, then the unit content **if
+the grade has `unit_by_week`**, then each gap activity whose week falls in the
+window, then `cursive` **if the grade has one**. `code` is never read.
+
+`unit_by_week` is for grades whose ELA row names a book or unit per week
+rather than gap activities - **Grade K, and TK when it is built**. Consecutive
+weeks in the window sharing the exact same `text` merge into one line, the way
+`zearnShiftedContent()` merges missions, keyed on the text since a unit has no
+numeric range to collapse. A grade without the key renders exactly as before.
 
 `week_windows` is **global, not per grade**: `{lp: [startWeek, endWeek]}` over
 weeks 1-36. LP1 is `[1, 4]`, which is why `app.js` uses `normalWeeks = 4` and
@@ -269,6 +287,28 @@ transcriptions were confirmed against the guide directly.
 What a reader notices is larger than the arithmetic suggests - LP8 opens with
 a mission Appendix A says is already finished, and LP10 shows seven lessons
 where Appendix A shows two. That is expected here, not a defect.
+
+### Enumerated units vs a printed range
+
+The third expected divergence, and the one where the week path can never match
+stored no matter how good the data is. It applies to the unit-shaped grades -
+Grade K now, TK later.
+
+Appendix A writes a grade K LP as a compact range, `Units 1-4`. The week path
+writes one line per unit, naming each book. Those shapes cannot be equal, so
+**a unit-shaped grade scores 0/10 on the exact-match check by construction**.
+Do not read that as a failure and do not try to make it match.
+
+Appendix A's unit ranges also do not track the calendar: they overlap at the
+boundaries and then fall behind, e.g. LP1 `Units 1-4` and LP2 `Units 4-8`
+count unit 4 twice, and by LP6 stored reads `Units 18-22` where the calendar
+holds units 20-23. That is the ordinary window-vs-prose shape on top of the
+representation difference.
+
+The check that replaces exact-match here is **coverage**: every week's unit
+must appear exactly once across LP1-LP10, with none missing and none repeated.
+Grade K passes - 36 units, 36 rendered, no gaps or duplicates. A missing or
+doubled unit IS a defect.
 
 ### When the guide's calendar and Appendix A disagree, the calendar wins
 

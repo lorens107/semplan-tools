@@ -14542,6 +14542,436 @@
           }
         }
       }
+    },
+    "K": {
+      "Math": {
+        "Zearn": {
+          "kind": "zearn",
+          "weeks": {
+            "1": {
+              "mission": 1,
+              "topic": "Topic A-B",
+              "lessons": "1-5"
+            },
+            "2": {
+              "mission": 1,
+              "topic": "Topic B-C",
+              "lessons": "6-10"
+            },
+            "3": {
+              "mission": 1,
+              "topic": "Topic C-D",
+              "lessons": "11-15"
+            },
+            "4": {
+              "mission": 1,
+              "topic": "Topic D-E",
+              "lessons": "16-17",
+              "assessment": "Mid-Mission Assessment (Topics A-D)"
+            },
+            "5": {
+              "mission": 1,
+              "topic": "Topic E",
+              "lessons": "18-22"
+            },
+            "6": {
+              "mission": 1,
+              "topic": "Topic F",
+              "lessons": "23-27"
+            },
+            "7": {
+              "mission": 1,
+              "topic": "Topic F-G",
+              "lessons": "28-32"
+            },
+            "8": {
+              "mission": 1,
+              "topic": "Topic H",
+              "lessons": "33-37"
+            },
+            "9": {
+              "mission": 2,
+              "topic": "Topic A",
+              "lessons": "1-2",
+              "assessment": "Mission 1 End-of-Mission Assessment (Topics E-H)"
+            },
+            "10": {
+              "mission": 2,
+              "topic": "Topic A-B",
+              "lessons": "3-7"
+            },
+            "11": {
+              "mission": 2,
+              "topic": "Topic B-C",
+              "lessons": "8-10",
+              "assessment": "End-of-Mission Assessment (Topics A-C)"
+            },
+            "12": {
+              "mission": 3,
+              "topic": "Topic A-B",
+              "lessons": "1-5"
+            },
+            "13": {
+              "mission": 3,
+              "topic": "Topic B-C",
+              "lessons": "6-10"
+            },
+            "14": {
+              "mission": 3,
+              "topic": "Topic C-D",
+              "lessons": "11-15"
+            },
+            "15": {
+              "mission": 3,
+              "topic": "Topic E",
+              "lessons": "16-17",
+              "assessment": "Mid-Mission Assessment (Topics A-D)"
+            },
+            "16": {
+              "mission": 3,
+              "topic": "Topic E-F",
+              "lessons": "18-22"
+            },
+            "17": {
+              "mission": 3,
+              "topic": "Topic F-G",
+              "lessons": "23-27"
+            },
+            "18": {
+              "mission": 3,
+              "topic": "Topic G-H",
+              "lessons": "28-32"
+            },
+            "19": {
+              "mission": 4,
+              "topic": "Topic A",
+              "lessons": "1-2",
+              "assessment": "Mission 3 End-of-Mission Assessment (Topics E-H)"
+            },
+            "20": {
+              "mission": 4,
+              "topic": "Topic A-B",
+              "lessons": "3-7"
+            },
+            "21": {
+              "mission": 4,
+              "topic": "Topic B",
+              "lessons": "8-12"
+            },
+            "22": {
+              "mission": 4,
+              "topic": "Topic C",
+              "lessons": "13-17"
+            },
+            "23": {
+              "mission": 4,
+              "topic": "Topic C-D",
+              "lessons": "18-22"
+            },
+            "24": {
+              "mission": 4,
+              "topic": "Topic D",
+              "lessons": "23-24",
+              "assessment": "Mid-Mission Assessment (Topics A-D)"
+            },
+            "25": {
+              "mission": 4,
+              "topic": "Topic E-F",
+              "lessons": "25-29"
+            },
+            "26": {
+              "mission": 4,
+              "topic": "Topic F-G",
+              "lessons": "30-34"
+            },
+            "27": {
+              "mission": 4,
+              "topic": "Topic G-H",
+              "lessons": "35-39"
+            },
+            "28": {
+              "mission": 4,
+              "topic": "Topic H",
+              "lessons": "40-41",
+              "assessment": "End-of-Mission Assessment (Topics E-H)"
+            },
+            "29": {
+              "mission": 5,
+              "topic": "Topic A",
+              "lessons": "1-5"
+            },
+            "30": {
+              "mission": 5,
+              "topic": "Topic B-C",
+              "lessons": "6-10"
+            },
+            "31": {
+              "mission": 5,
+              "topic": "Topic C",
+              "lessons": "11-14",
+              "assessment": "Mid-Mission Assessment (Topics A-C), Day 1"
+            },
+            "32": {
+              "mission": 5,
+              "topic": "Topic D",
+              "lessons": "15-17",
+              "assessment": "Mid-Mission Assessment (Topics A-C), Days 2-3"
+            },
+            "33": {
+              "mission": 5,
+              "topic": "Topic D-E",
+              "lessons": "18-22"
+            },
+            "34": {
+              "mission": 5,
+              "topic": "Topic E",
+              "lessons": "23-24",
+              "assessment": "End-of-Mission Assessment (Topics D-E)"
+            },
+            "35": {
+              "mission": 6,
+              "topic": "Topic A-B",
+              "lessons": "1-5"
+            },
+            "36": {
+              "mission": 6,
+              "topic": "Topic B",
+              "lessons": "6-8",
+              "assessment": "End-of-Mission Assessment (Topics A-B)"
+            }
+          }
+        }
+      },
+      "ELA": {
+        "Beyond the Page": {
+          "kind": "btp_ela",
+          "weeks": {
+            "gap_by_week": {
+              "2": {
+                "text": "Exploring Unknown Words About Pets (RI.K.4)",
+                "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.xim7c8sivh0j",
+                "code": "RI.K.4"
+              },
+              "4": {
+                "text": "Exploring Authors and Illustrators (RI.K.6)",
+                "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.xt3nhsfht50j",
+                "code": "RI.K.6"
+              },
+              "5": {
+                "text": "Exploring Leaves: Understanding Informational Text (RI.K.8)",
+                "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.ce0ndwrm4nz5",
+                "code": "RI.K.8"
+              },
+              "6": {
+                "text": "Exploring Fireflies - Comparing Informational Texts (RI.K.9)",
+                "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.8lhas9kmazp",
+                "code": "RI.K.9"
+              },
+              "7": {
+                "text": "Exploring Elephants: Using Illustrations to Make Predictions (RI.K.10b)",
+                "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.iyim6hiask7o",
+                "code": "RI.K.10b"
+              },
+              "8": {
+                "text": "Exploring Opinions with \"Millions of Cats\" (W.K.1)",
+                "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.18f0qrwp9qtt",
+                "code": "W.K.1"
+              },
+              "9": {
+                "text": "Strengthening Writing Skills through Nursery Rhymes (W.K.5)",
+                "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.1kvk783sjp0s",
+                "code": "W.K.5"
+              },
+              "10": {
+                "text": "Engaging in Collaborative Conversations with Owl Babies (SL.K.1.a-b)",
+                "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.829gosqsrz26",
+                "code": "SL.K.1.a-b"
+              },
+              "11": {
+                "text": "Exploring Nouns, Verbs, Prepositions, and Question Words (L.K.1.b-d,f)",
+                "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.s7oaz6pedkq1",
+                "code": "L.K.1.b-d,f"
+              },
+              "12": {
+                "text": "Exploring Words: Uncovering New Meanings (L.K.4.a-b)",
+                "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.mbmvj2ma8o3c",
+                "code": "L.K.4.a-b"
+              },
+              "13": {
+                "text": "Exploring Written Language with Harold and the Purple Crayon (RF.K.1.b)",
+                "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.7xion271l3x0",
+                "code": "RF.K.1.b"
+              },
+              "14": {
+                "text": "Exploring Syllables and Onsets & Rimes (RF.K.2.b-c)",
+                "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.rqgqo5pvac5o",
+                "code": "RF.K.2.b-c"
+              },
+              "16": {
+                "text": "Exploring Phonemes with \"Night in the Country\" (RF.K.2.d-f)",
+                "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.55oblkijy7up",
+                "code": "RF.K.2.d-f"
+              },
+              "17": {
+                "text": "Exploring Vowel Sounds in \"Marshmallow\" (RF.K.3.b)",
+                "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.vuk15ap95yuy",
+                "code": "RF.K.3.b"
+              },
+              "18": {
+                "text": "Exploring Sounds in Words with \"Umbrella\" (RF.K.3.d)",
+                "url": "https://docs.google.com/document/d/1ZiDCMYRnCe2CWGvhM-35JqI7n_79afdP-U0OeBs44Og/edit#bookmark=id.ds6dl5d937nk",
+                "code": "RF.K.3.d"
+              }
+            },
+            "unit_by_week": {
+              "1": {
+                "text": "Unit 1: A - A is for Musk Ox",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=216"
+              },
+              "2": {
+                "text": "Unit 2: H - Hondo and Fabian",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=217"
+              },
+              "3": {
+                "text": "Unit 3: I - The Little Island",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=218"
+              },
+              "4": {
+                "text": "Unit 4: T - What Do You Do with a Tail Like This?",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=219"
+              },
+              "5": {
+                "text": "Unit 5: L - We're Going on a Leaf Hunt",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=220"
+              },
+              "6": {
+                "text": "Unit 6: F - Fireflies",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=221"
+              },
+              "7": {
+                "text": "Unit 7: E - But No Elephants",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=222"
+              },
+              "8": {
+                "text": "Unit 8: C - Millions of Cats",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=223"
+              },
+              "9": {
+                "text": "Unit 9: G - The Real Mother Goose",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=224"
+              },
+              "10": {
+                "text": "Unit 10: O - Owl Babies",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=225"
+              },
+              "11": {
+                "text": "Unit 11: S - Seasons of Arnold's Apple Tree",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=226"
+              },
+              "12": {
+                "text": "Unit 12: D - Dinosaurs Big and Small",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=499"
+              },
+              "13": {
+                "text": "Unit 13: P - Harold and the Purple Crayon",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=228"
+              },
+              "14": {
+                "text": "Unit 14: B - Blueberries for Sal",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=229"
+              },
+              "15": {
+                "text": "Unit 15: R - Rain",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=230"
+              },
+              "16": {
+                "text": "Unit 16: N - Night in the Country",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=231"
+              },
+              "17": {
+                "text": "Unit 17: M - Marshmallow",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=232"
+              },
+              "18": {
+                "text": "Unit 18: U - Umbrella",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=233"
+              },
+              "19": {
+                "text": "Unit 19: J - Jump Frog Jump",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=234"
+              },
+              "20": {
+                "text": "Unit 20: K - Kindness",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=357"
+              },
+              "21": {
+                "text": "Unit 21: V - Zin! Zin! Zin! A Violin",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=236"
+              },
+              "22": {
+                "text": "Unit 22: Y - Little Blue and Little Yellow",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=237"
+              },
+              "23": {
+                "text": "Unit 23: W - George Washington's Birthday",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=238"
+              },
+              "24": {
+                "text": "Unit 24: Q - The Quilt Story",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=239"
+              },
+              "25": {
+                "text": "Unit 25: X - An Extraordinary Egg",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=240"
+              },
+              "26": {
+                "text": "Unit 26: Z - Greedy Zebra",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=241"
+              },
+              "27": {
+                "text": "Age 5-7 Reading Semester 1, Lesson 1",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+              },
+              "28": {
+                "text": "Age 5-7 Reading Semester 1, Lesson 2",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+              },
+              "29": {
+                "text": "Age 5-7 Reading Semester 1, Lesson 3; Unit 30: February Celebrations",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+              },
+              "30": {
+                "text": "Age 5-7 Reading Semester 1, Lesson 4",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+              },
+              "31": {
+                "text": "Age 5-7 Reading Semester 1, Lesson 5",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+              },
+              "32": {
+                "text": "Age 5-7 Reading Semester 1, Lesson 6",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+              },
+              "33": {
+                "text": "Age 5-7 Reading Semester 1, Lesson 7",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+              },
+              "34": {
+                "text": "Age 5-7 Reading Semester 1, Lesson 8",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+              },
+              "35": {
+                "text": "Age 5-7 Reading Semester 1, Lesson 9",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+              },
+              "36": {
+                "text": "Age 5-7 Reading Semester 1, Lesson 10",
+                "url": "https://www.beyondthepage.com/online/unit.aspx?unitID=450"
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
