@@ -20,6 +20,19 @@ be diffed). The contract, from engine.js:
                            "gap_by_week": {"<week>": {text, url, code?}}}
                   -> btpElaShiftedContent() reads gap_by_week[wk] and cursive.
 
+  kind "module_unit_lesson"
+                  weeks = {"<week 1-36>": [ {module: int, unit: str,
+                                             lessons: "lo-hi" or "n",
+                                             assessment: str} ]}
+                  Each week is a LIST of segments; a week crossing a Unit or
+                  Module boundary carries both. module and unit are required;
+                  a segment needs lessons or assessment, and may carry both -
+                  OUR Math has assessment-only weeks with no lessons at all.
+                  The stored block also carries a `labels` pair, set per
+                  curriculum by the flag, since one kind serves two wordings.
+                  -> moduleUnitLessonShiftedContent() renders a line per
+                     segment and never merges across weeks.
+
   kind "studies_weekly"
                   weeks = {"<week>": "title"}
                   -> studiesWeeklyShiftedContent() names each week in the
@@ -123,6 +136,46 @@ def check_studies_weekly(weeks):
     return weeks
 
 
+def check_module_unit_lesson(weeks):
+    if not isinstance(weeks, dict):
+        sys.exit('module_unit_lesson: expected an object keyed by week number')
+    weeks = {k: v for k, v in weeks.items() if not k.startswith('_')}
+    total = 0
+    for wk, segments in weeks.items():
+        where = 'module_unit_lesson week %s' % wk
+        if not str(wk).isdigit() or not 1 <= int(wk) <= 36:
+            sys.exit('%s: week keys must be "1".."36"' % where)
+        if not isinstance(segments, list) or not segments:
+            sys.exit('%s: expected a non-empty list of segments' % where)
+        for i, seg in enumerate(segments):
+            at = '%s segment %d' % (where, i + 1)
+            if not isinstance(seg, dict):
+                sys.exit('%s: expected an object' % at)
+            if not isinstance(seg.get('module'), int):
+                sys.exit('%s: module must be an int' % at)
+            if not isinstance(seg.get('unit'), str) or not seg['unit'].strip():
+                sys.exit('%s: unit must be a non-empty string' % at)
+            # lessons OR assessment - OUR Math has assessment-only segments
+            # (its Unit Assessment weeks carry no lessons at all)
+            if 'lessons' not in seg and 'assessment' not in seg:
+                sys.exit('%s: needs lessons, assessment, or both' % at)
+            if 'lessons' in seg:
+                if not isinstance(seg['lessons'], str):
+                    sys.exit('%s: lessons must be a string like "1-5"' % at)
+                for part in seg['lessons'].split('-')[:2]:
+                    if not part.strip().isdigit():
+                        sys.exit('%s: lessons %r is not "lo-hi" or "n"'
+                                 % (at, seg['lessons']))
+            if 'assessment' in seg and not isinstance(seg['assessment'], str):
+                sys.exit('%s: assessment must be a string' % at)
+            total += 1
+    missing = [w for w in range(1, 37) if str(w) not in weeks]
+    print('  note: %d weeks, %d segments%s' % (len(weeks), total,
+          '' if not missing else '; no entry for weeks %s'
+          % ','.join(map(str, missing))))
+    return weeks
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--grade', required=True)
@@ -136,11 +189,13 @@ def main():
     # that split is already baked into the grades' available[] lists.
     ap.add_argument('--ll-math', dest='ll_math')
     ap.add_argument('--ll-other', dest='ll_other')
+    ap.add_argument('--our-math', dest='our_math')
+    ap.add_argument('--el-ela', dest='el_ela')
     args = ap.parse_args()
     if not (args.zearn or args.btp_ela or args.sw_science or args.sw_hss
-            or args.ll_math or args.ll_other):
+            or args.ll_math or args.ll_other or args.our_math or args.el_ela):
         sys.exit('nothing to add: pass --zearn, --btp-ela, --sw-science, '
-                 '--sw-hss, --ll-math and/or --ll-other')
+                 '--sw-hss, --ll-math, --ll-other, --our-math and/or --el-ela')
 
     data = json.loads(DATA.read_text(encoding='utf-8'))
     if args.grade not in data['grades']:
@@ -168,10 +223,19 @@ def main():
         for subject in ('ELA', 'Science', 'HSS'):
             jobs.append((subject, 'Lincoln Learning', 'studies_weekly',
                          check_studies_weekly, args.ll_other, True))
+    if args.our_math:
+        jobs.append(('Math', 'Open Up Resources', 'module_unit_lesson',
+                     check_module_unit_lesson, args.our_math, False,
+                     {'labels': {'outer': 'Unit', 'inner': 'Section'}}))
+    if args.el_ela:
+        jobs.append(('ELA', 'Open Up EL Education', 'module_unit_lesson',
+                     check_module_unit_lesson, args.el_ela, False,
+                     {'labels': {'outer': 'Module', 'inner': 'Unit'}}))
 
     for job in jobs:
         subject, curriculum, kind, check, path = job[:5]
         optional = len(job) > 5 and job[5]
+        extra = job[6] if len(job) > 6 else None
         available = data['grades'][args.grade]['available'].get(subject, [])
         if curriculum not in available:
             if optional:
@@ -182,7 +246,11 @@ def main():
                      % (args.grade, curriculum, subject))
         payload = json.loads(pathlib.Path(path).read_text(encoding='utf-8'))
         weeks = check(unwrap(payload, kind))
-        block.setdefault(subject, {})[curriculum] = {'kind': kind, 'weeks': weeks}
+        entry = {'kind': kind}
+        if extra:
+            entry.update(extra)      # e.g. the per-curriculum label pair
+        entry['weeks'] = weeks
+        block.setdefault(subject, {})[curriculum] = entry
         print('  %s / %s / %s: ok' % (args.grade, subject, curriculum))
 
     with DATA.open('w', encoding='utf-8') as f:

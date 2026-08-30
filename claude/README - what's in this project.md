@@ -29,18 +29,20 @@ Build outputs that are *not* committed are listed in `.gitignore`.
 
 ## Week-level pacing
 
-**Week-level pacing is live for every grade, TK through 8**, across four
+**Week-level pacing is live for every grade, TK through 8**, across five
 curricula: Math/Zearn and ELA/Beyond the Page in every grade, Studies Weekly
 for Science and History/Social Science in Grades K-8 (TK does not offer it),
-and Lincoln Learning in every subject it is offered for in Grades TK-8 -
-keyed
+Lincoln Learning in every subject it is offered for in Grades TK-8 - keyed
 `LL` under Math and `Lincoln Learning` elsewhere, as the page already named
-it. The "Behind on weeks?" panel appears only for those
+it - and, **at Grade K only**, Math/Open Up Resources (OUR Math) and
+ELA/Open Up EL Education. The "Behind on weeks?" panel appears only for those
 grade/subject/curriculum combinations and stays hidden for every other
-curriculum a grade offers.
+curriculum a grade offers, including Open Up in every grade but K.
 
 `data/` holds the guide-sourced per-week files for **every wired grade** -
-TK, K and Grades 1 through 8. Grade 3 was the last to get its source files:
+TK, K and Grades 1 through 8 - and for every curriculum except Lincoln
+Learning, whose weeks are derived rather than transcribed. Grade 3 was the
+last grade to get its source files:
 its week data arrived inside the original uploaded build and lived only in
 `web/web_data.json` until 8/29/26, when the transcriptions were found and
 wired in, byte-identical to what was already there.

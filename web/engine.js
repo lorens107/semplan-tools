@@ -296,6 +296,48 @@
     return { lines: lines, activities: [] };
   }
 
+  /* Module / Unit / Lesson curricula - OUR Math and Open Up EL Education.
+   *
+   * A week's value is a LIST of segments, because a week that crosses a Unit
+   * or Module boundary carries both sides. Each segment renders as its own
+   * line and weeks are NOT merged the way zearnShiftedContent() merges
+   * missions: Appendix A's own cells for these two are one bullet per guide
+   * week, so the shifted view matches that shape.
+   *
+   * The label pair is per curriculum and lives in the data, since one kind
+   * serves both: OUR Math says "Unit 1 | Section A", EL Education says
+   * "Module 1 | Unit 2".
+   */
+  function lessonPhrase(lessons) {
+    return (String(lessons).indexOf('-') >= 0 ? 'Lessons ' : 'Lesson ') + lessons;
+  }
+
+  function moduleUnitLessonShiftedContent(weeks, win, labels) {
+    if (!win) return { lines: ['Curriculum finished before this LP (week range ran out)'], activities: [] };
+    var outer = (labels && labels.outer) || 'Unit';
+    var inner = (labels && labels.inner) || 'Section';
+    var lines = [];
+    for (var wk = win[0]; wk <= win[1]; wk++) {
+      var segments = weeks[String(wk)];
+      if (!segments) continue;
+      segments.forEach(function (seg) {
+        if (!seg.lessons) {
+          // An assessment-only segment - OUR Math's Unit Assessment weeks.
+          // Its `unit` is a label like "Assessments", accurate in the data but
+          // redundant on the page, so the inner label is dropped here rather
+          // than in the file.
+          lines.push(outer + ' ' + seg.module + ': ' + seg.assessment);
+          return;
+        }
+        var parts = [lessonPhrase(seg.lessons)];
+        if (seg.assessment) parts.push(seg.assessment);
+        lines.push(outer + ' ' + seg.module + ' | ' + inner + ' ' + seg.unit +
+                   ': ' + parts.join(' + '));
+      });
+    }
+    return { lines: lines, activities: [] };
+  }
+
   // The one entry point build() calls. Returns null when this
   // grade/subject/curriculum has no real week data, so the caller falls back
   // to the normal per-LP content untouched.
@@ -306,6 +348,8 @@
     if (pacing.kind === 'zearn') return zearnShiftedContent(pacing.weeks, win);
     if (pacing.kind === 'btp_ela') return btpElaShiftedContent(pacing.weeks, win);
     if (pacing.kind === 'studies_weekly') return studiesWeeklyShiftedContent(pacing.weeks, win);
+    if (pacing.kind === 'module_unit_lesson')
+      return moduleUnitLessonShiftedContent(pacing.weeks, win, pacing.labels);
     return null;
   }
 

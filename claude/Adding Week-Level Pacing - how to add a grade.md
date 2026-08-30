@@ -19,28 +19,77 @@ cells.
 ## Status
 
 **Every grade is wired: TK, K, and Grades 1 through 8**, and the feature now
-covers **three curricula, not two**:
+covers **five curricula**:
 
-    Math/Zearn              TK, K, 1-8
-    ELA/Beyond the Page     TK, K, 1-8
-    Science/Studies Weekly  K, 1-8   (no TK - TK does not offer it)
-    HSS/Studies Weekly      K, 1-8   (no TK)
-    Math/LL                 TK, K, 1-8
-    ELA/Lincoln Learning    TK, K, 1-8
-    Science/Lincoln Learning TK, K, 1-8
-    HSS/Lincoln Learning    TK, K, 1-8 except grade 3, which does not offer it
+    Math/Zearn                  TK, K, 1-8
+    ELA/Beyond the Page         TK, K, 1-8
+    Science/Studies Weekly      K, 1-8   (no TK - TK does not offer it)
+    HSS/Studies Weekly          K, 1-8   (no TK)
+    Math/LL                     TK, K, 1-8
+    ELA/Lincoln Learning        TK, K, 1-8
+    Science/Lincoln Learning    TK, K, 1-8
+    HSS/Lincoln Learning        TK, K, 1-8 except grade 3, which does not offer it
+    Math/Open Up Resources      K only
+    ELA/Open Up EL Education    K only
 
 Studies Weekly was added 8/29/26 and was the first new *curriculum* rather
 than a new grade - it needed a third `kind`. Lincoln Learning followed on
-8/30/26 and needed no new kind at all, reusing `studies_weekly`. Every combination is verified
-end to end in a real browser. The panel stays hidden for every curriculum
-without week-level data: Open Up Resources, Lincoln Learning, Open Up EL
-Education, Beast Academy, Dimensions Math, LL and TCI.
+8/30/26 and needed no new kind at all, reusing `studies_weekly`. Open Up
+Resources (OUR Math) and Open Up EL Education followed the same day and needed
+a fourth kind, `module_unit_lesson`; they are wired at **Grade K only**, and
+the other grades that offer them still show no panel. Every combination is
+verified end to end in a real browser. The panel stays hidden for every
+curriculum without week-level data: Beast Academy, Dimensions Math, TCI, and
+Open Up Resources / Open Up EL Education in every grade except K.
 
 A change here now means another new curriculum, a correction to an existing
 transcription, or a change to the panel itself.
 
 ### Changelog
+
+- **OUR Math and Open Up EL Education at Grade K** - 8/30/26. Two new
+  curricula and a fourth `kind`, `module_unit_lesson`, wired at **Grade K
+  only**. Both guides are shaped the same way and neither fits `zearn`: they
+  nest a lesson range inside *two* levels (Unit > Section for OUR Math,
+  Module > Unit for EL Education), and lesson numbers reset at the inner
+  level for EL Education but run continuously across the outer one for OUR
+  Math. A single `mission` integer cannot carry that, hence a new kind rather
+  than a reshaping of the existing one.
+
+  Three rules that came out of the build and are easy to get wrong later:
+
+    - **Consecutive weeks are never merged.** `zearnShiftedContent()` folds
+      same-mission weeks into one line; `moduleUnitLessonShiftedContent()`
+      deliberately does not. One segment in, one line out - the segments are
+      the guide's own week boundaries and collapsing them loses the pacing.
+
+    - **Assessment-only segments drop the inner label.** OUR Math's Unit
+      Assessment weeks carry no `lessons` key and store `unit: "Assessments"`,
+      which is accurate to the guide but redundant on the page. The engine
+      renders `Unit 1: Unit 1 Assessment`, not
+      `Unit 1 | Section Assessments: Unit 1 Assessment`. **The fix lives in
+      `moduleUnitLessonShiftedContent()`, not the data file** - do not
+      "clean up" `unit: "Assessments"` in `data/our_math_gK_weeks.json`.
+
+    - **`unit` is a string, always** - `"A"`, `"C-D"` and `"Assessments"` for
+      OUR Math, `"1"`, `"2"`, `"3"` for EL Education. EL Education's units are
+      numbered, and the first export typed them as ints; that was fixed in the
+      file. The validator enforces `str` and does **not** accept both types.
+
+  Verification here is **coverage, not exact match against Appendix A**. The
+  stored per-LP cells compress a whole LP into one range
+  (`M1 U1: Lessons 1 - Unit 1 Assessment`), while the panel enumerates one
+  line per guide week; the two cannot be string-compared by construction. The
+  test that was actually run: at every deficit, the rendered segments are an
+  exact ordered prefix of the source file's segments, with only the tail weeks
+  falling off the end of the calendar - 40 of 41 OUR Math segments and 41 of
+  42 EL Education segments at deficit 1, down to 38 and 39 at deficit 3.
+
+  Two things that look like defects in the source files and are not, both
+  confirmed against the guides: LP1's **Benchmark Assessment Cycles 1 and 2**
+  really do sit in week 1 of EL Education, and LP9's **repeated "Unit 2
+  Assessment"** in weeks 31 and 33 is a genuine two-part assessment, not a
+  duplicated row.
 
 - **Lincoln Learning at TK and K** - 8 further slots, taking LL to **39**.
   Not a week-pacing job: `ll_week_lesson_map.json` is grade-agnostic and
@@ -373,6 +422,33 @@ window, and appends `Course finished (no content past week N)` when the window
 runs past the last week the course has. No week-range line and no activities -
 this data carries no URLs.
 
+`kind: "module_unit_lesson"`
+
+    weeks = {"1".."36": [ {module: int,
+                           unit: str,                 (always a string)
+                           lessons: "lo-hi" or "n",   (optional)
+                           assessment: str}           (optional)
+                        , ... ]}
+
+Note the shape: a week's value is a **list of segments**, so a week that
+crosses a Unit or Module boundary carries both halves without folding or
+dropping a lesson. At least one of `lessons` / `assessment` must be present.
+
+The stored block also carries a `labels` pair naming the two levels, because
+they differ per curriculum:
+
+    "labels": {"outer": "Unit",   "inner": "Section"}   OUR Math
+    "labels": {"outer": "Module", "inner": "Unit"}      EL Education
+
+`moduleUnitLessonShiftedContent()` emits **one line per segment**, in week
+order, with **no merging of consecutive weeks** (unlike `zearn`):
+
+    {outer} {module} | {inner} {unit}: Lessons {lo-hi} [+ {assessment}]
+
+and, for a segment with no `lessons` key, drops the inner label entirely:
+
+    {outer} {module}: {assessment}
+
 `kind: "btp_ela"`
 
     weeks = {"cursive": {text, url},
@@ -396,6 +472,10 @@ caps the input at 4.
        python3 add_week_pacing.py --grade 1 \
            --zearn data/zearn_g1_weeks.json \
            --btp-ela data/btp_g1_ela_weeks.json
+
+   The other flags are `--sw-science`, `--sw-hss`, `--ll-math`, `--ll-other`,
+   `--our-math` and `--el-ela`; each takes a source file and each is
+   optional, so a run can wire one curriculum without touching the rest.
 
    It validates against the schema above rather than trusting the file's
    shape, and refuses a grade/curriculum pairing the panel could never show.
@@ -553,6 +633,21 @@ weeks must reconstruct the fixed table exactly. Union the lesson ranges of the
 weeks in each LP window and compare against the table - LP1 must come out
 1-15, LP2 16-40, and so on to LP10 at 170-180 - and confirm lessons 1-180 are
 covered once each with no gaps or duplicates. That is the whole check.
+
+### Enumerated segments vs a compressed LP range
+
+`module_unit_lesson` cannot be string-compared against its stored per-LP cells
+at all, and that is by construction, not a defect. Appendix A compresses a
+whole LP into a single span - `M1 U1: Lessons 1 - Unit 1 Assessment` - while
+the panel prints one line per guide week. Neither is wrong; they are different
+granularities of the same plan.
+
+The check that replaces exact match is **coverage as an ordered prefix**:
+render at each deficit, flatten the LP cells back into a list of segment
+lines, and confirm that list is exactly the source file's segments from week 1
+onward, with only the tail weeks falling off the end of the 36-week calendar.
+A segment out of order, repeated, or missing from the middle is a real defect;
+a shorter list at a larger deficit is the feature working.
 
 ### When the guide's calendar and Appendix A disagree, the calendar wins
 
