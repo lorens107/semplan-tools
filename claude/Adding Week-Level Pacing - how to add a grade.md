@@ -29,24 +29,67 @@ covers **five curricula**:
     ELA/Lincoln Learning        TK, K, 1-8
     Science/Lincoln Learning    TK, K, 1-8
     HSS/Lincoln Learning        TK, K, 1-8 except grade 3, which does not offer it
-    Math/Open Up Resources      K, 1, 2
-    ELA/Open Up EL Education    K, 1, 2
+    Math/Open Up Resources      K, 1, 2, 3
+    ELA/Open Up EL Education    K, 1, 2, 3
 
 Studies Weekly was added 8/29/26 and was the first new *curriculum* rather
 than a new grade - it needed a third `kind`. Lincoln Learning followed on
 8/30/26 and needed no new kind at all, reusing `studies_weekly`. Open Up
 Resources (OUR Math) and Open Up EL Education followed the same day and needed
-a fourth kind, `module_unit_lesson`; Grades 1 and 2 followed the same day.
-They are wired at **Grades K, 1 and 2 only**, and the other grades that offer
+a fourth kind, `module_unit_lesson`; Grades 1, 2 and 3 followed the same day.
+They are wired at **Grades K through 3 only**, and the other grades that offer
 them still show no panel. Every combination is verified end to end in a real
 browser. The panel stays hidden for every curriculum without week-level data:
 Beast Academy, Dimensions Math, TCI, and Open Up Resources / Open Up EL
-Education in every grade except K, 1 and 2.
+Education in Grades 4 through 8 and TK.
 
 A change here now means another new curriculum, a correction to an existing
 transcription, or a change to the panel itself.
 
 ### Changelog
+
+- **OUR Math and Open Up EL Education at Grade 3** - 8/30/26. Data-only, the
+  third grade on this kind. Week-pacing slots: 83 to **85**. OUR Math Grade 3
+  finishes at week 35 like Grades 1 and 2 (week 36 is "Roll and Add" /
+  "Math Achievement Showcase" review with no M|U|L content, so no `"36"` key);
+  EL Education runs the full 36. Coverage as ordered prefix is exact in both:
+  OUR Math 42, 41 and 40 of 42 segments at deficits 1, 2 and 3 (42 of 42 at
+  deficit 1, the early-finish signature), EL Education 38, 37 and 36 of 39.
+  No LP empty at any deficit.
+
+  **A new shape: detached Section Checkpoints.** At three Unit/Section
+  boundaries the guide prints a Checkpoint in the *following* week's table,
+  away from the lessons it assesses - week 13 opens with Section C's
+  checkpoint though Section C's lessons were all in week 12, week 14 with
+  Section D's, and week 25 with Section A's. Each is transcribed as its own
+  assessment-only segment in the week the guide actually prints it, per the
+  standing rule of following the guide's week boundaries. **This exercises the
+  assessment-only branch with a real `unit` value** - `"C"`, `"D"`, `"A"` -
+  where Grades K/1/2 only ever had the placeholder `"Assessments"`. The
+  renderer drops the inner label either way, and nothing is lost, because the
+  assessment text names the section itself: `Unit 3: Section C Checkpoint`.
+
+  **How to compare the week path against Appendix A, and how not to.** Only
+  **closed** ranges are comparable. Appendix A's open-ended form -
+  `Unit 3: Lessons 1 - Unit 3 Review, Unit 3 Assessment` - names the unit's
+  *first* lesson and an end tag; it does not claim lesson 1 falls in that LP,
+  so reading it as a range invents differences that are not there. It is the
+  normal phrasing throughout: Grade 2's ELA cells use it in nine of ten LPs.
+  Compare closed ranges only, and skip a unit that has no generated line in
+  that LP - that just means Appendix A grouped its tail elsewhere in prose.
+
+  Under that comparison, at deficit 0: EL Education agrees exactly at K, 1, 2
+  and 3, and OUR Math agrees everywhere except **one** LP boundary in the
+  whole set - Grade 2's LP7, plus Grade 3's LP8 below. Grades K and 1 are
+  clean.
+
+  Grade 3's one difference: Appendix A puts Unit 7 as **Lessons 1-15** in LP8
+  while the week path ends LP8 at lesson 14 and opens LP9 with 15. That is the
+  guide's own week-29/30 header typo - week 30's header claims Section D
+  covers 13-15 but its lesson-by-lesson body runs 13-14, with lesson 15 in
+  week 31 - and Appendix A reproduces the header text beside a title list that
+  matches the body. Body wins, per the standing rule. Lesson accounting is
+  contiguous 1-15 across Unit 7 either way.
 
 - **OUR Math and Open Up EL Education at Grade 2** - 8/30/26. Data-only, like
   Grade 1: both curricula were already offered with ten LPs of baseline
@@ -77,9 +120,10 @@ transcription, or a change to the panel itself.
       the guide's own week-27 header typo, which the transcriber resolved in
       favour of the week's lesson-by-lesson body; the calendar wins, per the
       standing rule.
-    - **Grade 1, LP2 and LP5**, and **Grade K, LP7**: the same shape - a
-      unit's tail sits one LP earlier or later in the week calendar than in
-      Appendix A's prose grouping.
+    - Grades K and 1 have **no** closed-range difference. An earlier pass
+      reported two at Grade 1 and one at Grade K; those were an artifact of
+      comparing Appendix A's open-ended phrasing as if it were a range - see
+      the Grade 3 entry for why that comparison is invalid.
 
   The guide typos are recorded in the file's own `_note`: the header rows for
   weeks 23, 24, 26 and 27 undercount the outgoing section's lesson range, and
