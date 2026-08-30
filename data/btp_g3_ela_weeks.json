@@ -1,0 +1,20 @@
+{
+  "_source": "CORE ELA Pacing Guide 3rd Grade - Beyond the Page, uploaded by Loren 8/27/26. Cross-checked against btp_g3_ela_pacing.json for matching urls/codes.",
+  "cursive": {"text": "Cursive Writing Assignment", "url": "https://drive.google.com/file/d/1wU5WhmwM6NLV-imcNkZON3lWu9Zio_gX/view?usp=sharing"},
+  "gap_by_week": {
+    "1": {"text": "Understanding Different Points of View in Informational Texts (RI.3.6)", "url": "https://docs.google.com/document/d/1UbmwAFR2LG4qRJax_Xbn7pUUvAnpHBJ73CxVn4nsaEE/edit?tab=t.0#bookmark=id.lmu56aybqemy", "code": "RI.3.6"},
+    "2": {"text": "Reading Comprehension for Third Grade (RI.3.10)", "url": "https://docs.google.com/document/d/1UbmwAFR2LG4qRJax_Xbn7pUUvAnpHBJ73CxVn4nsaEE/edit#bookmark=id.1jcf4957lhkv", "code": "RI.3.10"},
+    "3": {"text": "Writing Opinion Pieces in 3rd Grade (W.3.1.a-d)", "url": "https://docs.google.com/document/d/1UbmwAFR2LG4qRJax_Xbn7pUUvAnpHBJ73CxVn4nsaEE/edit#bookmark=id.9siodszihom6", "code": "W.3.1.a-d"},
+    "4": {"text": "Informative Writing (W.3.2.a-d)", "url": "https://docs.google.com/document/d/1UbmwAFR2LG4qRJax_Xbn7pUUvAnpHBJ73CxVn4nsaEE/edit#bookmark=id.ybskx4moga67", "code": "W.3.2.a-d"},
+    "5": {"text": "Crafting a Narrative: Elements of Storytelling (W.3.3.a-b,d)", "url": "https://docs.google.com/document/d/1UbmwAFR2LG4qRJax_Xbn7pUUvAnpHBJ73CxVn4nsaEE/edit#bookmark=id.xtubouhexpc4", "code": "W.3.3.a-b,d"},
+    "6": {"text": "Collaborative Conversations (SL.3.1.a-d)", "url": "https://docs.google.com/document/d/1UbmwAFR2LG4qRJax_Xbn7pUUvAnpHBJ73CxVn4nsaEE/edit#bookmark=id.ewgvv28kded5", "code": "SL.3.1.a-d"},
+    "7": {"text": "Abstract and Concrete Nouns Worksheet (L.3.1.c, k)", "url": "https://docs.google.com/document/d/1UbmwAFR2LG4qRJax_Xbn7pUUvAnpHBJ73CxVn4nsaEE/edit#bookmark=id.5k9qc5rud501", "code": "L.3.1.c, k"},
+    "8": {"text": "Capitalization and Punctuation Practice (L.3.2.a-b, e, f)", "url": "https://docs.google.com/document/d/1UbmwAFR2LG4qRJax_Xbn7pUUvAnpHBJ73CxVn4nsaEE/edit#bookmark=id.77l9u11lqhg6", "code": "L.3.2.a-b, e, f"},
+    "9": {"text": "Using Precise Language in Writing (L.3.3.b)", "url": "https://docs.google.com/document/d/1UbmwAFR2LG4qRJax_Xbn7pUUvAnpHBJ73CxVn4nsaEE/edit#bookmark=id.yjz1u3lmmdi9", "code": "L.3.3.b"},
+    "10": {"text": "Understanding Root Words Worksheet (L.3.4.c)", "url": "https://docs.google.com/document/d/1UbmwAFR2LG4qRJax_Xbn7pUUvAnpHBJ73CxVn4nsaEE/edit#bookmark=id.whl755ar7nbm", "code": "L.3.4.c"},
+    "11": {"text": "Exploring Word Relationships: Literal and Nonliteral Language (L.3.5.a-b)", "url": "https://docs.google.com/document/d/1UbmwAFR2LG4qRJax_Xbn7pUUvAnpHBJ73CxVn4nsaEE/edit#bookmark=id.vncdrzpxkz7f", "code": "L.3.5.a-b"},
+    "12": {"text": "Reading Fluency Worksheet: Accuracy, Speed, and Expression (RF.3.3.a-d)", "url": "https://docs.google.com/document/d/1UbmwAFR2LG4qRJax_Xbn7pUUvAnpHBJ73CxVn4nsaEE/edit?tab=t.0#bookmark=id.y8p6fnykx1tt", "code": "RF.3.3.a-d"},
+    "13": {"text": "Reading Fluency Practice Worksheet (RF.3.4.c)", "url": "https://docs.google.com/document/d/1UbmwAFR2LG4qRJax_Xbn7pUUvAnpHBJ73CxVn4nsaEE/edit#bookmark=id.6rc8dh9pldv1", "code": "RF.3.4.c"}
+  },
+  "note": "No standards-gap activity is named for weeks 14-36 in the guide - cursive runs every week regardless, confirmed against the guide's own week-by-week tables."
+}

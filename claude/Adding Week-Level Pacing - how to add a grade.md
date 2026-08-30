@@ -108,9 +108,14 @@ guide shape and will raise the same question.
   unchanged. Its Zearn file uses the previous-mission assessment convention
   (week 7 is Mission 3 but carries "Mission 2 End-of-Mission Assessment"),
   same as Grade 2.
-- **Grade 3** - arrived with the original uploaded build. It is the one grade
-  with **no source files in `data/`**; its week data exists only inside
-  `web/web_data.json` and cannot be re-derived.
+- **Grade 3** - arrived with the original uploaded build, and was the one
+  grade with no source files in `data/` until 8/29/26, when
+  `data/zearn_g3_weeks.json` (36 weeks) and `data/btp_g3_ela_weeks.json`
+  (13 gap weeks + cursive) were found already transcribed and verified, and
+  wired in. They proved **identical to the data already in
+  `web/web_data.json`** - every week, every gap activity, the same cursive -
+  so the merge was a byte-for-byte no-op on both `web_data.json` and
+  `index.html`. Every grade now has its source in `data/`.
 - **Grade 2** - `data/zearn_g2_weeks.json` (36 weeks),
   `data/btp_g2_ela_weeks.json` (11 gap weeks + cursive).
 - **Grade 1** - `data/zearn_g1_weeks.json` (36 weeks),

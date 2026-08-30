@@ -33,10 +33,11 @@ Build outputs that are *not* committed are listed in `.gitignore`.
 and ELA/Beyond the Page. The "Behind on weeks?" panel appears only for those
 grade/subject/curriculum combinations and stays hidden everywhere else.
 
-`data/` holds the guide-sourced per-week files for Grade K and Grades 1, 2,
-4, 5, 6, 7 and 8.
-**Grade 3 has no source files**: its week data arrived inside the original
-uploaded build and lives only in `web/web_data.json`.
+`data/` holds the guide-sourced per-week files for **every wired grade** -
+Grade K and Grades 1 through 8. Grade 3 was the last to get its source files:
+its week data arrived inside the original uploaded build and lived only in
+`web/web_data.json` until 8/29/26, when the transcriptions were found and
+wired in, byte-identical to what was already there.
 
 See "Adding Week-Level Pacing - how to add a grade.md" for the schema, the
 steps, and the real verification sequence - which is
