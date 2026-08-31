@@ -29,24 +29,50 @@ covers **five curricula**:
     ELA/Lincoln Learning        TK, K, 1-8
     Science/Lincoln Learning    TK, K, 1-8
     HSS/Lincoln Learning        TK, K, 1-8 except grade 3, which does not offer it
-    Math/Open Up Resources      K, 1, 2, 3, 4
-    ELA/Open Up EL Education    K, 1, 2, 3, 4
+    Math/Open Up Resources      K, 1, 2, 3, 4, 5
+    ELA/Open Up EL Education    K, 1, 2, 3, 4, 5
 
 Studies Weekly was added 8/29/26 and was the first new *curriculum* rather
 than a new grade - it needed a third `kind`. Lincoln Learning followed on
 8/30/26 and needed no new kind at all, reusing `studies_weekly`. Open Up
 Resources (OUR Math) and Open Up EL Education followed the same day and needed
-a fourth kind, `module_unit_lesson`; Grades 1 through 4 followed the same day.
-They are wired at **Grades K through 4 only**, and the other grades that offer
-them still show no panel. Every combination is verified end to end in a real
+a fourth kind, `module_unit_lesson`; Grades 1 through 5 followed. They are
+wired at **Grades K through 5 only**, and the other grades that offer them
+still show no panel. Every combination is verified end to end in a real
 browser. The panel stays hidden for every curriculum without week-level data:
 Beast Academy, Dimensions Math, TCI, and Open Up Resources / Open Up EL
-Education in Grades 5 through 8 and TK.
+Education in Grades 6 through 8 and TK.
 
 A change here now means another new curriculum, a correction to an existing
 transcription, or a change to the panel itself.
 
 ### Changelog
+
+- **OUR Math and Open Up EL Education at Grade 5** - 8/31/26. Data-only, the
+  fifth grade on this kind. Week-pacing slots: 87 to **89**. OUR Math ends at
+  week 35 again (no `"36"` key); EL Education runs the full 36. Coverage as
+  ordered prefix is exact in both: OUR Math 42, 41 and 40 of 42 segments at
+  deficits 1, 2 and 3, EL Education 38, 37 and 36 of 39. No LP empty at any
+  deficit.
+
+  **The cleanest grade in the set against Appendix A: zero boundary
+  differences.** Five closed ranges compared per curriculum, all agreeing
+  exactly - where Grade 4 had three differences and Grades 2 and 3 one each.
+  Worth recording because it shows the closed-range comparison is not simply
+  finding noise: when the transcription and Appendix A agree, it says so.
+
+  Six assessment-only segments, the most at any grade so far, including one at
+  a new position: **Unit 1's Section A Checkpoint prints in week 2**, away
+  from Section A's own week-1 lessons. Renders as `Unit 1: Section A
+  Checkpoint`, the inner label dropped as always.
+
+  The source notes record six wrong header rows in the Math guide, all the
+  familiar off-by-one-at-a-section-boundary family, and two mislabeled Module
+  numbers in the ELA guide (week 8 L9, week 13 L3) resolved by lesson-number
+  contiguity. One consequence is worth knowing about because it looks like a
+  second bug and is not: **Appendix A's own stored bullet for Grade 5 ELA LP4
+  carries a stray, lesson-less "M1 U2" fragment**, which is the week-13 typo
+  reproduced downstream rather than an independent error.
 
 - **Lincoln Learning week map rebuilt from the real school calendar** -
   8/30/26. `data/ll_week_lesson_map.json` replaced and re-merged into all

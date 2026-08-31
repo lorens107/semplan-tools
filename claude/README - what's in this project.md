@@ -34,10 +34,10 @@ curricula: Math/Zearn and ELA/Beyond the Page in every grade, Studies Weekly
 for Science and History/Social Science in Grades K-8 (TK does not offer it),
 Lincoln Learning in every subject it is offered for in Grades TK-8 - keyed
 `LL` under Math and `Lincoln Learning` elsewhere, as the page already named
-it - and, **at Grades K through 4 only**, Math/Open Up Resources (OUR Math)
+it - and, **at Grades K through 5 only**, Math/Open Up Resources (OUR Math)
 and ELA/Open Up EL Education. The "Behind on weeks?" panel appears only for
 those grade/subject/curriculum combinations and stays hidden for every other
-curriculum a grade offers, including Open Up at TK and in Grades 5 through 8.
+curriculum a grade offers, including Open Up at TK and in Grades 6 through 8.
 
 `data/` holds the guide-sourced per-week files for **every wired grade** -
 TK, K and Grades 1 through 8 - and for every curriculum except Lincoln
