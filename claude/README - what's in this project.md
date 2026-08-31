@@ -17,7 +17,9 @@ into a student's Semester Plan in Google Sheets.
     web/engine.js           PlanEngine: block/row assignment, pacing, week shift
     web/app.js              pickers, preview tables, Copy buttons
     web/web_data.json       the PLAN_DATA payload the page ships with
-    web/verify_week_shift.js  headless-browser check of the week-shift panel
+    web/verify_week_shift.js      headless check of one grade's week-shift panel
+    web/verify_week_shift_all.js  snapshots every week-shiftable slot, all
+                                  grades, for before/after regression diffs
 
     build_artifact.py       inlines the four above into index.html
     add_week_pacing.py      merges per-week source files into web_data.json
@@ -34,10 +36,11 @@ curricula: Math/Zearn and ELA/Beyond the Page in every grade, Studies Weekly
 for Science and History/Social Science in Grades K-8 (TK does not offer it),
 Lincoln Learning in every subject it is offered for in Grades TK-8 - keyed
 `LL` under Math and `Lincoln Learning` elsewhere, as the page already named
-it - and, **at Grades K through 5 only**, Math/Open Up Resources (OUR Math)
+it - and, **at Grades K through 6 only**, Math/Open Up Resources (OUR Math)
 and ELA/Open Up EL Education. The "Behind on weeks?" panel appears only for
 those grade/subject/curriculum combinations and stays hidden for every other
-curriculum a grade offers, including Open Up at TK and in Grades 6 through 8.
+curriculum a grade offers, including Open Up at TK and in Grades 7 and 8.
+There are **91** week-pacing slots in all.
 
 `data/` holds the guide-sourced per-week files for **every wired grade** -
 TK, K and Grades 1 through 8 - and for every curriculum except Lincoln
@@ -51,9 +54,9 @@ its week data arrived inside the original uploaded build and lived only in
 wired in, byte-identical to what was already there.
 
 See "Adding Week-Level Pacing - how to add a grade.md" for the schema, the
-steps, and the real verification sequence - which is
-`add_week_pacing.py`, `build_artifact.py` and `web/verify_week_shift.js`,
-and nothing else.
+steps, and the real verification sequence - which is `add_week_pacing.py`,
+`build_artifact.py`, `web/verify_week_shift.js` and
+`web/verify_week_shift_all.js`, and nothing else.
 
 ## Source of truth
 

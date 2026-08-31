@@ -1,0 +1,290 @@
+{
+ "_source": "CORE Math Pacing Guide 6th Grade - Open Up Resources with Open Up (OUR Math), uploaded 8/31/26, transcribed by week. Same segment-list schema as Grades K-5's our_math_g{K,1,2,3,4,5}_weeks.json.",
+ "_note": "Module = Unit (OUR Math's own numbering), Unit = Section (hyphenated when a week's lessons span multiple sections within the same Unit and every section involved has real lesson content that week - up to a three-way merge, 'C-D-E' at week 3, the first three-way merge for OUR Math since Grade 4's 'B-C-D' precedent; no assessment-only side is ever folded into a merge). Course finishes at week 35 (no Unit 9 Assessment in this guide - the guide simply ends after Unit 9's six lessons, a genuine feature of this guide, not a defect); week 36 is generic 'Review & Play' dice/card activities with no Unit/Section/Lesson content, so it carries no key here, the same shape as Grades 1-5's course ending one week early. This is the first grade where OUR Math drops the Section-Checkpoint pattern entirely (zero 'Checkpoint' mentions in this guide) in favor of two new assessment types: a 'Unit N Pre Assessment' at the start of nearly every unit, and an unnumbered 'Mid Unit Assessment' partway through most units. Pre-Assessments are diagnostic placement tests, not completion checkpoints - following the precedent of never tracking pre-tests in prior grades' files, and matching the fact that Appendix A's own bullets never mention them either, they are excluded here entirely. 'Mid Unit Assessment' is collapsed to the base 'Unit N Assessment' tag per the standing Mid-/End-of- collapsing rule, the same treatment EL Education gets - this is a judgment call worth flagging: Appendix A's own bullets never reproduce the Mid Unit Assessment at all (confirmed at every one of the five weeks it appears - weeks 3, 15, 19, 23, 32 - Appendix A's prose simply omits it while listing the same lesson numbers), so this is a new divergence pattern - an omitted assessment tag, not a lesson-range mismatch - and does not affect the closed-range comparison below, which agrees exactly everywhere. One guide header typo: week 17's header re-uses 'Unit 4' for its second section reference where the lesson URLs and titles (L2, L3) confirm Unit 5 Section B - Appendix A reproduces this same typo verbatim in its own stored bullet, the same downstream-artifact pattern documented at Grade 5 ELA. Body/URL wins per the standing rule. Confirmed against Appendix A's Grade 6 OUR Math bullets in 2627_LP_Meeting_Plan.md, which for this grade already carry the same per-week breakdown as the guide itself (unlike the compressed one-line-per-LP ranges at other grades) - every closed range agrees exactly across all 10 LPs, zero boundary mismatches, the cleanest grade in the set alongside this same grade's ELA file. Lesson accounting is contiguous from 1 with no gaps or duplicates across all 9 Units (19, 17, 17, 17, 15, 19, 19, 18, 6 lessons), 147 lessons total.",
+ "1": [
+  {
+   "module": 1,
+   "unit": "A",
+   "lessons": "1-3"
+  }
+ ],
+ "2": [
+  {
+   "module": 1,
+   "unit": "B-C",
+   "lessons": "4-8"
+  }
+ ],
+ "3": [
+  {
+   "module": 1,
+   "unit": "C-D-E",
+   "lessons": "9-12",
+   "assessment": "Unit 1 Assessment"
+  }
+ ],
+ "4": [
+  {
+   "module": 1,
+   "unit": "E-F",
+   "lessons": "13-17"
+  }
+ ],
+ "5": [
+  {
+   "module": 1,
+   "unit": "F-G",
+   "lessons": "18-19",
+   "assessment": "Unit 1 Assessment"
+  },
+  {
+   "module": 2,
+   "unit": "A",
+   "lessons": "1"
+  }
+ ],
+ "6": [
+  {
+   "module": 2,
+   "unit": "A-B",
+   "lessons": "2-6"
+  }
+ ],
+ "7": [
+  {
+   "module": 2,
+   "unit": "C-D",
+   "lessons": "7-11"
+  }
+ ],
+ "8": [
+  {
+   "module": 2,
+   "unit": "D-E",
+   "lessons": "12-16"
+  }
+ ],
+ "9": [
+  {
+   "module": 2,
+   "unit": "F",
+   "lessons": "17",
+   "assessment": "Unit 2 Assessment"
+  },
+  {
+   "module": 3,
+   "unit": "A-B",
+   "lessons": "1-2"
+  }
+ ],
+ "10": [
+  {
+   "module": 3,
+   "unit": "B-C",
+   "lessons": "3-7"
+  }
+ ],
+ "11": [
+  {
+   "module": 3,
+   "unit": "C-D",
+   "lessons": "8-12"
+  }
+ ],
+ "12": [
+  {
+   "module": 3,
+   "unit": "D-E",
+   "lessons": "13-17"
+  }
+ ],
+ "13": [
+  {
+   "module": 3,
+   "unit": "E",
+   "assessment": "Unit 3 Assessment"
+  },
+  {
+   "module": 4,
+   "unit": "A",
+   "lessons": "1-3"
+  }
+ ],
+ "14": [
+  {
+   "module": 4,
+   "unit": "B",
+   "lessons": "4-8"
+  }
+ ],
+ "15": [
+  {
+   "module": 4,
+   "unit": "B-C-D",
+   "lessons": "9-12",
+   "assessment": "Unit 4 Assessment"
+  }
+ ],
+ "16": [
+  {
+   "module": 4,
+   "unit": "D-E",
+   "lessons": "13-17"
+  }
+ ],
+ "17": [
+  {
+   "module": 4,
+   "unit": "E",
+   "assessment": "Unit 4 Assessment"
+  },
+  {
+   "module": 5,
+   "unit": "A-B",
+   "lessons": "1-3"
+  }
+ ],
+ "18": [
+  {
+   "module": 5,
+   "unit": "B-C",
+   "lessons": "4-7"
+  }
+ ],
+ "19": [
+  {
+   "module": 5,
+   "unit": "C-D",
+   "lessons": "8-11",
+   "assessment": "Unit 5 Assessment"
+  }
+ ],
+ "20": [
+  {
+   "module": 5,
+   "unit": "D-E",
+   "lessons": "12-15",
+   "assessment": "Unit 5 Assessment"
+  }
+ ],
+ "21": [
+  {
+   "module": 6,
+   "unit": "A",
+   "lessons": "1-4"
+  }
+ ],
+ "22": [
+  {
+   "module": 6,
+   "unit": "A-B",
+   "lessons": "5-9"
+  }
+ ],
+ "23": [
+  {
+   "module": 6,
+   "unit": "B-C",
+   "lessons": "10-13",
+   "assessment": "Unit 6 Assessment"
+  }
+ ],
+ "24": [
+  {
+   "module": 6,
+   "unit": "C-D",
+   "lessons": "14-18"
+  }
+ ],
+ "25": [
+  {
+   "module": 6,
+   "unit": "E",
+   "lessons": "19",
+   "assessment": "Unit 6 Assessment"
+  },
+  {
+   "module": 7,
+   "unit": "A",
+   "lessons": "1-2"
+  }
+ ],
+ "26": [
+  {
+   "module": 7,
+   "unit": "A",
+   "lessons": "3-7"
+  }
+ ],
+ "27": [
+  {
+   "module": 7,
+   "unit": "B-C",
+   "lessons": "8-12"
+  }
+ ],
+ "28": [
+  {
+   "module": 7,
+   "unit": "C-D",
+   "lessons": "13-17"
+  }
+ ],
+ "29": [
+  {
+   "module": 7,
+   "unit": "D-E",
+   "lessons": "18-19",
+   "assessment": "Unit 7 Assessment"
+  },
+  {
+   "module": 8,
+   "unit": "A",
+   "lessons": "1"
+  }
+ ],
+ "30": [
+  {
+   "module": 8,
+   "unit": "A-B",
+   "lessons": "2-6"
+  }
+ ],
+ "31": [
+  {
+   "module": 8,
+   "unit": "B-C",
+   "lessons": "7-11"
+  }
+ ],
+ "32": [
+  {
+   "module": 8,
+   "unit": "C-D",
+   "lessons": "12-15",
+   "assessment": "Unit 8 Assessment"
+  }
+ ],
+ "33": [
+  {
+   "module": 8,
+   "unit": "D-E",
+   "lessons": "16-18",
+   "assessment": "Unit 8 Assessment"
+  }
+ ],
+ "34": [
+  {
+   "module": 9,
+   "unit": "A",
+   "lessons": "1-3"
+  }
+ ],
+ "35": [
+  {
+   "module": 9,
+   "unit": "B",
+   "lessons": "4-6"
+  }
+ ]
+}

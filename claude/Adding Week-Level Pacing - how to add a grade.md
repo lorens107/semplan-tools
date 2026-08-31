@@ -29,24 +29,64 @@ covers **five curricula**:
     ELA/Lincoln Learning        TK, K, 1-8
     Science/Lincoln Learning    TK, K, 1-8
     HSS/Lincoln Learning        TK, K, 1-8 except grade 3, which does not offer it
-    Math/Open Up Resources      K, 1, 2, 3, 4, 5
-    ELA/Open Up EL Education    K, 1, 2, 3, 4, 5
+    Math/Open Up Resources      K, 1, 2, 3, 4, 5, 6
+    ELA/Open Up EL Education    K, 1, 2, 3, 4, 5, 6
 
 Studies Weekly was added 8/29/26 and was the first new *curriculum* rather
 than a new grade - it needed a third `kind`. Lincoln Learning followed on
 8/30/26 and needed no new kind at all, reusing `studies_weekly`. Open Up
 Resources (OUR Math) and Open Up EL Education followed the same day and needed
-a fourth kind, `module_unit_lesson`; Grades 1 through 5 followed. They are
-wired at **Grades K through 5 only**, and the other grades that offer them
+a fourth kind, `module_unit_lesson`; Grades 1 through 6 followed. They are
+wired at **Grades K through 6 only**, and the other grades that offer them
 still show no panel. Every combination is verified end to end in a real
 browser. The panel stays hidden for every curriculum without week-level data:
 Beast Academy, Dimensions Math, TCI, and Open Up Resources / Open Up EL
-Education in Grades 6 through 8 and TK.
+Education in Grades 7 and 8 and at TK.
 
 A change here now means another new curriculum, a correction to an existing
 transcription, or a change to the panel itself.
 
 ### Changelog
+
+- **OUR Math and Open Up EL Education at Grade 6** - 8/31/26. Data-only for
+  the curricula; the rollout now covers **K through 6**, with Grades 7, 8 and
+  TK still showing no panel for these two. Week-pacing slots: 89 to **91**.
+  OUR Math ends at week 35 (no `"36"` key); EL Education runs the full 36.
+  Coverage as ordered prefix is exact in both: OUR Math 41, 40 and 39 of 41
+  segments at deficits 1, 2 and 3, EL Education 40, 39 and 38 of 41. No LP
+  empty at any deficit.
+
+  **`web/verify_week_shift_all.js` added** - the multi-grade regression
+  snapshot that every session in this run has depended on, which until now
+  existed only as a scratch file outside the repo. Its two silent-failure
+  traps are documented under "Verifying" below. This is the tool the
+  no-regression claim in every changelog entry above was actually produced
+  with; it just was not committed.
+
+  Grade 6's Math guide is the first to **drop Section Checkpoints entirely**,
+  replacing them with a per-unit `Unit N Pre Assessment` (excluded, as
+  diagnostic pre-tests always have been, and absent from Appendix A too) and
+  an unnumbered `Mid Unit Assessment` (collapsed to `Unit N Assessment` per
+  the standing Mid-/End-of- rule). That collapsing is worth flagging as **a
+  new divergence shape: an omitted assessment tag rather than a lesson-range
+  difference.** Appendix A's prose never reproduces the Mid Unit Assessment at
+  any of the five weeks it appears, so the week path names an assessment
+  Appendix A does not. It does not affect any lesson range.
+
+  Also here: the second and third **three-way section merges** in the project,
+  `C-D-E` at week 3 and `B-C-D` at week 15, both rendering normally
+  (`Unit 1 | Section C-D-E: Lessons 9-12 + Unit 1 Assessment`), and a Unit 9
+  that simply ends after six lessons with **no Unit 9 Assessment at all** -
+  a feature of the guide, not a truncation.
+
+  **One correction to the source note's claim of zero closed-range mismatches
+  on both curricula.** Math is indeed zero across 9 closed ranges. **ELA has
+  one**, at LP9: Appendix A gives `M4 U3: Lessons 1-16` where the week path
+  ends LP9 at lesson 8 and opens LP10 with 9. Appendix A's own LP10 line
+  starts `M4 U3: Lessons 9 - ...`, so its "1-16" contradicts its next cell and
+  overshoots a unit that has 17 lessons; the 16 looks picked up from M4 U2's
+  lesson 16, which falls in that same LP. The week path is self-consistent and
+  agrees with Appendix A's LP10 start. Body wins, no change made.
 
 - **OUR Math and Open Up EL Education at Grade 5** - 8/31/26. Data-only, the
   fifth grade on this kind. Week-pacing slots: 87 to **89**. OUR Math ends at
@@ -738,7 +778,7 @@ caps the input at 4.
 
 ## Verifying
 
-**The three scripts below are the entire build and verification toolchain in
+**The four scripts below are the entire build and verification toolchain in
 this repo.** There is nothing else.
 
     python3 add_week_pacing.py --grade N \
@@ -751,9 +791,34 @@ this repo.** There is nothing else.
     cp "Semester Plan Pacing.html" index.html     # publish, once verified
 
 `verify_week_shift.js` prints panel visibility, field labels, the note text,
-and the rendered preview, as JSON. A console error reading
+and the rendered preview, as JSON, for **one** grade. A console error reading
 `net::ERR_CONNECTION_RESET` is expected offline - that is the Google Fonts
 stylesheet, not a script failure.
+
+For the no-regression check, use the fourth script:
+
+    node web/verify_week_shift_all.js index.html TK,K,1,2,3 > before.json
+    #   ... make the change, rebuild ...
+    node web/verify_week_shift_all.js "Semester Plan Pacing.html" TK,K,1,2,3 > after.json
+
+It enumerates **every** week-shiftable grade/subject/curriculum slot by asking
+`optionsFor()` rather than from a hardcoded list, and renders each at
+weeks-completed 0-4. Diff the two files: every pre-existing slot must be
+identical, and only the slots you added may be new. Pass a grade list to chunk
+the run; omit it for all of them.
+
+Two traps it exists to avoid, both of which fail *silently* and both of which
+have produced a false clean pass in this project before:
+
+  - `state.curricula` persists across grade changes inside one page load, so a
+    subject left unset keeps the previous grade's pick and its rows flip
+    between baked and shifted for reasons unrelated to the change under test.
+    Every subject is set explicitly on every pass, to `''` when it is not the
+    one being exercised.
+  - Filtering output rows by curriculum name misses slots whose *display* name
+    does not contain it - Lincoln Learning at TK and K is named after the VIE
+    pacing guides ("Mathematics K Pacing Guide - VIE"), so a name filter drops
+    8 of its 39 slots. The whole rendered body is captured instead.
 
 ### If your copy of this doc lists a different suite, it is stale
 
