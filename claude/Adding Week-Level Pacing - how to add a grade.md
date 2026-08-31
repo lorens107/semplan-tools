@@ -29,24 +29,67 @@ covers **five curricula**:
     ELA/Lincoln Learning        TK, K, 1-8
     Science/Lincoln Learning    TK, K, 1-8
     HSS/Lincoln Learning        TK, K, 1-8 except grade 3, which does not offer it
-    Math/Open Up Resources      K, 1, 2, 3, 4, 5, 6, 7
-    ELA/Open Up EL Education    K, 1, 2, 3, 4, 5, 6, 7
+    Math/Open Up Resources      K, 1-8   (TK offers it and is NOT yet wired)
+    ELA/Open Up EL Education    K, 1-8   (TK does not offer it at all)
 
 Studies Weekly was added 8/29/26 and was the first new *curriculum* rather
 than a new grade - it needed a third `kind`. Lincoln Learning followed on
 8/30/26 and needed no new kind at all, reusing `studies_weekly`. Open Up
 Resources (OUR Math) and Open Up EL Education followed the same day and needed
-a fourth kind, `module_unit_lesson`; Grades 1 through 7 followed. They are
-wired at **Grades K through 7 only**, and the other grades that offer them
-still show no panel. Every combination is verified end to end in a real
-browser. The panel stays hidden for every curriculum without week-level data:
-Beast Academy, Dimensions Math, TCI, and Open Up Resources / Open Up EL
-Education at Grade 8 and TK.
+a fourth kind, `module_unit_lesson`; Grades 1 through 8 followed. They are
+wired at **K and Grades 1-8**, which is every grade that offers them **except
+TK's Math slot** - the single remaining gap in this rollout (TK does not offer
+Open Up EL Education at all, so there is no TK ELA slot to fill). Every
+combination is verified end to end in a real browser. The panel stays hidden
+for every curriculum without week-level data: Beast Academy, Dimensions Math,
+TCI, and Open Up Resources at TK.
 
 A change here now means another new curriculum, a correction to an existing
 transcription, or a change to the panel itself.
 
 ### Changelog
+
+- **OUR Math and Open Up EL Education at Grade 8** - 8/31/26. Data-only, and
+  the last of Grades 1-8. Week-pacing slots: 93 to **95**. Both files were
+  checked against the schema independently of the loader first; both conform,
+  so no engine or loader change was needed. OUR Math ends at week 35 (no
+  `"36"` key); EL Education runs the full 36. Coverage as ordered prefix is
+  exact in both: OUR Math 37, 36 and 34 of 37 segments at deficits 1, 2 and 3,
+  EL Education 40, 39 and 37 of 41. No LP empty at any deficit, and **zero
+  closed-range differences** against Appendix A on either curriculum - the
+  third grade after 5 and 7 to come out clean on both.
+
+  **What remains after this is exactly one slot: TK / Math / Open Up
+  Resources.** TK offers OUR Math (with ten LPs of baseline content already in
+  place) and is the only grade offering it that has no week data. TK does
+  **not** offer Open Up EL Education at all - its ELA list is Beyond the Page
+  and Lincoln Learning only - so there is no TK ELA slot to fill and never
+  will be unless the offering changes. "TK and its Grade 8 counterpart" is not
+  the right way to think about what is left; it is one slot, not two.
+
+  Three Math guide header typos, all resolved from lesson URLs and all
+  reproduced verbatim in Appendix A - the same downstream-artifact pattern
+  running through Grades 5-7:
+
+    - **Week 14** says `Unit 4 | Section A | Lessons 1-3`; the URLs put
+      lessons 2-3 in Section B. Transcribed `A-B`, renders
+      `Unit 4 | Section A-B: Lessons 1-3`.
+    - **Week 24** prints `Section A` twice; the URLs put lessons 3-4 in
+      Section B. Transcribed `A-B`.
+    - **Week 10** says `Lessons 1-3` where the body lists four. Transcribed
+      1-4, and Appendix A's own title list already shows all four, which is
+      what settles it.
+
+  Also here: the project's **fourth three-way section merge**, `C-D-E` at week
+  33, and two Unit-boundary-crossing weeks (30, 34). EL Education carries five
+  boundary-crossing weeks (4, 7, 21, 30, 34) and the same four combined-tag
+  weeks as Grade 7 - **9, 18, 27 and 36, every ninth week**, at each Module's
+  own Unit-3 close, rendering with two ` + ` joins.
+
+  Math repeats the omitted-tag divergence from Grades 6 and 7: Pre Assessments
+  (weeks 1, 6, 10, 14, 18, 24, 27, 30) excluded as diagnostics, Mid-Unit
+  Assessments (weeks 3, 21) collapsed to the base tag. Neither touches a
+  lesson range.
 
 - **OUR Math and Open Up EL Education at Grade 7** - 8/31/26. Data-only; the
   rollout now covers **K through 7**, leaving only Grade 8 and TK. Week-pacing

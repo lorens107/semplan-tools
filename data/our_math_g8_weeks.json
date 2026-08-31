@@ -1,0 +1,268 @@
+{
+ "_source": "CORE Math Pacing Guide 8th Grade - Open Up Resources with Open Up (OUR Math), uploaded 8/31/26, transcribed by week. Same segment-list schema as Grades K-7's our_math_g{K,1,2,3,4,5,6,7}_weeks.json.",
+ "_note": "Module = Unit (OUR Math's own numbering), Unit = Section (hyphenated when a week's lessons span multiple sections within the same Unit and every section involved has real lesson content that week). Course finishes at week 35, same shape as Grades 1-7: week 36's header reads 'Unit 9 Assessments & Review' but the body is three generic dice/card review games (Dice Exponents Challenge, Card Linear Equations, Dice Data Analysis) unrelated to any specific Unit 9 content and with no lesson or assessment link - matching Appendix A's own bare LP10 line for this same slot, 'Unit 9 Assessments & Review — [Unit 9 Assessments]', with no lesson content either. No key for week 36 here, per the standing no-M|U|L-content rule. Every 'Unit N Pre-Unit Assessment' / 'Unit N Pre-Assessment' (weeks 1, 6, 10, 14, 18, 24, 27, 30) is a diagnostic placement test and is excluded entirely, per the precedent set at every prior grade and matching the fact that Appendix A's own bullets never mention them either. Weeks 3 and 21 each carry an unnumbered 'Mid-Unit Assessment' that collapses to the base 'Unit N Assessment' tag per the standing Mid-/End-of- rule - week 3's is inside Unit 1 (no bracket in Appendix A, but the guide's own week-3 body is the only place it appears, matching the precedent that the tag can live in the row body rather than a bracket suffix); week 21's header literally reads 'Unit 5 Mid-Unit Assessment & Section D | Lesson 11-14', collapsed the same way. Three guide header typos, all reproduced verbatim in Appendix A's own stored bullets (the same downstream-artifact pattern documented at Grades 5-7): week 14's header reads 'Unit 4 | Section A | Lessons 1-3' but the lesson URLs (unit-4/section-b/lesson-2, lesson-3) show Lessons 2-3 are Section B, so the week is transcribed 'A-B'; week 24's header repeats 'Section A' twice ('Unit 6 | Section A | Lessons 1-2 & Section A | Lessons 3-4') where the URLs (unit-6/section-b/lesson-3, lesson-4) confirm Lessons 3-4 are Section B, transcribed 'A-B'; and week 10's header reads 'Unit 3 | Section A | Lessons 1-3' but the body lists four lessons (L1-L4, the fourth being 'Comparing Proportional Relationships'), transcribed as lessons 1-4. Body/URL wins per the standing rule in all three, and Appendix A reproduces each typo's header text verbatim next to a title list that (for week 10) already shows all four lessons, which is what settles it. Two Unit-boundary-crossing weeks: week 30 (Unit 7's last lesson plus Unit 7 Assessment, then Unit 8's opening lesson 1) and week 34 (Unit 8's closing review/assessment, then Unit 9's opening lessons 1-3) - both confirmed against Appendix A, which carries the identical two-part breakdown at both weeks. One three-way section merge, week 33's 'C-D-E' (Unit 8, lessons 12-16), rendering 'Unit 8 | Section C-D-E: Lessons 12-16'. Confirmed against Appendix A's Grade 8 OUR Math bullets in 2627_LP_Meeting_Plan.md, which for this grade already carry the same per-week breakdown as the guide itself (unlike the compressed one-line-per-LP ranges at other grades) - every closed range agrees exactly across all 10 LPs (including all three header-typo weeks and both Unit-crossing weeks, which Appendix A reproduces identically), zero real boundary mismatches. Appendix A's own LP groupings shift the weeks between LP4/LP5 and LP8/LP9 relative to a strict 4-week-per-LP read (LP4 gets only 3 Math bullets, weeks 13-15; LP5 picks up at week 16; similarly LP8 gets only 3 bullets, weeks 28-30, and LP9 picks up at week 31) - the identical window-vs-prose grouping shift documented at Grade 7, at the same weeks; the guide's own week numbers are unaffected and are what this file transcribes. Lesson accounting is contiguous from 1 with no gaps or duplicates across all 9 Units (17, 13, 14, 16, 22, 11, 16, 16, 6 lessons), 131 lessons total.",
+ "1": [
+  {
+   "module": 1,
+   "unit": "A",
+   "lessons": "1-2"
+  }
+ ],
+ "2": [
+  {
+   "module": 1,
+   "unit": "A",
+   "lessons": "3-6"
+  }
+ ],
+ "3": [
+  {
+   "module": 1,
+   "unit": "B",
+   "lessons": "7-10",
+   "assessment": "Unit 1 Assessment"
+  }
+ ],
+ "4": [
+  {
+   "module": 1,
+   "unit": "C-D",
+   "lessons": "11-14"
+  }
+ ],
+ "5": [
+  {
+   "module": 1,
+   "unit": "D-E",
+   "lessons": "15-17",
+   "assessment": "Unit 1 Assessment"
+  }
+ ],
+ "6": [
+  {
+   "module": 2,
+   "unit": "A",
+   "lessons": "1-3"
+  }
+ ],
+ "7": [
+  {
+   "module": 2,
+   "unit": "A-B",
+   "lessons": "4-7"
+  }
+ ],
+ "8": [
+  {
+   "module": 2,
+   "unit": "B-C",
+   "lessons": "8-11"
+  }
+ ],
+ "9": [
+  {
+   "module": 2,
+   "unit": "C-D",
+   "lessons": "12-13",
+   "assessment": "Unit 2 Assessment"
+  }
+ ],
+ "10": [
+  {
+   "module": 3,
+   "unit": "A",
+   "lessons": "1-4"
+  }
+ ],
+ "11": [
+  {
+   "module": 3,
+   "unit": "B",
+   "lessons": "5-8"
+  }
+ ],
+ "12": [
+  {
+   "module": 3,
+   "unit": "C-D",
+   "lessons": "9-12"
+  }
+ ],
+ "13": [
+  {
+   "module": 3,
+   "unit": "D-E",
+   "lessons": "13-14",
+   "assessment": "Unit 3 Assessment"
+  }
+ ],
+ "14": [
+  {
+   "module": 4,
+   "unit": "A-B",
+   "lessons": "1-3"
+  }
+ ],
+ "15": [
+  {
+   "module": 4,
+   "unit": "B",
+   "lessons": "4-7"
+  }
+ ],
+ "16": [
+  {
+   "module": 4,
+   "unit": "B-C",
+   "lessons": "8-11"
+  }
+ ],
+ "17": [
+  {
+   "module": 4,
+   "unit": "C",
+   "lessons": "12-15"
+  }
+ ],
+ "18": [
+  {
+   "module": 4,
+   "unit": "D",
+   "lessons": "16",
+   "assessment": "Unit 4 Assessment"
+  }
+ ],
+ "19": [
+  {
+   "module": 5,
+   "unit": "A-B",
+   "lessons": "1-5"
+  }
+ ],
+ "20": [
+  {
+   "module": 5,
+   "unit": "B-C",
+   "lessons": "6-10"
+  }
+ ],
+ "21": [
+  {
+   "module": 5,
+   "unit": "D",
+   "lessons": "11-14",
+   "assessment": "Unit 5 Assessment"
+  }
+ ],
+ "22": [
+  {
+   "module": 5,
+   "unit": "D-E",
+   "lessons": "15-19"
+  }
+ ],
+ "23": [
+  {
+   "module": 5,
+   "unit": "E-F",
+   "lessons": "20-22",
+   "assessment": "Unit 5 Assessment"
+  }
+ ],
+ "24": [
+  {
+   "module": 6,
+   "unit": "A-B",
+   "lessons": "1-4"
+  }
+ ],
+ "25": [
+  {
+   "module": 6,
+   "unit": "B-C",
+   "lessons": "5-9"
+  }
+ ],
+ "26": [
+  {
+   "module": 6,
+   "unit": "C-D",
+   "lessons": "10-11",
+   "assessment": "Unit 6 Assessment"
+  }
+ ],
+ "27": [
+  {
+   "module": 7,
+   "unit": "A-B",
+   "lessons": "1-5"
+  }
+ ],
+ "28": [
+  {
+   "module": 7,
+   "unit": "B-C",
+   "lessons": "6-10"
+  }
+ ],
+ "29": [
+  {
+   "module": 7,
+   "unit": "C",
+   "lessons": "11-15"
+  }
+ ],
+ "30": [
+  {
+   "module": 7,
+   "unit": "D",
+   "lessons": "16",
+   "assessment": "Unit 7 Assessment"
+  },
+  {
+   "module": 8,
+   "unit": "A",
+   "lessons": "1"
+  }
+ ],
+ "31": [
+  {
+   "module": 8,
+   "unit": "A-B",
+   "lessons": "2-6"
+  }
+ ],
+ "32": [
+  {
+   "module": 8,
+   "unit": "B",
+   "lessons": "7-11"
+  }
+ ],
+ "33": [
+  {
+   "module": 8,
+   "unit": "C-D-E",
+   "lessons": "12-16"
+  }
+ ],
+ "34": [
+  {
+   "module": 8,
+   "unit": "Assessments",
+   "assessment": "Unit 8 Assessment"
+  },
+  {
+   "module": 9,
+   "unit": "A",
+   "lessons": "1-3"
+  }
+ ],
+ "35": [
+  {
+   "module": 9,
+   "unit": "B",
+   "lessons": "4-6"
+  }
+ ]
+}

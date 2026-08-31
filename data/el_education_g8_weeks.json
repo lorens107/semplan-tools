@@ -1,0 +1,305 @@
+{
+ "_source": "CORE ELA Pacing Guide 8th Grade - Open Up EL Education, uploaded 8/31/26, transcribed by week (parsed from the guide's M | U | L labels, cross-checked against Appendix A's Grade 8 ELA bullets in 2627_LP_Meeting_Plan.md).",
+ "_note": "Module = EL Education Module, Unit = the Unit within that Module (stored as a string; lesson numbers reset per Unit, as in Grades K-7). This guide runs the full 36 weeks with no early finish, matching Grades 4-7. Every Module-to-Module transition (weeks 9/10, 18/19, 27/28) lands cleanly on a week boundary. Five weeks cross a Unit boundary within the same Module - week 4 (Unit 1 to Unit 2), week 7 (Unit 2 to Unit 3), week 21 (Unit 1 to Unit 2), week 30 (Unit 1 to Unit 2), and week 34 (Unit 2 to Unit 3) - each split into two segments per the standing rule. Many lessons carry a duplicate '(Homework)' entry under the same lesson number (e.g. week 1's L2 and L2 (Homework)); these are deduped to a single lesson number rather than double-counted. One lesson's homework prints a full week after its own lesson body - L10's homework in week 24 follows L10's own lesson in week 23 - which does not add a new lesson to week 24's count since L10 was already counted the week before; week 36 similarly opens with L9's homework, already counted in week 35. 'assessment' names any Mid-Unit / End-of-Unit Assessment falling within that segment's lessons - 'Mid-Unit'/'End of Unit'/'Part I/II' and colon detail are dropped, keeping only the base tag; a tag repeated across lessons in the same segment (e.g. week 5's Mid-Unit 2 Assessment at L4 and L5, week 12's Mid- and End-of-Unit-1 Assessment at L11 and L15) is written once per segment. Four weeks - 9, 18, 27, and 36 - carry two distinct assessment tags in one segment: an End-of-Unit Assessment tag plus a following 'Performance Task' lesson run (Introduce the Performance Task / Create a Webpage at week 9; Create an Infographic / Create Prompt Cards / Roundtable Presentations at week 18; Create Graphic Panels / Create Prompt Cards / Create and Present a Graphic Panel Depiction at week 27; Activist Assembly at week 36) - joined with ' + ' in guide-text order, e.g. week 9: 'Unit 3 Assessment + Performance Task'. This is the identical shape and identical week positions (9, 18, 27, 36 - every ninth week, at each Module's own Unit-3 close) documented at Grade 7. Confirmed against Appendix A's Grade 8 Open Up EL Education bullets in 2627_LP_Meeting_Plan.md, which for this grade already carry the same per-week breakdown as the guide itself (compressed into one flowing paragraph per LP rather than per-week bullets, but listing every lesson number and title in guide order) - every lesson number transcribed here appears in Appendix A's own text at the matching LP, zero real boundary mismatches found. Appendix A's own LP groupings shift the weeks between LP4/LP5 and LP8/LP9 relative to a strict 4-week-per-LP read (LP4 gets only weeks 13-15; LP5 picks up at week 16; LP8 gets only weeks 28-30; LP9 picks up at week 31) - the identical window-vs-prose shift documented at Grade 7 and matching this same grade's OUR Math file, at the same weeks. Lesson accounting is contiguous from 1 with no gaps or duplicates across all twelve Module/Unit pairs (M1: 16, 11, 14 lessons; M2: 15, 14, 15; M3: 10, 14, 15; M4: 12, 19, 12), 167 lessons total.",
+ "1": [
+  {
+   "module": 1,
+   "unit": "1",
+   "lessons": "1-3"
+  }
+ ],
+ "2": [
+  {
+   "module": 1,
+   "unit": "1",
+   "lessons": "4-8"
+  }
+ ],
+ "3": [
+  {
+   "module": 1,
+   "unit": "1",
+   "lessons": "9-13",
+   "assessment": "Unit 1 Assessment"
+  }
+ ],
+ "4": [
+  {
+   "module": 1,
+   "unit": "1",
+   "lessons": "14-16",
+   "assessment": "Unit 1 Assessment"
+  },
+  {
+   "module": 1,
+   "unit": "2",
+   "lessons": "1"
+  }
+ ],
+ "5": [
+  {
+   "module": 1,
+   "unit": "2",
+   "lessons": "2-5",
+   "assessment": "Unit 2 Assessment"
+  }
+ ],
+ "6": [
+  {
+   "module": 1,
+   "unit": "2",
+   "lessons": "6-10"
+  }
+ ],
+ "7": [
+  {
+   "module": 1,
+   "unit": "2",
+   "lessons": "11",
+   "assessment": "Unit 2 Assessment"
+  },
+  {
+   "module": 1,
+   "unit": "3",
+   "lessons": "1-4",
+   "assessment": "Unit 3 Assessment"
+  }
+ ],
+ "8": [
+  {
+   "module": 1,
+   "unit": "3",
+   "lessons": "5-9"
+  }
+ ],
+ "9": [
+  {
+   "module": 1,
+   "unit": "3",
+   "lessons": "10-14",
+   "assessment": "Unit 3 Assessment + Performance Task"
+  }
+ ],
+ "10": [
+  {
+   "module": 2,
+   "unit": "1",
+   "lessons": "1-5"
+  }
+ ],
+ "11": [
+  {
+   "module": 2,
+   "unit": "1",
+   "lessons": "6-10"
+  }
+ ],
+ "12": [
+  {
+   "module": 2,
+   "unit": "1",
+   "lessons": "11-15",
+   "assessment": "Unit 1 Assessment"
+  }
+ ],
+ "13": [
+  {
+   "module": 2,
+   "unit": "2",
+   "lessons": "1-5"
+  }
+ ],
+ "14": [
+  {
+   "module": 2,
+   "unit": "2",
+   "lessons": "6-9",
+   "assessment": "Unit 2 Assessment"
+  }
+ ],
+ "15": [
+  {
+   "module": 2,
+   "unit": "2",
+   "lessons": "10-14",
+   "assessment": "Unit 2 Assessment"
+  }
+ ],
+ "16": [
+  {
+   "module": 2,
+   "unit": "3",
+   "lessons": "1-5",
+   "assessment": "Unit 3 Assessment"
+  }
+ ],
+ "17": [
+  {
+   "module": 2,
+   "unit": "3",
+   "lessons": "6-10"
+  }
+ ],
+ "18": [
+  {
+   "module": 2,
+   "unit": "3",
+   "lessons": "11-15",
+   "assessment": "Unit 3 Assessment + Performance Task"
+  }
+ ],
+ "19": [
+  {
+   "module": 3,
+   "unit": "1",
+   "lessons": "1-5"
+  }
+ ],
+ "20": [
+  {
+   "module": 3,
+   "unit": "1",
+   "lessons": "6-9",
+   "assessment": "Unit 1 Assessment"
+  }
+ ],
+ "21": [
+  {
+   "module": 3,
+   "unit": "1",
+   "lessons": "10",
+   "assessment": "Unit 1 Assessment"
+  },
+  {
+   "module": 3,
+   "unit": "2",
+   "lessons": "1-2"
+  }
+ ],
+ "22": [
+  {
+   "module": 3,
+   "unit": "2",
+   "lessons": "3-6"
+  }
+ ],
+ "23": [
+  {
+   "module": 3,
+   "unit": "2",
+   "lessons": "7-10",
+   "assessment": "Unit 2 Assessment"
+  }
+ ],
+ "24": [
+  {
+   "module": 3,
+   "unit": "2",
+   "lessons": "11-14",
+   "assessment": "Unit 2 Assessment"
+  }
+ ],
+ "25": [
+  {
+   "module": 3,
+   "unit": "3",
+   "lessons": "1-5",
+   "assessment": "Unit 3 Assessment"
+  }
+ ],
+ "26": [
+  {
+   "module": 3,
+   "unit": "3",
+   "lessons": "6-10"
+  }
+ ],
+ "27": [
+  {
+   "module": 3,
+   "unit": "3",
+   "lessons": "11-15",
+   "assessment": "Unit 3 Assessment + Performance Task"
+  }
+ ],
+ "28": [
+  {
+   "module": 4,
+   "unit": "1",
+   "lessons": "1-5"
+  }
+ ],
+ "29": [
+  {
+   "module": 4,
+   "unit": "1",
+   "lessons": "6-10",
+   "assessment": "Unit 1 Assessment"
+  }
+ ],
+ "30": [
+  {
+   "module": 4,
+   "unit": "1",
+   "lessons": "11-12",
+   "assessment": "Unit 1 Assessment"
+  },
+  {
+   "module": 4,
+   "unit": "2",
+   "lessons": "1-3"
+  }
+ ],
+ "31": [
+  {
+   "module": 4,
+   "unit": "2",
+   "lessons": "4-8",
+   "assessment": "Unit 2 Assessment"
+  }
+ ],
+ "32": [
+  {
+   "module": 4,
+   "unit": "2",
+   "lessons": "9-13"
+  }
+ ],
+ "33": [
+  {
+   "module": 4,
+   "unit": "2",
+   "lessons": "14-18",
+   "assessment": "Unit 2 Assessment"
+  }
+ ],
+ "34": [
+  {
+   "module": 4,
+   "unit": "2",
+   "lessons": "19",
+   "assessment": "Unit 2 Assessment"
+  },
+  {
+   "module": 4,
+   "unit": "3",
+   "lessons": "1-4"
+  }
+ ],
+ "35": [
+  {
+   "module": 4,
+   "unit": "3",
+   "lessons": "5-9",
+   "assessment": "Unit 3 Assessment"
+  }
+ ],
+ "36": [
+  {
+   "module": 4,
+   "unit": "3",
+   "lessons": "10-12",
+   "assessment": "Unit 3 Assessment + Performance Task"
+  }
+ ]
+}
