@@ -29,24 +29,69 @@ covers **five curricula**:
     ELA/Lincoln Learning        TK, K, 1-8
     Science/Lincoln Learning    TK, K, 1-8
     HSS/Lincoln Learning        TK, K, 1-8 except grade 3, which does not offer it
-    Math/Open Up Resources      K, 1, 2, 3, 4, 5, 6
-    ELA/Open Up EL Education    K, 1, 2, 3, 4, 5, 6
+    Math/Open Up Resources      K, 1, 2, 3, 4, 5, 6, 7
+    ELA/Open Up EL Education    K, 1, 2, 3, 4, 5, 6, 7
 
 Studies Weekly was added 8/29/26 and was the first new *curriculum* rather
 than a new grade - it needed a third `kind`. Lincoln Learning followed on
 8/30/26 and needed no new kind at all, reusing `studies_weekly`. Open Up
 Resources (OUR Math) and Open Up EL Education followed the same day and needed
-a fourth kind, `module_unit_lesson`; Grades 1 through 6 followed. They are
-wired at **Grades K through 6 only**, and the other grades that offer them
+a fourth kind, `module_unit_lesson`; Grades 1 through 7 followed. They are
+wired at **Grades K through 7 only**, and the other grades that offer them
 still show no panel. Every combination is verified end to end in a real
 browser. The panel stays hidden for every curriculum without week-level data:
 Beast Academy, Dimensions Math, TCI, and Open Up Resources / Open Up EL
-Education in Grades 7 and 8 and at TK.
+Education at Grade 8 and TK.
 
 A change here now means another new curriculum, a correction to an existing
 transcription, or a change to the panel itself.
 
 ### Changelog
+
+- **OUR Math and Open Up EL Education at Grade 7** - 8/31/26. Data-only; the
+  rollout now covers **K through 7**, leaving only Grade 8 and TK. Week-pacing
+  slots: 91 to **93**. Both files were checked against the schema
+  independently of the loader before merging - every segment's key set, types
+  and required fields conform, so the data-only expectation held rather than
+  being assumed. OUR Math ends at week 35 (no `"36"` key); EL Education runs
+  the full 36. Coverage as ordered prefix is exact in both: OUR Math 41, 40
+  and 39 of 41 segments at deficits 1, 2 and 3, EL Education 42, 41 and 39 of
+  43. No LP empty at any deficit, and zero closed-range differences against
+  Appendix A on either curriculum - the second grade after Grade 5 to come out
+  clean on both.
+
+  **Two Math guide header typos**, both resolved from the lesson URLs and both
+  reproduced verbatim in Appendix A - the downstream-artifact pattern first
+  documented at Grade 5 ELA:
+
+    - **Week 9** drops a section letter entirely: the header reads
+      `Section B | Lessons 7-9 & Section | Lessons 10-11`. The URLs
+      (`unit-3/section-c/lesson-10`, `lesson-11`) name Section C, so the week
+      is transcribed `B-C` and renders `Unit 3 | Section B-C: Lessons 7-11`.
+    - **Week 24** re-uses `Unit 6` for lessons whose URLs and titles (Adjacent
+      Angles, Nonadjacent Angles) are all `unit-7/section-a`. Transcribed as
+      Unit 7; renders `Unit 7 | Section A-B: Lessons 2-6`.
+
+  **One ELA header/body mismatch, at week 33**: the header names
+  `Module 4 | Unit 3`, but every lesson in the week's body is M4 U2 by its own
+  labels and by continuity from week 32's L5-L9. Unit 3 does not start until
+  week 34's L1. Transcribed as Unit 2, body wins.
+
+  **Four combined-tag weeks** in ELA - 9, 18, 27 and 36 - each carrying a Unit
+  Assessment tag plus a following Performance Task lesson pair in one segment,
+  joined in guide-text order. These render with two ` + ` joins rather than
+  one, e.g. `Module 1 | Unit 3: Lessons 7-11 + Unit 3 Assessment + Performance
+  Task`, which is worth seeing once before assuming a doubled tag is a bug.
+
+  **Seven Unit-boundary-crossing weeks** in ELA - 4, 7, 13, 16, 21, 25 and 34
+  - a new high (Grade 6 had five, Grade 5 three). Every Module-to-Module
+  transition still lands cleanly on a week boundary. The count only affects
+  segment totals, not the rendering.
+
+  Math also repeats Grade 6's **omitted-tag divergence**: Pre Assessments
+  (weeks 1, 4, 7, 10, 14, 18, 23, 27) are excluded as diagnostics, and the Mid
+  Unit Assessments (weeks 20, 30) collapse to the base tag, which Appendix A
+  never prints at all. Neither touches a lesson range.
 
 - **OUR Math and Open Up EL Education at Grade 6** - 8/31/26. Data-only for
   the curricula; the rollout now covers **K through 6**, with Grades 7, 8 and

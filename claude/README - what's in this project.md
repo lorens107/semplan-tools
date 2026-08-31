@@ -36,11 +36,11 @@ curricula: Math/Zearn and ELA/Beyond the Page in every grade, Studies Weekly
 for Science and History/Social Science in Grades K-8 (TK does not offer it),
 Lincoln Learning in every subject it is offered for in Grades TK-8 - keyed
 `LL` under Math and `Lincoln Learning` elsewhere, as the page already named
-it - and, **at Grades K through 6 only**, Math/Open Up Resources (OUR Math)
+it - and, **at Grades K through 7 only**, Math/Open Up Resources (OUR Math)
 and ELA/Open Up EL Education. The "Behind on weeks?" panel appears only for
 those grade/subject/curriculum combinations and stays hidden for every other
-curriculum a grade offers, including Open Up at TK and in Grades 7 and 8.
-There are **91** week-pacing slots in all.
+curriculum a grade offers, including Open Up at TK and Grade 8.
+There are **93** week-pacing slots in all.
 
 `data/` holds the guide-sourced per-week files for **every wired grade** -
 TK, K and Grades 1 through 8 - and for every curriculum except Lincoln
