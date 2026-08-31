@@ -1,0 +1,306 @@
+{
+ "_source": "CORE ELA Pacing Guide Grade TK - Open Up's EL Education, uploaded 8/31/26, transcribed by week (parsed from the guide's M | U | L labels and lesson titles). Same segment-list schema as el_education_g1_weeks.json and el_education_gK_weeks.json. Unlike TK/Math, this is a genuinely new slot, not a missing-week-data gap: TK's ELA available/content/display in web_data.json currently list only Beyond the Page and Lincoln Learning - Open Up EL Education isn't there at all. Loren corrected this mid-session on 8/31/26 after the OUR Math TK file was handed off; the earlier premise that 'TK does not offer Open Up EL Education at all' (stated in README and the changelog doc) is wrong and those docs need correcting.",
+ "_note": "Module = EL Education Module, Unit = the Unit within that Module (unit stored as a string; lesson numbers reset per Unit, so segments split strictly on module/unit changes with no cross-unit merging, same as every other EL Education file). Every Module-to-Module transition lands cleanly on a week boundary (no week crosses a Module, only ever a Unit within one) - confirmed programmatically, not just by inspection. 'assessment' on a segment names any Unit Assessment / Performance Task that falls within that segment's lessons; 'Part I/II/III' and colon detail are dropped, keeping only the base tag. Where a segment's lessons carry two distinct tags, they're joined with ' + ' in guide-text order (week 34: 'Unit 3 Assessment + Performance Task'), matching the pattern already seen at Grade 7. Where a lesson title is printed as a bare continuation - 'Assessment, Part II: ...' with no unit number restated - and a specific Unit N Assessment tag is already open earlier in the same segment, it's treated as the same assessment and not added as a second tag (week 6: L9 'Unit 2 Assessment, Part I' + L10 'Assessment, Part II' collapse to one 'Unit 2 Assessment' tag, not 'Unit 2 Assessment + Assessment'). The one case where a bare 'Assessment' tag is kept standalone is week 15 (M2 U2 L15, 'Assessment: Identifying Story Elements in a Text') - the guide never restates a unit number for it anywhere in Unit 2, so it's transcribed as printed rather than assumed to mean 'Unit 2 Assessment'. One header/body mismatch, same downstream-artifact pattern seen everywhere else in this project: week 24's header row says 'Module 3 | Unit 2', but every lesson tag in the week's own body is M3U3 (continuing directly from week 23's M3U3 lessons 1-3), and the week's content closes with 'Unit 3 Assessment, Part I'. Transcribed as Unit 3, body wins. Unlike Grade K's and Grade 1's EL Education files, this guide has zero Benchmark Assessment Cycle mentions anywhere (confirmed by search, not just by not encountering one) - not an omission, the guide simply doesn't reference that assessment type for TK. IMPORTANT - could not be cross-checked against Appendix A the way every other file in this rollout has been: 2627_LP_Meeting_Plan.md's TK section has no 'ELA (Open Up EL Education)' line at all (only Beyond the Page), because this curriculum was never wired for TK before now. Verification here is schema validity and lesson-accounting contiguity only - checked programmatically, no gaps or duplicates within any of the 12 Module/Unit pairs (M1: 1-7/1-10/1-13, M2: 1-13/1-15/1-12, M3: 1-8/1-12/1-15, M4: 1-9/1-10/1-15). Appendix A's own TK ELA section will need a new 'ELA (Open Up EL Education)' line added per LP once this is wired, the same way Lincoln Learning's baseline content had to be authored from scratch for TK/K rather than just adding week data to an existing slot.",
+ "1": [
+  {
+   "module": 1,
+   "unit": "1",
+   "lessons": "1-3"
+  }
+ ],
+ "2": [
+  {
+   "module": 1,
+   "unit": "1",
+   "lessons": "4-6",
+   "assessment": "Unit 1 Assessment"
+  }
+ ],
+ "3": [
+  {
+   "module": 1,
+   "unit": "1",
+   "lessons": "7"
+  },
+  {
+   "module": 1,
+   "unit": "2",
+   "lessons": "1-2"
+  }
+ ],
+ "4": [
+  {
+   "module": 1,
+   "unit": "2",
+   "lessons": "3-5"
+  }
+ ],
+ "5": [
+  {
+   "module": 1,
+   "unit": "2",
+   "lessons": "6-8"
+  }
+ ],
+ "6": [
+  {
+   "module": 1,
+   "unit": "2",
+   "lessons": "9-10",
+   "assessment": "Unit 2 Assessment"
+  },
+  {
+   "module": 1,
+   "unit": "3",
+   "lessons": "1-2"
+  }
+ ],
+ "7": [
+  {
+   "module": 1,
+   "unit": "3",
+   "lessons": "3-6"
+  }
+ ],
+ "8": [
+  {
+   "module": 1,
+   "unit": "3",
+   "lessons": "7-10",
+   "assessment": "Unit 3 Assessment"
+  }
+ ],
+ "9": [
+  {
+   "module": 1,
+   "unit": "3",
+   "lessons": "11-13",
+   "assessment": "Performance Task"
+  }
+ ],
+ "10": [
+  {
+   "module": 2,
+   "unit": "1",
+   "lessons": "1-5"
+  }
+ ],
+ "11": [
+  {
+   "module": 2,
+   "unit": "1",
+   "lessons": "6-10"
+  }
+ ],
+ "12": [
+  {
+   "module": 2,
+   "unit": "1",
+   "lessons": "11-13",
+   "assessment": "Unit 1 Assessment"
+  },
+  {
+   "module": 2,
+   "unit": "2",
+   "lessons": "1-2"
+  }
+ ],
+ "13": [
+  {
+   "module": 2,
+   "unit": "2",
+   "lessons": "3-7"
+  }
+ ],
+ "14": [
+  {
+   "module": 2,
+   "unit": "2",
+   "lessons": "8-11"
+  }
+ ],
+ "15": [
+  {
+   "module": 2,
+   "unit": "2",
+   "lessons": "12-15",
+   "assessment": "Assessment"
+  }
+ ],
+ "16": [
+  {
+   "module": 2,
+   "unit": "3",
+   "lessons": "1-4"
+  }
+ ],
+ "17": [
+  {
+   "module": 2,
+   "unit": "3",
+   "lessons": "5-8"
+  }
+ ],
+ "18": [
+  {
+   "module": 2,
+   "unit": "3",
+   "lessons": "9-12",
+   "assessment": "Unit 3 Assessment"
+  }
+ ],
+ "19": [
+  {
+   "module": 3,
+   "unit": "1",
+   "lessons": "1-5"
+  }
+ ],
+ "20": [
+  {
+   "module": 3,
+   "unit": "1",
+   "lessons": "6-8",
+   "assessment": "Unit 1 Assessment"
+  },
+  {
+   "module": 3,
+   "unit": "2",
+   "lessons": "1-2"
+  }
+ ],
+ "21": [
+  {
+   "module": 3,
+   "unit": "2",
+   "lessons": "3-7"
+  }
+ ],
+ "22": [
+  {
+   "module": 3,
+   "unit": "2",
+   "lessons": "8-12",
+   "assessment": "Unit 2 Assessment"
+  }
+ ],
+ "23": [
+  {
+   "module": 3,
+   "unit": "3",
+   "lessons": "1-3"
+  }
+ ],
+ "24": [
+  {
+   "module": 3,
+   "unit": "3",
+   "lessons": "4-6",
+   "assessment": "Unit 3 Assessment"
+  }
+ ],
+ "25": [
+  {
+   "module": 3,
+   "unit": "3",
+   "lessons": "7-9",
+   "assessment": "Unit 3 Assessment"
+  }
+ ],
+ "26": [
+  {
+   "module": 3,
+   "unit": "3",
+   "lessons": "10-12",
+   "assessment": "Performance Task"
+  }
+ ],
+ "27": [
+  {
+   "module": 3,
+   "unit": "3",
+   "lessons": "13-15",
+   "assessment": "Performance Task"
+  }
+ ],
+ "28": [
+  {
+   "module": 4,
+   "unit": "1",
+   "lessons": "1-3"
+  }
+ ],
+ "29": [
+  {
+   "module": 4,
+   "unit": "1",
+   "lessons": "4-6"
+  }
+ ],
+ "30": [
+  {
+   "module": 4,
+   "unit": "1",
+   "lessons": "7-9",
+   "assessment": "Unit 1 Assessment"
+  },
+  {
+   "module": 4,
+   "unit": "2",
+   "lessons": "1"
+  }
+ ],
+ "31": [
+  {
+   "module": 4,
+   "unit": "2",
+   "lessons": "2-5",
+   "assessment": "Unit 2 Assessment"
+  }
+ ],
+ "32": [
+  {
+   "module": 4,
+   "unit": "2",
+   "lessons": "6-9"
+  }
+ ],
+ "33": [
+  {
+   "module": 4,
+   "unit": "2",
+   "lessons": "10",
+   "assessment": "Unit 2 Assessment"
+  },
+  {
+   "module": 4,
+   "unit": "3",
+   "lessons": "1-3",
+   "assessment": "Unit 3 Assessment"
+  }
+ ],
+ "34": [
+  {
+   "module": 4,
+   "unit": "3",
+   "lessons": "4-7",
+   "assessment": "Unit 3 Assessment + Performance Task"
+  }
+ ],
+ "35": [
+  {
+   "module": 4,
+   "unit": "3",
+   "lessons": "8-10",
+   "assessment": "Performance Task"
+  }
+ ],
+ "36": [
+  {
+   "module": 4,
+   "unit": "3",
+   "lessons": "11-15",
+   "assessment": "Performance Task"
+  }
+ ]
+}

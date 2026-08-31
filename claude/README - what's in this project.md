@@ -36,16 +36,23 @@ curricula: Math/Zearn and ELA/Beyond the Page in every grade, Studies Weekly
 for Science and History/Social Science in Grades K-8 (TK does not offer it),
 Lincoln Learning in every subject it is offered for in Grades TK-8 - keyed
 `LL` under Math and `Lincoln Learning` elsewhere, as the page already named
-it - Math/Open Up Resources in Grades TK-8, and ELA/Open Up EL Education in
-Grades K-8 (TK does not offer it). The "Behind on weeks?" panel appears only
-for those grade/subject/curriculum combinations and stays hidden for every
-other curriculum a grade offers - Beast Academy, Dimensions Math and TCI,
-which have no week-level source at all.
+it - and Open Up in Grades TK-8, both Math/Open Up Resources and
+ELA/Open Up EL Education. The "Behind on weeks?" panel appears only for those
+grade/subject/curriculum combinations and stays hidden for every other
+curriculum a grade offers - Beast Academy, Dimensions Math and TCI, which have
+no week-level source at all.
 
-**The rollout is complete: 96 slots, no gaps.** Every grade that offers a
-week-shiftable curriculum has week data for it. The count is 96, not the 95
-an earlier draft of this file gave - that was the number *wired* at the time,
-with one slot still open.
+**97 slots, no gaps.** Every grade that offers a week-shiftable curriculum has
+week data for it. Two caveats on the newest slot, TK / ELA / Open Up EL
+Education, which was a **new offering** rather than a missing-data gap - its
+`available`, `display` and `content` blocks were all created on 8/31/26:
+
+  - its **baseline per-LP content cells were derived from the week file**, not
+    taken from Appendix A like every other grade's, because Appendix A has no
+    TK ELA section yet; and
+  - its **display entry has no guide URL** - none was supplied, and one was
+    not invented. The curriculum name renders unlinked until a real URL is
+    added.
 
 `data/` holds the guide-sourced per-week files for **every wired grade** -
 TK, K and Grades 1 through 8 - and for every curriculum except Lincoln

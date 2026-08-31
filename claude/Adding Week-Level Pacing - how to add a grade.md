@@ -30,7 +30,7 @@ covers **five curricula**:
     Science/Lincoln Learning    TK, K, 1-8
     HSS/Lincoln Learning        TK, K, 1-8 except grade 3, which does not offer it
     Math/Open Up Resources      TK, K, 1-8
-    ELA/Open Up EL Education    K, 1-8   (TK does not offer it at all)
+    ELA/Open Up EL Education    TK, K, 1-8
 
 Studies Weekly was added 8/29/26 and was the first new *curriculum* rather
 than a new grade - it needed a third `kind`. Lincoln Learning followed on
@@ -39,7 +39,7 @@ Resources (OUR Math) and Open Up EL Education followed the same day and needed
 a fourth kind, `module_unit_lesson`; Grades 1 through 8 and then TK followed.
 
 **The rollout is complete.** Every grade that offers a week-shiftable
-curriculum now has week data for it - **96 slots, no gaps**. Verified
+curriculum now has week data for it - **97 slots, no gaps**. Verified
 programmatically, not by counting: for every (curriculum, subject) pair that
 carries week data, no grade offering it is left unwired. The panel stays
 hidden only for curricula that have no week-level source at all: Beast
@@ -50,6 +50,55 @@ curriculum, or a change to the panel itself - no longer a missing grade.
 
 
 ### Changelog
+
+- **Open Up EL Education at TK - a new offering, not a missing-data gap** -
+  8/31/26. Slots: 96 to **97**. Unlike every other entry in this rollout, TK's
+  ELA slot did not exist: `available.ELA`, `display.ELA` and `content.ELA`
+  listed only Beyond the Page and Lincoln Learning. All three were created
+  here, then the week data merged normally. The week file is schema-valid,
+  lesson-contiguous across all twelve Module/Unit pairs, renders with no empty
+  LP at any deficit, and is prefix-exact at deficits 1-3 (41, 40 and 39 of 42
+  segments).
+
+  **Two things about this slot are unlike all 96 others. Both are live in the
+  shipped page and neither should be forgotten.**
+
+  **1. Its baseline per-LP cells were derived from the week file, not taken
+  from Appendix A.** `2627_LP_Meeting_Plan.md` has no TK "ELA (Open Up EL
+  Education)" section, because the curriculum was never offered at TK before.
+  That has two consequences worth stating plainly:
+
+    - The usual closed-range check is **circular here** and was not run as if
+      it meant anything. Everywhere else it compares the week path against
+      independently-sourced stored cells; at TK ELA both sides come from the
+      same file.
+    - The derived cells **read cleaner than their neighbours', and that is
+      itself a signal.** A generator written to reproduce the stored cells was
+      tested against all nine existing EL Education grades and **could not
+      reproduce any of them exactly.** The stored cells carry Appendix A's own
+      inconsistencies - "End of Unit N Assessment" at Grades 3-8 versus "Unit
+      N Assessment" at K-2, Benchmark cycles collapsed to a bare "Benchmark
+      Assessment", Performance Task sometimes appended to a unit line and
+      sometimes on its own, stray lesson-less fragments like `M1 U1` at
+      Grades 3 and 5, and closed ranges at Grade 4 LP9 and Grade 6 LP9 that
+      the week data says should be open-ended. **The stored cells are not
+      mechanically derivable from the week files.** TK's are, which means TK's
+      are a different kind of artefact wearing the same shape. If Appendix A
+      later gains a TK ELA section, expect it to disagree with these cells,
+      and prefer it.
+
+  **2. Its display entry has no guide URL.** None was supplied and none was
+  invented, per the precedent set at TK/K Lincoln Learning. `url` is `null`,
+  which `optionsFor()` already handles - the name renders unlinked. **This is
+  the only slot in the tool without a guide link**, and it should be filled in
+  as soon as the URL is known.
+
+  The name follows the existing pattern, `Open Up (EL Education) - TK`. The
+  file's own content notes are unremarkable by now: one header/body mismatch
+  at week 24 (header says M3 U2, every lesson in the body is M3 U3 - body
+  wins), a bare `Assessment` tag at week 15 kept as printed because the guide
+  never restates a unit number for it, and **zero Benchmark Assessment Cycles
+  anywhere** - confirmed by search, unlike Grades K and 1, which have five.
 
 - **OUR Math at TK - the rollout is finished** - 8/31/26. The last slot.
   Week-pacing slots: 95 to **96**. TK already offered OUR Math with ten LPs of
