@@ -29,25 +29,61 @@ covers **five curricula**:
     ELA/Lincoln Learning        TK, K, 1-8
     Science/Lincoln Learning    TK, K, 1-8
     HSS/Lincoln Learning        TK, K, 1-8 except grade 3, which does not offer it
-    Math/Open Up Resources      K, 1-8   (TK offers it and is NOT yet wired)
+    Math/Open Up Resources      TK, K, 1-8
     ELA/Open Up EL Education    K, 1-8   (TK does not offer it at all)
 
 Studies Weekly was added 8/29/26 and was the first new *curriculum* rather
 than a new grade - it needed a third `kind`. Lincoln Learning followed on
 8/30/26 and needed no new kind at all, reusing `studies_weekly`. Open Up
 Resources (OUR Math) and Open Up EL Education followed the same day and needed
-a fourth kind, `module_unit_lesson`; Grades 1 through 8 followed. They are
-wired at **K and Grades 1-8**, which is every grade that offers them **except
-TK's Math slot** - the single remaining gap in this rollout (TK does not offer
-Open Up EL Education at all, so there is no TK ELA slot to fill). Every
-combination is verified end to end in a real browser. The panel stays hidden
-for every curriculum without week-level data: Beast Academy, Dimensions Math,
-TCI, and Open Up Resources at TK.
+a fourth kind, `module_unit_lesson`; Grades 1 through 8 and then TK followed.
 
-A change here now means another new curriculum, a correction to an existing
-transcription, or a change to the panel itself.
+**The rollout is complete.** Every grade that offers a week-shiftable
+curriculum now has week data for it - **96 slots, no gaps**. Verified
+programmatically, not by counting: for every (curriculum, subject) pair that
+carries week data, no grade offering it is left unwired. The panel stays
+hidden only for curricula that have no week-level source at all: Beast
+Academy, Dimensions Math and TCI.
+
+A change here now means a correction to an existing transcription, a new
+curriculum, or a change to the panel itself - no longer a missing grade.
+
 
 ### Changelog
+
+- **OUR Math at TK - the rollout is finished** - 8/31/26. The last slot.
+  Week-pacing slots: 95 to **96**. TK already offered OUR Math with ten LPs of
+  baseline content; it just had no week data. There is no TK ELA counterpart -
+  TK does not offer Open Up EL Education - so this single file closed the
+  whole thing out. Schema conforms, coverage as ordered prefix is exact (40,
+  39 and 38 of 41 segments at deficits 1, 2 and 3), no LP empty at any
+  deficit, and **zero closed-range differences** across 8 comparisons.
+
+  **Two counts in the previous entry were wrong, and both are corrected
+  here.**
+
+    1. **The total is 96, not 95.** The Grade 8 entry said "95 week-pacing
+       slots in all, and exactly one gap left", which cannot both be true: 95
+       was the number *wired*, and one gap meant 96 offered. Wiring TK took
+       the wired count to 96 and closed the gap. Anyone reading "95/95" as the
+       finish line will be off by one.
+    2. **TK's OUR Math is not the only file that runs the full 36 weeks.**
+       The source note says K and 1-8 all finish at week 35; **Grade K also
+       has a week 36** (`Unit 8 Review + Unit 8 Assessment`). The real split
+       is: K and TK carry a real week 36, Grades 1-8 do not. TK's week 36 is
+       still notable for *why* - its body carries a linked Unit 8 Assessment
+       rather than the content-free review games that make Grades 1-8 omit the
+       key - but it is not unique.
+
+  Three guide header typos, all resolved from lesson URLs and all reproduced
+  in Appendix A: week 10 (`B`/`C` where the URLs say `C`/`D`, transcribed
+  `C-D`), week 14 (`Section A` where lesson 10 is Section B, transcribed
+  `A-B`), and week 24 (header says Unit 6, URLs and the week's own Unit 5
+  Review/Assessment say Unit 5, transcribed Unit 5). One wording quirk is
+  preserved as printed rather than normalized: **Unit 2's assessment link
+  reads "Unit 2 Assessments", plural, where every other unit is singular**. It
+  renders that way - `Unit 2: Unit 2 Assessments` - and should not be
+  "corrected".
 
 - **OUR Math and Open Up EL Education at Grade 8** - 8/31/26. Data-only, and
   the last of Grades 1-8. Week-pacing slots: 93 to **95**. Both files were
