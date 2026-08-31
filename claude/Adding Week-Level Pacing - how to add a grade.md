@@ -68,12 +68,16 @@ curriculum, or a change to the panel itself - no longer a missing grade.
        the wired count to 96 and closed the gap. Anyone reading "95/95" as the
        finish line will be off by one.
     2. **TK's OUR Math is not the only file that runs the full 36 weeks.**
-       The source note says K and 1-8 all finish at week 35; **Grade K also
-       has a week 36** (`Unit 8 Review + Unit 8 Assessment`). The real split
-       is: K and TK carry a real week 36, Grades 1-8 do not. TK's week 36 is
-       still notable for *why* - its body carries a linked Unit 8 Assessment
-       rather than the content-free review games that make Grades 1-8 omit the
-       key - but it is not unique.
+       The first draft's note said K and 1-8 all finish at week 35; **Grade K
+       also has a week 36**. The real split is: K and TK carry a real week 36,
+       Grades 1-8 do not. The file was re-issued the same day with a corrected
+       note and, more substantively, a corrected week 36 - `Unit 8 Review +
+       Unit 8 Assessment` under `Assessments & Review`, matching Grade K
+       exactly, where the first draft had dropped the Review half. **That
+       correction is invisible in the UI**: week 36 is only ever reached at
+       deficit 0, where the stored per-LP cells render instead of the week
+       path, so no rendered output changed. It matters for the data's
+       accuracy, not for what anyone sees today.
 
   Three guide header typos, all resolved from lesson URLs and all reproduced
   in Appendix A: week 10 (`B`/`C` where the URLs say `C`/`D`, transcribed
